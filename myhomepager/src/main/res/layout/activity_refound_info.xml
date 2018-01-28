@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/img_finish_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/return_exchange"
+            android:textColor="@color/sub_title_color"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/icon_more"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        />
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#FEF7EA"
+        android:gravity="center"
+        android:text="@string/return_apply_od"
+        android:textColor="#ff6600"
+        android:textSize="10sp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/liner_bottom"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/my_return" />
+
+                        <TextView
+                            android:id="@+id/tv_order_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/orange"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_logistic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/theme_color"
+                            android:text="@string/logistics_number_"/>
+
+
+                        <TextView
+                            android:id="@+id/tv_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/theme_color"
+                            android:layout_marginLeft="20dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_refuse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_refuse_des"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textColor="@color/sub_title_color"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_refuse_pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/liner_logits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/logistics_information"
+                            android:textColor="@color/sub_title_color"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:background="@drawable/circular_bead_border"
+                                android:paddingRight="10dp"
+                                >
+
+                            <!--<EditText-->
+                                <!--android:id="@+id/et_company"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="30dp"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:gravity="center_vertical"-->
+                                <!--android:hint="请输入物流公司"-->
+                                <!--android:textColorHint="@color/light_black"-->
+                                <!--android:paddingLeft="12dp"-->
+                                <!--android:paddingRight="12dp"-->
+                                <!--android:textColor="@color/textColor9"-->
+                                <!--android:textSize="12sp"-->
+                                <!--android:background="@null"/>-->
+                                <TextView
+                                    android:id="@+id/tv_logistics_company"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:textColor="@color/main_title_color"
+                                    android:textSize="@dimen/textsize_12sp"
+                                    android:text="@string/choose_logistics_company"
+                                    android:paddingLeft="12dp"
+                                    android:drawableEnd="@drawable/icon_next"
+                                    android:drawableRight="@drawable/icon_next"
+                                    android:gravity="center_vertical"
+                                    />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/divider_color"
+                                    />
+                                <EditText
+                                    android:id="@+id/et_num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:digits="0123456789"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/input_logistics_number"
+                                    android:textColorHint="@color/edittext_hint_color"
+                                    android:inputType="phone"
+                                    android:maxLength="15"
+                                    android:paddingLeft="12dp"
+                                    android:paddingRight="12dp"
+                                    android:textColor="@color/main_title_color"
+                                    android:textSize="12sp"
+                                    android:background="@null"/>
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/tv_confir_tijiao"
+                                android:layout_width="70dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/shape_login_press"
+                                android:gravity="center"
+                                android:text="@string/confirm_submit"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:layout_gravity="bottom"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/tv_aftersale_type"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tv_refound_order_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/after_code"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tv_transaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/refund_water_"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_refound_applytimestr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/apply_time"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_return_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/refound_money"
+                            android:textColor="@color/sub_title_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_refound_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/theme_color"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_refound_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/return_reason"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_returnRemark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/return_explain"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:src="@drawable/ic_launcher"-->
+                         <!--/>-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_img_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/apply_after_sale_product"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color"
+                        android:layout_marginTop="15dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/refound_info_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_order_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/transaction_amount"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/order_code_"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_order_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/order_time_"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/return_to"
+                        android:padding="12dp"
+                        android:textSize="@dimen/textsize_14sp"
+                        android:textColor="@color/sub_title_color"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/main_title_color"
+                            android:textSize="@dimen/textsize_14sp"
+                            />
+                        <TextView
+                            android:id="@+id/tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/main_title_color"
+                            android:textSize="@dimen/textsize_14sp"
+                            android:layout_toRightOf="@+id/tv_name"
+                            android:layout_marginLeft="30dp"/>
+                        <TextView
+                            android:id="@+id/tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_name"
+                            android:textSize="@dimen/textsize_12sp"
+                            android:textColor="@color/sub_title_color"
+                            android:layout_marginTop="12dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/iv_address_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_address_background"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/liner_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="right|center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_cancleOrAgein"
+                android:layout_width="100dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/circular_bead_border"
+                android:gravity="center"
+                android:text="@string/cancel_return"
+                android:textColor="@color/sub_title_color"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"
+                 />
+
+                <TextView
+                    android:id="@+id/tv_modif"
+                    android:layout_width="100dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/circular_bead_border"
+                    android:gravity="center"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="14sp"
+                    android:text="@string/modification"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

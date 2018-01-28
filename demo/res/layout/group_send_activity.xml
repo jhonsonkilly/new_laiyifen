@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:theme="@style/ToolbarTheme">
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                android:text="发送"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll_send_name"
+        android:background="@color/white"
+        android:layout_below="@id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="right|center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+            <LinearLayout
+                android:layout_marginLeft="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="收件人"
+                    android:textColor="@color/gray7"/>
+                <TextView
+                    android:id="@+id/tv_sendto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                >
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/add_send"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/ll_send_name"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray7"/>
+    <LinearLayout
+        android:layout_below="@id/line"
+        android:id="@+id/ll_send_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容"
+            android:textColor="@color/gray7"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="消息内容最多可发1000字"
+            android:gravity="top|left"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:maxLength="1000"/>
+    </LinearLayout>
+    
+</RelativeLayout>

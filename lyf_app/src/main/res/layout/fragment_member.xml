@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_member_head"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_caren" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@id/common_img_2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_message_white" />
+
+                <ImageView
+                    android:id="@id/common_img_3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_settiong" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="36dp"
+                    android:layout_toLeftOf="@+id/ll_center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@id/common_tv_1"
+                        android:layout_width="48dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_member_line"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+
+                        android:paddingRight="5dp"
+                        android:text="- -"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_min_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:text="会员等级"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_min_12"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@id/common_img_1"
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:background="@mipmap/img_member_head"
+                        fresco:roundAsCircle="true" />
+
+                    <TextView
+
+
+                        android:padding="3dp"
+                        android:id="@id/common_tv_3"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:maxEms="8"
+
+                        android:text="登录/注册"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_med_14"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_yidou"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="36dp"
+                    android:layout_toRightOf="@+id/ll_center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@id/common_tv_2"
+                        android:layout_width="48dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+
+                        android:background="@drawable/shape_member_line"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="- -"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_min_12" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="伊豆"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_min_12"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_zhuangshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/icon_my_owncard" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FF6501" />
+
+            <FrameLayout
+
+                android:layout_width="55dp"
+                android:layout_height="45dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img_bg"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/img_sales"
+
+                    />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/common_loading_progressbar"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FF6501" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_yiqizhuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_myorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_packet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/common_bg" />
+
+        <FrameLayout
+            android:id="@+id/fl_recylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></FrameLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

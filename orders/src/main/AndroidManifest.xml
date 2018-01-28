@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ody.p2p.check">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name=".aftersale.AftersaleActivity"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity android:name=".bill.BillActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".coupon.AddCouponActivity" />
+        <activity android:name=".coupon.CouponActivity" />
+        <activity android:name=".giftcard.BindGiftCardActivity" />
+        <activity android:name=".giftcard.GiftCardActivity" />
+        <activity android:name=".myorder.ChoosePayWayActivity" />
+        <activity
+            android:name=".myorder.ConfirmOrderActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".orderlist.EvaluateActivity" />
+        <activity android:name=".orderoinfo.LogisticsActivity" />
+        <activity android:name=".orderoinfo.OrderInfoActivity" />
+        <activity android:name=".coupon.UseCouponActivity" />
+        <activity android:name=".orderlist.ShowImageViewActivity" />
+        <activity android:name=".ordersearch.OrdersearchActivity" />
+        <activity android:name=".giftcard.UsegiftcardActivity" />
+        <activity android:name=".giftcard.GiftCardConsumerActivity"></activity>
+    </application>
+
+</manifest>

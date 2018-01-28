@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+
+    <attr name="OFwheelviewdefalut" format="reference" />
+
+    <declare-styleable name="OFWheelView">
+        <attr name="visibleItems" format="integer" />
+        <attr name="valustextColor" format="color" />
+        <attr name="itemtextColor" format="color" />
+        <attr name="itemtextsize" format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontal_spacing" format="dimension"></attr>
+        <attr name="vertical_spacing" format="dimension"></attr>
+    </declare-styleable>
+    
+        <declare-styleable name="RationImageView">
+            <attr name="height_width_rate" format="float"></attr>
+        </declare-styleable>
+</resources>

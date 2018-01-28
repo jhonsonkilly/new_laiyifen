@@ -1,0 +1,19 @@
+<resources>
+    <string name="pay_status_title">支付状态</string>
+    <string name="pay_advice2">支付成功!</string>
+    <string name="pay_again">重新支付</string>
+    <string name="continue_shopping">继续购买</string>
+    <string name="recommend">个性化推荐</string>
+    <string name="pay_online1">余额支付</string>
+    <string name="pay_online5">在线支付</string>
+    <string name="pay_succeed">支付成功</string>
+    <string name="pay_fail">支付失败</string>
+    <string name="wx_app_id">wxde8907939c78dc5c</string>
+    <string name="wx_no_install_tip">未找到微信应用，请选择其他支付方式</string>
+    <string name="pay_advice">支付未完成, 请在60分钟之内完成支付!</string>
+    <string name="unpay_please">支付未完成, 请在</string>
+    <string name="complete_the_payment">之内完成支付</string>
+    <string name="order_automatic_cancel">该订单已自动取消</string>
+    <string name="pay_result_confirmed">支付结果确认中</string>
+    <string name="user_cancel_pay">用户取消了支付</string>
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
+
+    <include layout="@layout/head"
+        android:id="@+id/head"/>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line"
+        android:layout_below="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color" />
+
+    <!--密码-->
+    <RelativeLayout
+        style="@style/login_edit_style"
+        android:id="@+id/rl_psd"
+        android:layout_marginTop="35dp"
+        android:layout_below="@id/v_divide_line">
+
+        <TextView
+            android:id="@+id/tv_psd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:text="@string/new_password_text"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_15sp" />
+
+        <!--控制可见性的眼睛图片-->
+        <RelativeLayout
+            android:id="@+id/rl_visiable_psd"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_visible_confirm_psd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/user_pwd_off" />
+        </RelativeLayout>
+        <!--叉图片-->
+        <RelativeLayout
+            android:visibility="invisible"
+            android:id="@+id/rl_cha_psd"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_visiable_psd">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/my_btn_close_n" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_input_psd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_cha_psd"
+            android:layout_toRightOf="@id/tv_psd"
+            android:background="@null"
+            android:hint="@string/input_login_psd"
+            android:layout_marginLeft="2dp"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="@dimen/textsize_15sp" />
+    </RelativeLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line2"
+        android:layout_below="@id/rl_psd"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color" />
+
+    <!--确认密码-->
+    <RelativeLayout
+        android:id="@+id/rl_psd_again"
+        style="@style/login_edit_style"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/v_divide_line2">
+
+        <TextView
+            android:id="@+id/tv_psd_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:minWidth="60dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/confirm_password"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_15sp" />
+
+        <!--控制可见性的眼睛图片-->
+        <RelativeLayout
+            android:id="@+id/rl_visiable_psd2"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_visible_confirm_psd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/user_pwd_off" />
+        </RelativeLayout>
+        <!--叉图片-->
+        <RelativeLayout
+            android:visibility="invisible"
+            android:id="@+id/rl_cha_psd2"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_visiable_psd2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/my_btn_close_n" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_input_psd2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_cha_psd2"
+            android:layout_toRightOf="@id/tv_psd_again"
+            android:background="@null"
+            android:layout_marginLeft="2dp"
+            android:hint="@string/input_login_psd_again"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="@dimen/textsize_15sp" />
+    </RelativeLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line3"
+        android:layout_below="@id/rl_psd_again"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color" />
+
+    <!--完成-->
+    <TextView
+        android:id="@+id/tv_finish"
+        android:layout_below="@id/v_divide_line3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="72dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_login"
+        android:gravity="center"
+        android:text="@string/complete"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

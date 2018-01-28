@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/faile_view"
+        layout="@layout/view_failed_load"/>
+
+    <LinearLayout
+        android:id="@+id/ll_line1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.ody.p2p.views.flowLayout.FlowRadioLayout
+            android:id="@+id/flowlayout_pingjia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="9dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/white"
+        android:padding="6dp"
+        android:src="@drawable/ic_arrowdown_gray"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_havadata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/lineTwo423"
+            style="@style/Line" />
+
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">-->
+
+
+        <com.ody.p2p.views.swiprefreshview.OdySwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <com.ody.p2p.views.recyclerviewlayoutmanager.OdyRecyclerView
+                android:id="@+id/recy_goodappriaise"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="none" />
+
+        </com.ody.p2p.views.swiprefreshview.OdySwipeRefreshLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_over"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <TextView
+                android:id="@+id/tv_flag"
+                style="@style/Allwrap"
+                android:layout_centerInParent="true"
+                android:text="@string/end"
+                android:textColor="@color/note_color"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/left_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/tv_flag"
+                android:background="#B0B0B0" />
+
+            <View
+                android:id="@+id/right_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/tv_flag"
+                android:background="#B0B0B0" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_notdata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_notdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/personal_collection_list" />
+
+        <TextView
+            android:id="@+id/tv_evaluate_notdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/notappraise"
+            android:textColor="@color/note_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

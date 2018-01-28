@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    >
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:text="@string/parcel_product"
+        android:textSize="@dimen/textsize_18sp"
+        android:textColor="@color/sub_title_color"
+        android:gravity="center"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_product"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/theme_color"
+        android:text="@string/close"
+        android:textColor="@color/button_text_color"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="25dp"/>
+    </LinearLayout>
+
+</LinearLayout>

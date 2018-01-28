@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:orientation="horizontal"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/img_refound_list_item_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_refound_list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:textSize="13sp"
+            android:lines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:textSize="13sp"
+            android:layout_alignParentBottom="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_refound_list_item_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/note_color"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

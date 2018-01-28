@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="收银台"
+            android:textColor="@color/main_title_color"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <com.ody.p2p.productdetail.views.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_orderinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/warn_bg"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/checkstand_time"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="支付剩余时间0:00"
+                        android:textColor="@color/main_title_color"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_coed"
+                            android:textColor="@color/c80"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="支付金额"
+                            android:textColor="@color/c80"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="伊点卡支付"
+                            android:textColor="@color/c80"
+                            android:textSize="@dimen/text_size_15sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="剩余应付"
+                            android:textColor="@color/c80"
+                            android:textSize="@dimen/text_size_15sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_ordercode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/main_title_color"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:textColor="@color/main_title_color"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_yidian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="￥10.00"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/text_size_15sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="￥10.00"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/text_size_15sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_yidian"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_yidian_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/checkstand_card" />
+
+                <TextView
+                    android:id="@+id/tv_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@+id/iv_yidian_card"
+                    android:textColor="@color/main_title_color"
+                    android:textSize="@dimen/textsize_14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_card_name"
+                    android:layout_below="@+id/tv_card_name"
+                    android:textColor="@color/c80"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/icon_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_next" />
+
+                <TextView
+                    android:id="@+id/tv_yidian_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/icon_next"
+                    android:text="-￥10.00"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/text_size_15sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_cashier_linearlayout_leisurely"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="12dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_icon_balance"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/pay_ic_youcard"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/layout_cashier_textview_title_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iv_icon_balance"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_icon_balance"
+                        android:text="悠点会员卡"
+                        android:textColor="@color/main_title_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_alignBaseline="@id/layout_cashier_textview_title_1"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:id="@+id/leisurely_balance"
+                        android:layout_toRightOf="@id/layout_cashier_textview_title_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_14sp"
+                        tools:text="余额 : 0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/layout_cashier_textview_title_1"
+                        android:layout_below="@+id/layout_cashier_textview_title_1"
+                        android:layout_marginBottom="12dp"
+                        android:text="来伊份旗下会员卡快捷支付"
+                        android:textColor="@color/c80"
+                        android:textSize="@dimen/textsize_14sp" />
+
+                    <ImageView
+                        android:id="@+id/balance_iv_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next" />
+
+                    <TextView
+                        android:id="@+id/leisurely_use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/balance_iv_next"
+                        android:padding="2dp"
+                        android:text="去充值"
+                        android:textColor="@color/cb2"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/layout_cashier_cards_lines"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/divider_color"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_cashier_linearlayout_yCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="12dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ycard_iv_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_next" />
+
+                    <TextView
+                        android:id="@+id/yCard_use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/ycard_iv_next"
+                        android:padding="2dp"
+                        android:text="绑定"
+                        android:textColor="@color/cb2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/layout_cashier_textview_title_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_toEndOf="@+id/iv_icon_yCard"
+                        android:layout_toRightOf="@+id/iv_icon_yCard"
+                        android:text="伊点储值卡"
+                        android:textColor="@color/main_title_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_alignBaseline="@id/layout_cashier_textview_title_2"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:id="@+id/yCard_balance"
+                        android:layout_toRightOf="@id/layout_cashier_textview_title_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_14sp"
+                        tools:text="余额 : 0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/layout_cashier_textview_title_2"
+                        android:layout_alignStart="@+id/layout_cashier_textview_title_2"
+                        android:layout_below="@+id/layout_cashier_textview_title_2"
+                        android:layout_marginBottom="12dp"
+                        android:textColor="@color/c80"
+                        android:textSize="@dimen/textsize_14sp"
+                        android:text="来伊份旗下储值卡快捷支付" />
+
+                    <ImageView
+                        android:id="@+id/iv_icon_yCard"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pay_ic_ycard" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.ody.p2p.views.MyListView
+                android:id="@+id/lv_common_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:divider="@color/divider_color"
+                android:dividerHeight="1dp"
+                android:visibility="gone" />
+
+            <com.ody.p2p.views.MyListView
+                android:id="@+id/lv_payway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:divider="@color/divider_color"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+    </com.ody.p2p.productdetail.views.MyScrollView>
+</LinearLayout>

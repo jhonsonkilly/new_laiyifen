@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_search_item"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+        <com.ody.p2p.views.SquareImageView
+            android:id="@+id/iv_product_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tv_product_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_product_pic"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="新品力推"
+            android:textColor="@color/theme_color"
+            android:visibility="gone"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_product_activity"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="1234"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_promotion"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@id/tv_product_name"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_product_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler_promotion"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="12dp"
+            android:singleLine="true"
+            android:text="999"
+            android:textStyle="bold"
+            android:textColor="@color/theme_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_product_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_product_cost"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/sub_title_color"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_productcost_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler_promotion"
+            android:layout_toRightOf="@id/tv_product_cost"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="15dp"
+            android:singleLine="true"
+            android:text="￥16.80"
+            android:textColor="@color/sub_title_color"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_addtocart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_product_name"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/cart_add" />
+    </RelativeLayout>
+</LinearLayout>

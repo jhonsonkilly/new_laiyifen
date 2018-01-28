@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/random"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="随机金额红包"
+            android:textColor="@color/jrmf_rp_red"
+            android:textSize="16sp"/>
+
+
+        <View
+            android:id="@+id/line_random"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/jrmf_rp_red"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#E8E8E8"/>
+
+
+    <RelativeLayout
+        android:id="@+id/immobilization"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/tv_immobilization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="固定金额红包"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+        <View
+            android:id="@+id/line_immobilization"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+</LinearLayout>

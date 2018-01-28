@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 二维码扫描-->
+<resources>
+
+    <!--通用 控件id-->
+
+    <!--viewpager-->
+    <item name="common_viewpager" type="id"/>
+
+    <!--refresh_recyclerview-->
+    <item name="common_refresh_recyclerView_1" type="id"/>
+    <item name="common_refresh_recyclerView_2" type="id"/>
+    <item name="common_refresh_recyclerView_3" type="id"/>
+
+    <!--girdview-->
+    <item name="common_gridview_1" type="id"/>
+    <item name="common_gridview_2" type="id"/>
+
+    <!--common_listview_1-->
+    <item name="common_listview_1" type="id"/>
+    <item name="common_listview_2" type="id"/>
+
+
+    <!--common_frameLayout_1-->
+    <item name="common_frameLayout_1" type="id"/>
+    <item name="common_frameLayout_2" type="id"/>
+    <item name="common_frameLayout_3" type="id"/>
+    <item name="common_frameLayout_4" type="id"/>
+    <item name="common_frameLayout_5" type="id"/>
+    <item name="common_frameLayout_6" type="id"/>
+    <item name="common_frameLayout_7" type="id"/>
+    <item name="common_frameLayout_8" type="id"/>
+
+
+    <!--通用 水平 imageView ID-->
+    <item name="common_img_horizontal_number_1" type="id"/>
+    <item name="common_img_horizontal_number_2" type="id"/>
+    <item name="common_img_horizontal_number_3" type="id"/>
+    <item name="common_img_horizontal_number_4" type="id"/>
+    <item name="common_img_horizontal_number_5" type="id"/>
+    <item name="common_img_horizontal_number_6" type="id"/>
+    <item name="common_img_horizontal_number_7" type="id"/>
+    <item name="common_img_horizontal_number_8" type="id"/>
+    <item name="common_img_horizontal_number_9" type="id"/>
+    <item name="common_img_horizontal_number_10" type="id"/>
+
+
+    <!-- 通用 id viewHolder 中使用-->
+
+    <!--通用 垂直 textView ID-->
+    <item name="common_tv_vertical_number_1" type="id"/>
+    <item name="common_tv_vertical_number_2" type="id"/>
+    <item name="common_tv_vertical_number_3" type="id"/>
+    <item name="common_tv_vertical_number_4" type="id"/>
+    <item name="common_tv_vertical_number_5" type="id"/>
+    <item name="common_tv_vertical_number_6" type="id"/>
+    <item name="common_tv_vertical_number_7" type="id"/>
+    <item name="common_tv_vertical_number_8" type="id"/>
+    <item name="common_tv_vertical_number_9" type="id"/>
+    <item name="common_tv_vertical_number_10" type="id"/>
+
+    <!--通用 水平 textView ID-->
+    <item name="common_tv_horizontal_number_1" type="id"/>
+    <item name="common_tv_horizontal_number_2" type="id"/>
+    <item name="common_tv_horizontal_number_3" type="id"/>
+    <item name="common_tv_horizontal_number_4" type="id"/>
+    <item name="common_tv_horizontal_number_5" type="id"/>
+    <item name="common_tv_horizontal_number_6" type="id"/>
+    <item name="common_tv_horizontal_number_7" type="id"/>
+    <item name="common_tv_horizontal_number_8" type="id"/>
+    <item name="common_tv_horizontal_number_9" type="id"/>
+    <item name="common_tv_horizontal_number_10" type="id"/>
+    <item name="common_tv_ok" type="id"/>
+    <item name="common_tv_horizontal_number_11" type="id"/>
+    <item name="common_tv_horizontal_number_12" type="id"/>
+    <!--通用 水平 RelativeLayout ID-->
+    <item name="common_rllayout_horizontal_number_1" type="id"/>
+    <item name="common_rllayout_horizontal_number_2" type="id"/>
+    <item name="common_rllayout_horizontal_number_3" type="id"/>
+    <item name="common_rllayout_horizontal_number_4" type="id"/>
+    <item name="common_rllayout_horizontal_number_5" type="id"/>
+    <item name="common_rllayout_horizontal_number_6" type="id"/>
+    <item name="common_rllayout_horizontal_number_7" type="id"/>
+    <item name="common_rllayout_horizontal_number_8" type="id"/>
+    <!--通用 垂直 FrameLayout ID-->
+    <item name="common_fllayout_vertical_number_1" type="id"/>
+    <item name="common_fllayout_vertical_number_2" type="id"/>
+    <item name="common_fllayout_vertical_number_3" type="id"/>
+
+
+    <!--通用 水平 LinearLayout ID-->
+    <item name="common_lllayout_horizontal_number_1" type="id"/>
+    <item name="common_lllayout_horizontal_number_2" type="id"/>
+    <item name="common_lllayout_horizontal_number_3" type="id"/>
+    <item name="common_lllayout_horizontal_number_4" type="id"/>
+    <item name="common_lllayout_horizontal_number_5" type="id"/>
+    <item name="common_lllayout_horizontal_number_6" type="id"/>
+    <item name="common_lllayout_horizontal_number_7" type="id"/>
+    <item name="common_lllayout_horizontal_number_8" type="id"/>
+    <item name="common_lllayout_horizontal_number_9" type="id"/>
+
+    <!--通用  LinearLayout ID-->
+    <item name="common_linearLayout_1" type="id"/>
+    <item name="common_linearLayout_2" type="id"/>
+    <item name="common_linearLayout_3" type="id"/>
+    <item name="common_linearLayout_4" type="id"/>
+    <item name="common_linearLayout_5" type="id"/>
+    <item name="common_linearLayout_6" type="id"/>
+    <item name="common_linearLayout_7" type="id"/>
+    <item name="common_linearLayout_8" type="id"/>
+    <item name="common_linearLayout_9" type="id"/>
+    <item name="common_linearLayout_10" type="id"/>
+
+
+
+    <!--通用  RelativeLayout ID-->
+    <item name="common_relativeLayout_1" type="id"/>
+    <item name="common_relativeLayout_2" type="id"/>
+    <item name="common_relativeLayout_3" type="id"/>
+    <item name="common_relativeLayout_4" type="id"/>
+    <item name="common_relativeLayout_5" type="id"/>
+    <item name="common_relativeLayout_6" type="id"/>
+    <item name="common_relativeLayout_7" type="id"/>
+    <item name="common_relativeLayout_8" type="id"/>
+    <item name="common_relativeLayout_9" type="id"/>
+    <item name="common_relativeLayout_10" type="id"/>
+
+
+
+    <!--通用  textView ID-->
+    <item name="common_tv_1" type="id"/>
+    <item name="common_tv_2" type="id"/>
+    <item name="common_tv_3" type="id"/>
+    <item name="common_tv_4" type="id"/>
+    <item name="common_tv_5" type="id"/>
+    <item name="common_tv_6" type="id"/>
+    <item name="common_tv_7" type="id"/>
+    <item name="common_tv_8" type="id"/>
+    <item name="common_tv_9" type="id"/>
+    <item name="common_tv_10" type="id"/>
+    <item name="common_img_vertical_number_1" type="id"/>
+
+
+
+
+    <!--通用 垂直 Button ID-->
+    <item name="common_btn_1" type="id"/>
+    <item name="common_btn_2" type="id"/>
+    <item name="common_btn_3" type="id"/>
+    <item name="common_btn_4" type="id"/>
+    <item name="common_btn_5" type="id"/>
+    <item name="common_btn_6" type="id"/>
+    <item name="common_btn_7" type="id"/>
+    <item name="common_btn_8" type="id"/>
+    <item name="common_btn_9" type="id"/>
+    <item name="common_btn_10" type="id"/>
+
+
+
+
+
+    <!--通用 垂直 imageView ID-->
+    <item name="common_img_1" type="id"/>
+    <item name="common_img_2" type="id"/>
+    <item name="common_img_3" type="id"/>
+    <item name="common_img_4" type="id"/>
+    <item name="common_img_5" type="id"/>
+    <item name="common_img_6" type="id"/>
+    <item name="common_img_7" type="id"/>
+    <item name="common_img_8" type="id"/>
+    <item name="common_img_9" type="id"/>
+    <item name="common_img_10" type="id"/>
+
+
+
+    <!--通用 垂直 editView ID-->
+    <item name="common_edit_1" type="id"/>
+    <item name="common_edit_2" type="id"/>
+    <item name="common_edit_3" type="id"/>
+    <item name="common_edit_4" type="id"/>
+    <item name="common_edit_5" type="id"/>
+    <item name="common_edit_6" type="id"/>
+    <item name="common_edit_7" type="id"/>
+    <item name="common_edit_8" type="id"/>
+    <item name="common_edit_9" type="id"/>
+    <item name="common_edit_10" type="id"/>
+
+
+
+
+
+
+
+
+    <!--通用  checkbox ID-->
+    <item name="common_check_box_1" type="id"/>
+    <item name="common_check_box_2" type="id"/>
+    <item name="common_check_box_3" type="id"/>
+
+    <item name="common_loadpager" type="id"/>
+
+</resources>

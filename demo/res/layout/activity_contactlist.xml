@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textview_border"
+
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/search"/>
+
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_search"
+                android:background="@null"
+                android:gravity="left|center"
+                android:hint="搜索昵称"
+                android:maxLines="1"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/color_grey_888888"
+                android:textSize="14sp"/>
+
+            <!--        <ImageView
+                        android:id="@+id/iv_cancel"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/cancel_button"/>-->
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/bg_bar"-->
+    <!--android:gravity="center_horizontal"/>-->
+
+    <com.netease.nim.demo.main.widget.SearchEditText
+        android:id="@+id/txt_filter_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textview_border"
+        android:hint="快速找到联系人"
+        android:textAlignment="center"
+        android:textSize="15.0dip"
+        android:visibility="gone"/>
+
+    <!-- contact user list -->
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        >
+
+        <ListView
+            android:id="@+id/list_view_user_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            >
+        </ListView>
+
+        <!--<com.mingtou.app.CheckIdentity.widget.SideBar
+            android:id="@+id/sild_bar"
+            android:layout_width="30.0dip"
+            android:layout_height="300dip"
+            android:layout_gravity="center|right"/>-->
+
+        <TextView
+            android:id="@+id/txt_user_list_user_num"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            />
+    </FrameLayout>
+
+
+    <!--<Button
+        android:id="@+id/bt_invite_all"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/lyf_color"
+        android:text="批量群发邀请"
+        android:textColor="@color/white"
+        />-->
+
+</LinearLayout>

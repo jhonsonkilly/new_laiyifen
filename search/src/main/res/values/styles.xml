@@ -1,0 +1,92 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="searchbar_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:background">@color/half_input</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="AnimationRightFade">
+        <item name="android:windowEnterAnimation">@anim/in_righttoleft</item>
+        <item name="android:windowExitAnimation">@anim/out_lefttoright</item>
+    </style>
+
+
+    <!--<item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="searchbar_input_edittext_style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:hint">@string/app_search_hint_keywords</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:drawableLeft">@drawable/icon_search</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:background">@drawable/shape_top_input</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/main_title_color</item>
+        <item name="android:textColorHint">@color/edittext_hint_color</item>
+        <item name="android:textSize">@dimen/textsize_14sp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_edittext_cursor</item>
+    </style>
+
+    <style name="searchbar_input_edittext_style_search">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:hint">@string/app_search_hint_keywords</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:drawableLeft">@drawable/icon_search</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/main_title_color</item>
+        <item name="android:textColorHint">@color/edittext_hint_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:maxLength">100</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_edittext_cursor</item>
+    </style>
+
+
+    <!--  文字置顶颜色-->
+    <style name="text_stick_title">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+    <!--  钱金额大小-->
+    <style name="text_stick_head">
+        <item name="android:textColor">@color/main_title_color</item>
+    </style>
+
+</resources>

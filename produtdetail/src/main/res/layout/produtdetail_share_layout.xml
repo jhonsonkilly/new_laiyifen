@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/click_to_dismiss"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="18dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/share_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:numColumns="3"
+                android:padding="10dip"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="20dip" />
+
+            <TextView
+                android:id="@+id/text_idiss"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/cancel"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_close" />
+    </FrameLayout>
+
+</RelativeLayout>

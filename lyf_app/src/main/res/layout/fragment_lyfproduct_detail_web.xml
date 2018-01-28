@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.ody.p2p.views.scrollwebview.ScrollWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/pull_up"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/background_color">
+
+            <TextView
+                android:id="@+id/tv_flag_up"
+                style="@style/Allwrap"
+                android:layout_centerInParent="true"
+                android:text="@string/photoDeatile"
+                android:textColor="@color/note_color"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/left_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/tv_flag_up"
+                android:background="#B0B0B0" />
+
+            <View
+                android:id="@+id/right_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/tv_flag_up"
+                android:background="#B0B0B0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#FFFFFF"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/l2"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#9A32CD"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/text_spxq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/l2">
+
+                        <TextView
+                            android:id="@+id/text_spxq1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/product_info"
+                            android:textColor="@color/theme_color" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/l4"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#E4007D"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/text_guige"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/l4">
+
+                        <TextView
+                            android:id="@+id/text_guige1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/standard"
+                            android:textColor="@color/main_title_color" />
+
+                        <View
+                            style="@style/shopdeties_vertical_linr"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/l6"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#E4007D"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/text_shfw"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/l6">
+
+                        <TextView
+                            android:id="@+id/text_shfw1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/aftersale"
+                            android:textColor="@color/main_title_color" />
+
+                        <View style="@style/shopdeties_vertical_linr" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_haveH5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:paddingTop="10dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/guige_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <com.ody.p2p.views.odyscorllviews.OdyScrollView
+                android:id="@+id/scroll_web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <!--<com.ody.p2p.views.scrollwebview.ScrollWebView-->
+                        <!--android:id="@+id/webView"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent" />-->
+
+                    <ImageView
+                        android:id="@+id/img_mark_price_illustration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_about_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </com.ody.p2p.views.odyscorllviews.OdyScrollView>
+
+
+            <ImageView
+                android:id="@+id/img_totop_button"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="125dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/bg_bt_top"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_notH5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="81dp"
+                android:src="@drawable/failed_to_load" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="@string/a_o_load_faile"
+                android:textColor="@color/note_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

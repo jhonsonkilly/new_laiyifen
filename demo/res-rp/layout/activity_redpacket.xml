@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical"
+    tools:context="com.netease.nim.demo.redpacket.RedpacketActivity">
+
+    <include
+        android:id="@+id/app_bar_layout"
+        layout="@layout/toolbar_layout"/>
+
+    <TextView
+        android:id="@+id/notice_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6CEA1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/jrmf_rp_red"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <!--群红包布局-->
+    <include
+        android:id="@+id/team_redpacket"
+        layout="@layout/team_redpacket_layout"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/border_white"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="金额"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+
+        <EditText
+            android:maxLength="6"
+            android:id="@+id/input_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/tv_unit"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:hint="0.00"
+            android:textColorHint="@color/gray_text"
+            android:inputType="numberDecimal"
+            android:textColor="@color/gray_text"/>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/team_redpacket_count"
+        android:visibility="gone"
+        layout="@layout/team_redpacket_count_layout"/>
+
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_white"
+        android:hint="恭喜发财,大吉大利!"
+        android:textColorHint="@color/gray_text"
+        android:padding="15dp"
+        android:maxLength="30"
+        android:textColor="@color/gray_text"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/amount"
+            android:text="¥"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="0.00"
+            android:textColor="@color/black"
+            android:textSize="28sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/redpacket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_ora"
+        android:padding="10dp"
+        android:text="去塞钱"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"/>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_arrival_notifa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.ody.p2p.main.productDetail.notifacation.ArrivalNotifaActivity">
+
+    <include layout="@layout/head"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/notifaction_for_product"
+        android:textColor="@color/note_color"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/tv_productname"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/main_title_color"
+        android:text="@string/product_name"
+        android:layout_height="44dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_height="44dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:text="@string/app_push_notif"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/check_app_push"
+            android:layout_width="42dp"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:button="@null"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_btn"
+            android:layout_height="24dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/main_title_color"
+                android:text="@string/message_notif"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/check_message"
+                android:layout_width="42dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:checked="true"
+                android:button="@null"
+                android:background="@drawable/toggle_btn"
+                android:layout_height="24dp" />
+
+        </RelativeLayout>
+
+        <View style="@style/line_match_parent"/>
+
+        <EditText
+            android:id="@+id/ed_mobile"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColorHint="@color/note_color"
+            android:textSize="14sp"
+            android:textColor="@color/main_title_color"
+            android:layout_height="44dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:text="@string/confirm"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/white"
+        android:background="@drawable/theme_btn_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

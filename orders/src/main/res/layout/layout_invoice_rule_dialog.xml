@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_popupw_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票规则"
+            android:textColor="@color/main_title_color"
+            android:layout_gravity="center_horizontal"
+            android:padding="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sub_title_color"
+            android:textSize="@dimen/textsize_14sp"
+            android:text="@string/invoice_rule"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:id="@+id/textView" />
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_14sp"
+            android:textColor="@color/theme_color"
+            android:layout_gravity="center_horizontal"
+            android:text="我知道了"
+            android:padding="12dp"/>
+    </LinearLayout>
+</LinearLayout>

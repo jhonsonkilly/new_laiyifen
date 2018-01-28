@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2 id="h2" onclick="post()">hello world</h2>
+<img src="http://ody-open.kssws.ks-cdn.com/zs/picture/1481179534930_44_temp.jpg" width="400px">
+<script type="text/javascript">
+    var h2 = document.getElementById("h2");
+    function a(data) {
+        h2.innerHTML = data;
+    }
+    var params = {
+        function: "getLocation",
+        param: "test",
+        callback: "a"
+    }
+
+    function post(){
+        window.mobileAPI.postMessage(JSON.stringify(params));
+    }
+<!--5.0.6 版本发版--> lyf
+<!--5.0.8 版本发版--> lyf 08/21  ceshiee
+<!--5.1.1 版本发版--> lyf
+
+
+
+
+
+
+</script>
+</body>
+</html>

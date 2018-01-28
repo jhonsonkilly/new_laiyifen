@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_promotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/sub_title_color"
+        android:textSize="13sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:text="描述"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_promotion_single"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        />
+</LinearLayout>

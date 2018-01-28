@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fail.PayFailActivity">
+
+    <include layout="@layout/head" />
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color" />
+
+    <ImageView
+        android:id="@+id/iv_status_icon"
+        android:layout_width="@dimen/height_49"
+        android:layout_height="@dimen/height_49"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/icon_order_success" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:text="@string/pay_advice2"
+        android:textColor="@color/main_title_color"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <!--查看订单  继续购买-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_check_order"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_pay_again"
+            android:gravity="center"
+            android:text="@string/check_order"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_12sp" />
+        <TextView
+            android:id="@+id/tv_continue_shopping"
+            android:layout_marginLeft="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_pay_again"
+            android:gravity="center"
+            android:text="@string/continue_shopping"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_12sp" />
+    </LinearLayout>
+
+    <!--个性化推荐  此处无标注!!!-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_49"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:background="@color/divider_color"
+        >
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:background="@color/divider_color"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0.5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/recommend"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14sp"
+            />
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:background="@color/divider_color"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0.5dp"/>
+
+    </LinearLayout>
+
+    <!--推荐的内容,暂未处理这块,外层scrollview也未嵌套-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</LinearLayout>

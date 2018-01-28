@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/mac/.android/build-cache/a99b6fd4d48389d35c688ab44a81c044ea40a97f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6593c407460276e9aa8485b05bd5934924224458">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/10/classes_46ad37a76b41c4bf4f0e93ab379e5febedea98c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Core-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="99bb3aeaafb9e39b48dceb4e77fcff2887555501">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-Core-2.7.4_1551d03751503ae87f8fc9e5832b4ff43aa05ad9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9392363bd25ca8a0e9f9d943f6b390cede40ce40">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_c18a52f6c2b58a25c73a4c06a37ac9e90da0a0ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-Moments-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ae97b837fce6e6b29528168ff62e6bb5fb4abe">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-Wechat-Moments-2.7.4_93d091d69a03e0a70568d51eb1e45c1533f89f92/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f086e018e187da53a1432c188023c86d1fa3ff73">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nineoldandroids-2.4.0_c25503b407016c04fb38bc1c4b218dc0257eadb8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/libs/java-json.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d82e23e816eb939bbfb7663a368fa61f38e174ad">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/java-json_5d8e6e9b9650724c2e76d2710a1bc42205b21fca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pushlibrary/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b5b45cb56d3affd4b514feb49243d075b29eee1">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_099b60e591ac2cf943f7d7b55f63612d4735c595/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-basesdk-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e3ac83ade75b962f57b35e0bb3f3b8fec0947df">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nim-basesdk-4.3.0_42558165797cb8963d7d0ae7a9d9210528549820/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="866fd298a45f52678429bf7b4231b46e22987c6f">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-Wechat-2.7.4_add41ac3cde867c5d7978543d9af8313f85fc14f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/addressmanage/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9d9e05262791c8ec66f44144df86f50ede839640">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_964ff3ba67f9a3c560e7d34b63f61c207d187a97/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/screenShotSdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1f5bf6288048cfd17160fb267e3e0a0b36d2dc2d">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/screenShotSdk_0903f738b48f7fbf98dd908fa1ebb391dca30993/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/UPPayAssistEx.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="862f3c8eca793eb7e3616fdba3d9c0fa0a94c58b">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/UPPayAssistEx_1c62802732de39e25f9bd727c65002f12fdb7ea6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e88b6f7ca306fc5aa2a04b8de0687aa278d7e7db">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212_5628acd95aafb166e82d357837407c7300006453/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/libs/fastjson-1.1.34.android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eef620d9aaf422102f51e417dbc08ffbece1da39">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/fastjson-1.1.34.android_c1c584ce8fdaaf2a98f0b55ab6d925f873e78dd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/myhomepager/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="55f9968d24b1f22040d8229c0841fa22116e5064">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_568422fb8185fa428cbbdd0797f8e863e7974cd2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/alipaySdk-20160120.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cf51b28f968d252f95d9b407fa8d89054f6c7a8">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/alipaySdk-20160120_671afc731f0f71dc283d12a6f0c65d03f6871363/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-SinaWeibo-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8373401adfe8c499a2ec20eaddb9e68cdb117ee8">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-SinaWeibo-2.7.4_f4dcf85e091692db633bd9043a6783d5abc834c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/libs/video_effect.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3a163c779e00aebcb3f862ad58e6a5f7516e6976">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/video_effect_81eba79c1516ef8ef461c5f0fa932b38f4b3befa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-lucene-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b82cdef3d6af5b63f246f83cc10064e7152e979">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nim-lucene-4.3.0_6074e49b41773be4239b4b619b641b368ad31a25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/commons-io-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="450f8e4dbf7f00db647c240673fe6e6905aa6401">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/commons-io-1.4_6cb69668216037da3371cd8e32c0f4c5fd852811/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e2a9c788016ea496c76407f409d8d1cf69f43cb3">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/libammsdk_cb4f02b5362ad90c2800da761a2ecc963a814cc3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/classesification/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fb0c3498fa54a3f3c45d429ff3ecbdc8b5bffa3a">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_bfc2c994c78444a06152d192f8370d0713e5ad46/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/libs/nrtc-sdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="922b57715c0339a64558370efb97d43c9f7e1d69">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nrtc-sdk_f445381d1a88df378849a4c746dc12fd38dbfa22/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Core-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="99bb3aeaafb9e39b48dceb4e77fcff2887555501">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-Core-2.7.4_fe9ee16577fd5fe267dadf070e437f50f9e12b9d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/MobCommons-2016.0707.1708.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="398ade3da1c6e9bc6bd0de7954780cab949420c7">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/MobCommons-2016.0707.1708_b86370d66ac6afb70b43e8015bbdf3f8efd7bf18/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-chatroom-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9953e67d70bc8481cbf9c4de609182404e244b11">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nim-chatroom-4.3.0_a5751bbe68388a37501ecce61ba83740adbf673c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/datatist-sdk.2.0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1179c281f5c364aceebd37167ca41277e0c20ac">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/datatist-sdk.2.0.6_1dc3633896d5bc7a0582ed7678614314940b2a83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/AMap2DMap_3.0.0_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5507bf1d8d4ce50825c3af1d281fd04a7d15178c">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/AMap2DMap_3.0.0_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228_c46f6464128793cf372ce42cfaa9dfd147e1d907/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-Favorite-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="084b2aab864653cf49063141fcfd4aecaba7f0e9">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-Wechat-Favorite-2.7.4_4882bea75650e3013539b8ca807f2824d4f8ad3e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/addressmanage/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9d9e05262791c8ec66f44144df86f50ede839640">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_3b19962bf48437b44cb94858aafe111619a43a9e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/BestpaySDK-V4.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4067471b0ff5b1068ec2294fc05b7c3ee5d9fa07">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/BestpaySDK-V4.0.2_66423a96229eff5c2b49f0e483c42db2f8923079/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/screenShotSdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1f5bf6288048cfd17160fb267e3e0a0b36d2dc2d">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/screenShotSdk_9102d695bd984af7f318e7a3b40bc9bdf52e962b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/libs/nrtc-sdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="922b57715c0339a64558370efb97d43c9f7e1d69">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nrtc-sdk_3c8ef0ff591a8c74bfba69e3ca2f493243e86745/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="89168f4239992cec0caab82e555b8357b517419a">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/4/classes_b2219398f56c005aa60b8198e987e22baf839ad9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/passguard.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="41eb8c54689f2c4d278b2802161923e91beb7743">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/passguard_fce3e787466ced1153dd86353ca573519041d207/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-Moments-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ae97b837fce6e6b29528168ff62e6bb5fb4abe">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-Wechat-Moments-2.7.4_e639df37af1e413ba94c41bd25add9e2b7e00704/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-QZone-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f37ea54a903cd9b10963b10da1f7b221ca97f8c0">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-QZone-2.7.4_950dbd3c58ef2fc21d415638bf789e26bbf7247c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-SinaWeibo-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8373401adfe8c499a2ec20eaddb9e68cdb117ee8">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-SinaWeibo-2.7.4_a75e87769bc05ccd4f67d3c82cf73486e43025f5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/MobTools-2016.0707.1708.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="28f68213d34af515852ca328277fd4788ddc20c2">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/MobTools-2016.0707.1708_66ab81a4929ef9902d16e208e837c48f7423ebbc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9392363bd25ca8a0e9f9d943f6b390cede40ce40">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Huawei/debug/folders/1000/4/classes_e4ab013b951ac588b9c09476bcfe78e259fc7eaf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/.android/build-cache/1fa4fb3f66ec06a92c69e4b1f4a3171a2d0af8c1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dc4c4df5ebec54cca183e9d3b346ccb8e856cb0a">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/10/classes_0da27b6d7710415a1c0b09fcfcd373e5fa441505/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/ormlite-android-4.48.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a5cc32a5e4335d1dc012e6f3a3c9cf86eac0e3e">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ormlite-android-4.48_cfc28f38fa705d2dac3c40d65ff0a654cad770f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/libs/fastjson-1.1.34.android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eef620d9aaf422102f51e417dbc08ffbece1da39">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/fastjson-1.1.34.android_9f62128ed55051c02495569dc0f541cebe6e9980/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/lyf_login/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bfd9a9602f8e091526ab9e07319e6dcbcfc7bc6">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_8cb1af6abc225a3ef25db0a3eff4965d4fb60023/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/libs/pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fef719fbca78dba4ee7f0896fb38e446d19ee29a">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/pinyin4j-2.5.0_ba325f4a3999478c04fe34700e0f428ec5d30cc9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/libs/sun.misc.BASE64Decoder.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce82c44dff33530a6399041e5bea62f2a679452">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/sun.misc.BASE64Decoder_af5a2e4138f5879534521c0896be9646257551bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/photograph/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="541965960785e6ebfde6e9340e249a30277d6e9b">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_4fcfa63c0df841d221a3285c08f9412725e69716/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f086e018e187da53a1432c188023c86d1fa3ff73">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nineoldandroids-2.4.0_e3fe296a00a459ed43c68d6fed01c17d59d5edfc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d356a06e8abb320802d60fa682f5f15e20790ea4">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_f3eb4c83347feb3f87342203676aee2dbf8ad85f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/classesification/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fb0c3498fa54a3f3c45d429ff3ecbdc8b5bffa3a">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_9df45d8664e0d198a70e052abd338644e7adeab2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/orders/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da6320fd87606816abed8e531764c44e9a7dfef5">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_81aa6ec1e3a33269172eff1023b39207a937c539/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-chatroom-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9953e67d70bc8481cbf9c4de609182404e244b11">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nim-chatroom-4.3.0_fa7ad0f9f6586aa4fef0b830b4343da780d6f7d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-avchat-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7b96cf47e2973c910610f0e5947cadcb4fcc2b53">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nim-avchat-4.3.0_fae7cca6e8e9efe89071948ac5f942ac5d0e0a58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/lyf_home/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4f721f1c5f8740aa13c385d930133ce8e1deed8">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_e6195bef27e85b6bede8813177ce31e38265a29a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/orders/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da6320fd87606816abed8e531764c44e9a7dfef5">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_dc434eb67455c1c995a7942212d9cfe380f89c8d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8cc50499893bd3902cc2753864bae6caa827e8c6">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_4d0b04a9aa972516b71e582645436a2ddbf1a2d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/libs/nim-rts-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="244b8bc353616c96fda856aa795c51c9444a5c61">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nim-rts-4.3.0_c5b1083f0a7e1e790245734e5464703b07beb127/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/ormlite-core-4.48.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d76be9684d2bb4e6a40ed6047dae256dfe4c77c1">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ormlite-core-4.48_a613987475938b41321170044c9dace7eaba6f1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-QQ-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70d8c8e5f1523ff2e5f20af3b5af779d378556cb">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-QQ-2.7.4_f464be9450d0fb959f86a27c2ee7b574b384e7d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/datatist-sdk.2.0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1179c281f5c364aceebd37167ca41277e0c20ac">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/8/datatist-sdk.2.0.6_a8568bb99d021e0e802164eb1776dd5660051c89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/shopcart/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1da127053a062ed5768e5edcbc8e41873a2bf6bb">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_8d8d1885842fc6f957c860f2a47db0414243dd4f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pushlibrary/build/intermediates/bundles/default/libs/jpush-android-2.1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="39c1fc754b0189a6cfbc93829ba6adbc72629c8c">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/jpush-android-2.1.8_b15b97f135baaeb6cadea193fa3fc4abdc469124/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/ormlite-android-4.48.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a5cc32a5e4335d1dc012e6f3a3c9cf86eac0e3e">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ormlite-android-4.48_9ad45b63d063eb40b2af21dc978c134da4e1612a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pushlibrary/build/intermediates/bundles/default/libs/jpush-android-2.1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="39c1fc754b0189a6cfbc93829ba6adbc72629c8c">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/jpush-android-2.1.8_8a4014274e402335aa47d1bfb777ddf9ebbc3bb7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/lyf_login/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bfd9a9602f8e091526ab9e07319e6dcbcfc7bc6">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/4/classes_4d1290ec2c84908358c5fd13124a5338f97586eb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-basesdk-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e3ac83ade75b962f57b35e0bb3f3b8fec0947df">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/nim-basesdk-4.3.0_85072b56e1057be6fffae4e1192bb5a96116aef7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/TalkingdataAnalytics.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f773b0f8f3899facef1103cecbc6d31bf1883243">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/TalkingdataAnalytics_74d1d8370e8d0a1a5b368e50a0e0565aaa6691b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/libs/pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fef719fbca78dba4ee7f0896fb38e446d19ee29a">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/pinyin4j-2.5.0_ac4d5ae517865850cefe4883dd7ec389b6514834/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="82d0bd0fd60e8a1a757c18338726cd7547d35f4c">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_ed6cf871e880746b801d8d5c242c21f92da45109/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/photograph/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="541965960785e6ebfde6e9340e249a30277d6e9b">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_f0329fb7be03900b87327965e8b16a6343a0c5a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/commons-codec-1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a95520a8cec486d19de3aaf49bc31b042b6e8b26">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/commons-codec-1.8_167fa87bccf894d56159da18c7c3d495cbbd9636/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/UPPayPluginExPro.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="57d49bb116603aad0db12611573fb285a216272b">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/UPPayPluginExPro_1e183182b917007c827213d97838a599d002b3aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uplevel/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3d3459a1d58c305f4f80752df06cda1b79bbc6da">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_415f9074fff018467e40a02bd0eba011ef257eaa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/TalkingData_AppAnalytics_Android_SDK_V2.3.62.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f6777ba0f3af173d58f0f8f1c3af8e3f917e7561">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/TalkingData_AppAnalytics_Android_SDK_V2.3.62_bbc4678f720f389db3818d7e01938c10f931f45e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/BestpaySDK-V4.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4067471b0ff5b1068ec2294fc05b7c3ee5d9fa07">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/BestpaySDK-V4.0.2_3fef507efedc4fd88d4a63647ce009a426420d39/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-Favorite-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="084b2aab864653cf49063141fcfd4aecaba7f0e9">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-Wechat-Favorite-2.7.4_57e6ecfb74714ff64dde21137e4f29c847fb7675/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-Core-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fe37d765c9eb58dff824e4efffd987ab49275592">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-Wechat-Core-2.7.4_878c273268d7973680be5f832d39e2085ba16b66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/AMap2DMap_3.0.0_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5507bf1d8d4ce50825c3af1d281fd04a7d15178c">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/AMap2DMap_3.0.0_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228_aec92ddccf41c280826621420b6b3e279d7d8db7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/ormlite-core-4.48.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d76be9684d2bb4e6a40ed6047dae256dfe4c77c1">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ormlite-core-4.48_2dd72117087f8a627c7f03a385fb4e2401576ad3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/odylibrary/build/intermediates/bundles/default/libs/TalkingdataAnalytics.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f773b0f8f3899facef1103cecbc6d31bf1883243">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/TalkingdataAnalytics_ac4f1a131eed18f6007bc9a7982963b0bd1027ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/ccbnetpay_v1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="22ea7fe3aa932bf7b456a09bff32941c8e4cbdc0">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ccbnetpay_v1.0.1_6606691ef133db8115acee56967eb21f0db5683f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/cmbkeyboard2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c6f714b21aeb2f3dd60d3c796814349367d99920">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/cmbkeyboard2.0_8eac7334c82e18ce7b9b3541a6340f5922d1e46e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/libs/nim-rts-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="244b8bc353616c96fda856aa795c51c9444a5c61">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nim-rts-4.3.0_f89a7382483aa988ad3196bed752cc9b5d11ebe2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pushlibrary/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b5b45cb56d3affd4b514feb49243d075b29eee1">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/4/classes_312d0f3513c57dab77556ae47207cb73d7c3dcbf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6e31f4706bbadf26a8e4c836ee1407707cdbe9fe">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Huawei/debug/folders/1000/4/classes_c871bde1c2709dc7cee2c0b8d26d4b69173a4c42/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/produtdetail/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2258bb5a0270cf7d749ba1297a6342e1e0f1f99a">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_c1acc3fd9ea5eb5107d99a805d953ed46ca5cfed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e2a9c788016ea496c76407f409d8d1cf69f43cb3">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/libammsdk_509843593735af0cd52b66df3562b7ee2111bc07/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/MobCommons-2016.0707.1708.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="398ade3da1c6e9bc6bd0de7954780cab949420c7">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/MobCommons-2016.0707.1708_ebd2382aae1dc066af53c69af3b86e5d5807606a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/produtdetail/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2258bb5a0270cf7d749ba1297a6342e1e0f1f99a">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_1b0aecb6bc6b115fc44c00d7644b10a25865d49b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/uikit/build/intermediates/bundles/default/libs/java-json.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d82e23e816eb939bbfb7663a368fa61f38e174ad">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/java-json_8a6bdcbbab10610a5f89a6977afae6d6ed0c23ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/myhomepager/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="55f9968d24b1f22040d8229c0841fa22116e5064">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_5963b1c7fef1a692deeadff4865073b5d9b5a57d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/ccbnetpay_v1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="22ea7fe3aa932bf7b456a09bff32941c8e4cbdc0">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ccbnetpay_v1.0.1_341595ef65c6059676fcd2287d9c2f09041c8b60/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/MobTools-2016.0707.1708.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="28f68213d34af515852ca328277fd4788ddc20c2">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/MobTools-2016.0707.1708_7c65d36b995aee2b71201c64c7c36aebb7818bfd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.umeng.analytics/analytics/6.1.4/c1d30c2bbdce435b775cadca57df2098044a0f5e/analytics-6.1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c1d30c2bbdce435b775cadca57df2098044a0f5e">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/10/analytics-6.1.4_8542bd06eb4099e826957c1cceb900361c61a9ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/UPPayAssistEx.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="862f3c8eca793eb7e3616fdba3d9c0fa0a94c58b">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/UPPayAssistEx_fb53d3dd0cc97d7a63cac6dbf025c4b24d14ff65/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-avchat-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7b96cf47e2973c910610f0e5947cadcb4fcc2b53">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nim-avchat-4.3.0_9eeeeaf79bded63279e97d4a6a24935c55c6ad26/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/passguard.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="41eb8c54689f2c4d278b2802161923e91beb7743">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/passguard_ba0c3da47f2d6c7c5473a2390c866961c5e0669d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-QZone-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f37ea54a903cd9b10963b10da1f7b221ca97f8c0">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-QZone-2.7.4_f5dd4d5d0eef65bd4b92b5583f1b6c0b3a0ea1b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/commons-codec-1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a95520a8cec486d19de3aaf49bc31b042b6e8b26">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/commons-codec-1.8_d645e4d3dc97c5b8c974243a131d53166d0c0d28/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/search/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eeafda7389e20efdbe72567ae4adde7e9107e2af">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_3e68e04a3713bc9f1f4490da1de05596a6f9d370/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/libs/mi_push_sdk_3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="676a56d6a5cf55356e629ba015662aeef3fd1629">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/mi_push_sdk_3.2.2_73eaed7820abd720606e313b1ac34db177d4a816/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-QQ-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70d8c8e5f1523ff2e5f20af3b5af779d378556cb">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-QQ-2.7.4_210aed4d34c83ba6dfecf1e63d115fa775fc4a58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/commons-io-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="450f8e4dbf7f00db647c240673fe6e6905aa6401">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/commons-io-1.4_32fe3ae2d7e17744c1406c2196424113bbf1af2a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b66dd72275c2cb79ccefe3baf686f5056185ecd8">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/4/classes_eb704d76fde0b81e5c7b35d039f1edf1335be29f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/TalkingData_AppAnalytics_Android_SDK_V2.3.62.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f6777ba0f3af173d58f0f8f1c3af8e3f917e7561">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/TalkingData_AppAnalytics_Android_SDK_V2.3.62_b8dfe423ecca9635f0e5df0fb5619c25e910e0b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/cmbkeyboard2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c6f714b21aeb2f3dd60d3c796814349367d99920">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/cmbkeyboard2.0_dbf02b6c8aedd427d4ea594dac533f73c04a40c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/search/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eeafda7389e20efdbe72567ae4adde7e9107e2af">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_03c3b38428e4c8805d33742496ee0ea5d3195b2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/lyf_home/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4f721f1c5f8740aa13c385d930133ce8e1deed8">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/4/classes_c04d8bcf8d05cfec51f229a3e0b97a2a8f6e46c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="82d0bd0fd60e8a1a757c18338726cd7547d35f4c">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_6233cdfc4d41f8da6df301ae3b51dcf231def573/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/pay/build/intermediates/bundles/default/libs/UPPayPluginExPro.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="57d49bb116603aad0db12611573fb285a216272b">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/UPPayPluginExPro_e0ecd9a131b66a517a9a5e3805b725bbe32d439e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="866fd298a45f52678429bf7b4231b46e22987c6f">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-Wechat-2.7.4_b4642df42f85812d531ffba2855e1eedc44d79db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-ShortMessage-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d3fc4e6e6ca6d89da88251286fae4233bf3bb312">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-ShortMessage-2.7.4_cbd27c92be8d9555a230d00e64e8419c93507458/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-ShortMessage-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d3fc4e6e6ca6d89da88251286fae4233bf3bb312">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-ShortMessage-2.7.4_851cfb5c696b5ee34631f8e6bad62c7f235e6d6f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/libs/video_effect.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3a163c779e00aebcb3f862ad58e6a5f7516e6976">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/video_effect_57c91f4e8be4b679de51f32e867083f9a491238f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/libs/alipaySdk-20160120.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cf51b28f968d252f95d9b407fa8d89054f6c7a8">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/alipaySdk-20160120_b269e52aedb6c060670ed2ea600900c786cbef4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uplevel/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3d3459a1d58c305f4f80752df06cda1b79bbc6da">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/4/classes_37c4cc987b4996b450a6db849421b3511a968760/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e88b6f7ca306fc5aa2a04b8de0687aa278d7e7db">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212_3d7e0477e247b6508ddb34e5dd9360b30fb76971/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/share/build/intermediates/bundles/default/libs/ShareSDK-Wechat-Core-2.7.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fe37d765c9eb58dff824e4efffd987ab49275592">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/ShareSDK-Wechat-Core-2.7.4_0d369511d5f78c4d4890a2387f03a9052ff9e7bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/demo/build/intermediates/bundles/default/libs/mi_push_sdk_3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="676a56d6a5cf55356e629ba015662aeef3fd1629">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/mi_push_sdk_3.2.2_8778d4666b3b3efee28ebc18055d8a566b567076/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/final_laiyifen/uikit/build/intermediates/bundles/default/libs/nim-lucene-4.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b82cdef3d6af5b63f246f83cc10064e7152e979">
+        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Gionee/debug/folders/1000/8/nim-lucene-4.3.0_2ccea7b313d1194c83dfd67bf598ee5fd9b26ab6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/shopcart/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1da127053a062ed5768e5edcbc8e41873a2bf6bb">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_a18cf5d6896aa34c5de4d94ecc7f05bf163fb54a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/demo/build/intermediates/bundles/default/libs/sun.misc.BASE64Decoder.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce82c44dff33530a6399041e5bea62f2a679452">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/sun.misc.BASE64Decoder_99b4cdf6bf8063ac7c755f60f953857f7a4d3de5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mac/Desktop/new_laiyifen/pay/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="497f5fb04a76b239233d30d0cc1845128d488168">
+        <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_2562067c08e6ec4e27888a5084420fa9b9949844/classes.dex" />
+    </item>
+
+</items>

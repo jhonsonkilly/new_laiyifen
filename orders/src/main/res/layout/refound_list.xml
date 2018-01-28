@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/conterper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+    <CheckBox
+        android:id="@+id/checkbox_buttom"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:button="@drawable/checkbox_coupon"
+        />
+
+        <FrameLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/img_shopcart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_stub"
+                />
+
+            <TextView
+                android:id="@+id/tv_product_kucun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transp_black_50"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/inventory_nervou"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:paddingRight="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/main_title_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_bead_border"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textColor="@color/note_color"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_shopcart_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/theme_color"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linear_editproduct_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <Button
+                        android:id="@+id/btn_shopcart_sub"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sub_btn_background" />
+
+                    <TextView
+                        android:id="@+id/tv_shopcart_num"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_bead_bord"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/main_title_color" />
+
+                    <Button
+                        android:id="@+id/btn_shopcart_add"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/add_btn_background" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_stumk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/main_title_color"
+                    android:layout_below="@+id/linear_editproduct_num"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    <View style="@style/liner_horizontal" />
+</LinearLayout>

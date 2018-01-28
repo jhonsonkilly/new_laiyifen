@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/ll_root"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider_color"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/text_refoundList_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+    <View
+        style="@style/liner_horizontal"
+         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy_salefround"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"/>
+
+    <View style="@style/liner_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_deal_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sub_title_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:textColor="@color/sub_title_color"
+            android:textSize="13sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¥0.00"
+            android:textColor="@color/theme_color"
+            android:textSize="13sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_seedetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_info"
+            android:textColor="@color/textColor_blue"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:layout_marginRight="12dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="@string/show_logistics"
+            android:textSize="@dimen/textsize_14sp"
+            android:textColor="@color/sub_title_color"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="@string/cancel_order"
+            android:textSize="@dimen/textsize_14sp"
+            android:textColor="@color/sub_title_color"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

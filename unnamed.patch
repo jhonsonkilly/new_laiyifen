@@ -1,0 +1,24 @@
+Index: lyf_app/src/main/java/com/ody/p2p/main/App.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lyf_app/src/main/java/com/ody/p2p/main/App.java	(revision 211011)
++++ lyf_app/src/main/java/com/ody/p2p/main/App.java	(revision )
+@@ -10,7 +10,6 @@
+ import com.alibaba.wxlib.util.SysUtil;
+ import com.facebook.stetho.Stetho;
+ import com.laiyifen.lyfframework.base.BaseApplication;
+-import com.laiyifen.redpacket.redpacket.RedPacketActivity;
+ import com.netease.nim.demo.DemoCache;
+ import com.netease.nim.demo.NimInitManager;
+ import com.netease.nim.demo.NimSDKOptionConfig;
+@@ -238,7 +237,7 @@
+                 router.put(getRouterUrl(JumpUtils.POINT_CARD), PointCardSearchActivity.class);
+                 router.put(getRouterUrl(JumpUtils.CHOOSE_CONTACTS), ContactsActivity.class);
+                 router.put(getRouterUrl(JumpUtils.UPLEVEL), UpLevelActivity.class);
+-                router.put(getRouterUrl(JumpUtils.RED_PACKET), RedPacketActivity.class);
++//                router.put(getRouterUrl(JumpUtils.RED_PACKET), RedPacketActivity.class);
+                 router.put(getRouterUrl(JumpUtils.PAY_FOR_LEISURELY), PayForLeisurelyActivity.class);
+                 router.put(getRouterUrl(JumpUtils.YWTPAY), YIActivity.class);
+                 router.put(getRouterUrl(JumpUtils.SHOP_HOME), LyfStoreHomeActivity.class);

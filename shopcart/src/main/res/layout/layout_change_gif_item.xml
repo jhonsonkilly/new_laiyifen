@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_changegif_item_checked"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:paddingTop="17dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/selected_false" />
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/img_changegif_item_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_stock_num"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:background="@color/transp_black_50"
+                android:text="库存紧张"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/img_changegif_item_gifname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="gifname"
+                android:textColor="@color/sub_title_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/img_changegif_item_gifprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="¥0.0"
+                android:textColor="@color/theme_color" />
+
+            <TextView
+                android:id="@+id/img_changegif_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="x1"
+                android:textColor="@color/sub_title_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_guige"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/img_changegif_item_arrow"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrowdown_gray" />
+
+        <TextView
+            android:id="@+id/img_changegif_item_stands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="规格"
+            android:textColor="@color/theme_color"
+            android:textSize="12sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/img_changegif_item_reclycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_marginTop="10dp"
+        style="@style/line_match_parent" />
+
+
+</LinearLayout>

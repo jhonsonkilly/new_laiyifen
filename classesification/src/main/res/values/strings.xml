@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UI</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fashion">时尚</string>
+    <string name="preference">特惠</string>
+
+</resources>

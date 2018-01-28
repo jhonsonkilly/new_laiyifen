@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cell_textview_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/sure_dialog_color"
+        tools:text="支付宝" />
+
+    <View
+        android:id="@+id/cell_textview_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e5e5e5" />
+
+</LinearLayout>

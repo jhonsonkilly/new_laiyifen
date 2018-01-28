@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.netease.nimlib:jsbridge-1.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/8d281778dcf3ab094a791fe693bb971fb4c8e4f4/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/8d281778dcf3ab094a791fe693bb971fb4c8e4f4/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netease.nimlib/jsbridge/1.3.1/654a4ed663ac59b84dceb74bce60b1b9e1ed50ad/jsbridge-1.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

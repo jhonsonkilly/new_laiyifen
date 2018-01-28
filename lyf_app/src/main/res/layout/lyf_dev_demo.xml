@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_arrival_notifa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@id/common_btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="来抢购" />
+
+
+    <Button
+        android:id="@id/common_btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="闪购" />
+
+    <Button
+        android:id="@id/common_btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="我的订单" />
+
+    <Button
+        android:id="@id/common_btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="订单列表" />
+
+    <Button
+        android:id="@id/common_btn_5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="订单详情" />
+
+    <Button
+        android:id="@id/common_btn_6"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="我的" />
+</LinearLayout>

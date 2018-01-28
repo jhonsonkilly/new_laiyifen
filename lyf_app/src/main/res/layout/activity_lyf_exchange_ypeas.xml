@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fresh_bg_color"
+    android:orientation="vertical">
+
+    <!--  来伊份 我的钱包 积分 兑换伊豆界面 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/activity_lyf_exchange_back"
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icon_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="兑换伊豆"
+            android:textColor="@color/main_title_color"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activity_lyf_exchange_ypeas_rule"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#fef7f1"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        tools:text="兑换规则:1积分=X伊豆"
+        android:textColor="#666666"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/activity_lyf_exchange_ypeas_edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:inputType="number"
+            android:textColor="#666666"
+            android:textColorHint="#808080"
+            android:textSize="15sp"
+            tools:hint="最多可兑换100伊豆" />
+
+        <ImageView
+            android:id="@+id/activity_lyf_exchange_ypeas_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/common_btn_clear" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前剩余积分:"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/activity_lyf_exchange_ypeas_surplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_ff690"
+                android:textSize="12sp"
+                tools:text="1696" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_lyf_exchange_ypeas_exchange_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c_ff690"
+            android:textSize="12sp"
+            android:text="全部兑换" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_lyf_exchange_ypeas_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/lyf_exchange_bg_gray"
+        android:gravity="center"
+        android:text="兑换"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

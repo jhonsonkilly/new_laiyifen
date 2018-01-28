@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/img_finish_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="什么是分享赚鼓励金"
+            android:textColor="@color/sub_title_color"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/icon_more"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_22"
+        android:text="1.2017年7月1日起，累计购物满XX元的用户自动成为伊起赚会员。\n\n
+2.伊起赚会员将伊起赚频道内的商品分享出去，点击注册账号的用户即成为自己的粉丝。粉丝购买商品，自己获得现金奖励。\n\n
+3.伊起赚会员自己或粉丝的粉丝购买商品，自己也会获得现金奖励。\n\n
+4.现金奖励可以提现，也可以在平台内消费。\n\n
+5.如产生了退货退款，获取的现金奖励将被扣除。\n"
+        android:textColor="@color/main_title_color"
+        android:textSize="@dimen/sp_18" />
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000">
+<!--整体-->
+    <LinearLayout
+        android:id="@+id/container_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f7fa"
+        android:orientation="vertical">
+<!--第一行  选择 完成等button-->
+        <RelativeLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                tools:text="@string/cancel"
+                style="@style/button"
+                />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_alignParentRight="true"
+                tools:text="@string/confirm"
+                style="@style/button"
+                />
+        </RelativeLayout>
+
+        <!--分割线-->
+        <View
+            android:id="@+id/v_divide_line"
+            android:visibility="gone"
+            android:background="@color/divider_color"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <com.ody.p2p.settings.utils.pickerview.LoopView
+                    android:id="@+id/picker_year"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.ody.p2p.settings.utils.pickerview.LoopView
+                    android:id="@+id/picker_month"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.ody.p2p.settings.utils.pickerview.LoopView
+                    android:id="@+id/picker_day"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

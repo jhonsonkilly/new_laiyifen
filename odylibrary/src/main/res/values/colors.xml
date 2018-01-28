@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题色-->
+    <color name="theme_color">#CC0000</color>
+    <!-- 页面背景色-->
+    <color name="background_color">#f5f5f5</color>
+    <!-- 分割线颜色-->
+    <color name="divider_color">#e5e5e5</color>
+    <!-- EditText hint颜色-->
+    <color name="edittext_hint_color">#dddddd</color>
+    <!-- 主题按扭文字颜色-->
+    <color name="button_text_color">#ffffff</color>
+    <!-- 正标题颜色-->
+    <color name="main_title_color">#333333</color>
+    <!-- 次标题颜色-->
+    <color name="sub_title_color">#666666</color>
+    <!-- 注释、补充内容颜色-->
+    <color name="note_color">#999999</color>
+    <!--广告背景色-->
+    <color name="advertisement_backgrond">#FFFAC4</color>
+    <!--浅白色背景-->
+    <color name="tint_white_background">#fafafa</color>
+
+    <color name="gray_5d5d5d">#5d5d5d</color>
+
+
+    <!-- 次标题颜色-->
+    <color name="rectangle_bead">#b2b2b2</color>
+    <!--常用色 -->
+    <color name="bold_black">#241c0a</color>
+    <color name="background_transparent">#00FFFFFF</color>
+    <color name="transparent">#FFFFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="scan_background">#60000000</color>
+    <color name="scan_border">#ff09BB07</color>
+    <color name="mainhome_time_green">#2F7979</color>
+    <color name="orange">#ff6600</color>
+    <color name="grey">#cccccc</color>
+    <color name="banner_normal">#30333333</color>
+    <color name="half_input">#e0FFFFFF</color>
+    <color name="transp_black_50">#30000000</color>
+    <color name="user_bg_color">#6eFFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue">#0066cc</color>
+    <color name="green">#2eb97c</color>
+    <color name="comment_popup_tx_bg">#c7c7c7</color>
+    <color name="border_golden">#b7913f</color>
+    <color name="lucency_bg">#00000000</color>
+    <color name="des_rank_bg">#F3B700</color>
+    <color name="black">#000000</color>
+    <color name="result_gorden_bg">#FCB203</color>
+    <color name="result_de_bg">#FEF7F1</color>
+    <color name="line_color">#D9D9D9</color>
+
+
+    <color name="activity_bg_color">#F0F0F0</color>
+    <color name="title_search_bg">#6007091f</color>
+    <color name="grey_text_color">#808080</color>
+    <color name="light_grey_text_color">#B2B2B2</color>
+    <color name="sure_dialog_color">#2cb2ff</color>
+    <color name="fresh_bg_color">#f0f0f0</color>
+    <color name="tag_text_bg">#E1E1E1</color>
+    <color name="hint_text_color">#dddddd</color>
+    <color name="CDDDDDD">#dddddd</color>
+    <color name="C22ffffff">#22ffffff</color>
+    <color name="CFF6900">#FF6900</color>
+    <color name="CF79100">#F79100</color>
+    <color name="fd7b4f">#fd7b4f</color>
+    <color name="color_ff6d00">#ff6d00</color>
+    <color name="color_text_already_star">#333333</color>
+    <color name="color_text_not_star">#ffffff</color>
+
+
+    <color name="common_bg">#eeeeee</color>
+    <color name="CE2330E">#E2330E</color>
+    <color name="text_med_grey">#666666</color>
+    <color name="text_max_grey">#333333</color>
+    <color name="text_min_grey">#999999</color>
+    <color name="red_min">#CA3618</color>
+
+    <!--<color name="color_clean_search_history_shape">#FAFAFA</color>-->
+    <!--<color name="sys_bg">#f5f5f5</color>-->
+    <!--<color name="des_firstbg">#241c0a</color>-->
+
+    <!--&lt;!&ndash; 线条颜色 &ndash;&gt;-->
+    <!--<color name="colorline">#CFCFCF</color>-->
+    <!--<color name="btn_textcolor">#ffffff</color>-->
+    <!--&lt;!&ndash; &ndash;&gt;-->
+    <!--<color name="color_title">#CC0000</color>-->
+    <!--<color name="popup_bg">#8f000000</color>-->
+    <!--<color name="line_bg">#CDCDCD</color>-->
+    <!--<color name="comment_popup_bg">#292929</color>-->
+    <!--<color name="comment_popup_tx_bg">#c7c7c7</color>-->
+    <!--<color name="click_bg">#c7c7c7</color>-->
+    <!--<color name="menu_bg">#2b2b2b</color>-->
+    <!--<color name="menu_click_bg">#515151</color>-->
+
+    <!--&lt;!&ndash;50%de 透明度&ndash;&gt;-->
+    <!--<color name="transp_black_50">#64000000</color>-->
+    <!--<color name="app_price">#b38a32</color>-->
+    <!--&lt;!&ndash;边框颜色&ndash;&gt;-->
+    <!--<color name="border_golden">#b7913f</color>-->
+    <!--<color name="des_pressed_yellow">#8c7032</color>-->
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <!--<color name="white">#ffffff</color>-->
+    <!--<color name="black">#333333</color>-->
+    <!--<color name="black_black">#000000</color>-->
+
+    <!--<color name="blacked">#eeeeee</color>-->
+    <!--<color name="gray">#666666</color>-->
+    <!--<color name="system_color">#ff6600</color>-->
+    <!--<color name="tv_checked_bg">#56BA22</color>-->
+    <!--<color name="tv_tab_normal">#BBBBBB</color>-->
+    <!--<color name="tv_tab_checked">#D42E2E</color>-->
+    <!--<color name="bg_activity">#D8D8D8</color>-->
+    <!--<color name="red_text_bg">#FB0606</color>-->
+    <!--<color name="grey_60000000">#60000000</color>-->
+    <!--<color name="green_09bb07">#09bb07</color>-->
+    <!--<color name="viewfinder_mask">#60000000</color>-->
+    <!--<color name="viewfinder_laser">#ff09BB07</color>-->
+    <!--<color name="viewfinder_border">#ff09BB07</color>-->
+    <!--<color name="sweepline">#07F1F8</color>-->
+    <!--<color name="light_black">#717171</color>-->
+    <!--<color name="light_red">#B46A70</color>-->
+    <!--<color name="light_gray">#F4F4F4</color>-->
+    <!--<color name="line_color">#EBEBEB</color>-->
+    <!--<color name="type_first_bg">#F2F2F2</color>-->
+
+
+    <!--&lt;!&ndash;背景色&ndash;&gt;-->
+    <!--<color name="app_background">#eeeeee</color>-->
+    <!--&lt;!&ndash;为什么又换了个文字颜色&ndash;&gt;-->
+    <!--<color name="textbutton">#5c471a</color>-->
+    <!--&lt;!&ndash;整体默认文字颜色&ndash;&gt;-->
+    <!--<color name="textColor3">#333333</color>-->
+    <!--&lt;!&ndash;文字灰色&ndash;&gt;-->
+    <!--<color name="textColor6">#666666</color>-->
+    <!--&lt;!&ndash;文字深灰色&ndash;&gt;-->
+    <!--<color name="textColor9">#999999</color>-->
+    <!--&lt;!&ndash;红色文字，如金钱&ndash;&gt;-->
+    <!--<color name="textred">#ff4444</color>-->
+    <!--<color name="text_bule">#157efb</color>-->
+    <!--<color name="text_green">#2eb97c</color>-->
+    <!--&lt;!&ndash;暗灰色（红色按钮里面的文字颜色）&ndash;&gt;-->
+    <!--<color name="button_text_gary">#cccccc</color>-->
+    <!--&lt;!&ndash;橙色&ndash;&gt;-->
+    <!--<color name="orange">#ff6600</color>-->
+    <!--<color name="textBule">#0066cc</color>-->
+
+
+    <!--<color name="statusBar">#FFFFFF</color>-->
+    <!--<color name="login_hint_text_color">#BFBFBF</color>-->
+    <!--<color name="search_board">#999999</color>-->
+    <!--<color name="text_color1">#666666</color>-->
+    <!--<color name="search_cancel">#333333</color>-->
+    <!--<color name="tag1">#F5F5F5</color>-->
+    <!--&lt;!&ndash; 灰色背景&ndash;&gt;-->
+    <!--<color name="classify_left_back_gray">#F1F1F1</color>-->
+    <!--<color name="background">#F5F5F5</color>-->
+    <!--<color name="text_color2">#0066CC</color>-->
+    <!--<color name="tag_color">#EEEEEE</color>-->
+    <!--&lt;!&ndash; 线条颜色 &ndash;&gt;-->
+    <!--<color name="color_line">#CFCFCF</color>-->
+    <!--<color name="red">#CC0000</color>-->
+    <!--<color name="red2">#E54948</color>-->
+    <!--<color name="red3">#E6E54948</color>-->
+    <!--<color name="red4">#FF6600</color>-->
+    <!--<color name="color_line2">#DDDDDD</color>-->
+    <!--<color name="color_line3">#66DDDDDD</color>-->
+
+    <!--&lt;!&ndash;支付&ndash;&gt;-->
+    <!--<color name="color_pay1">#FF0000</color>-->
+
+    <!--&lt;!&ndash;直播&ndash;&gt;-->
+    <!--<color name="text_color">#E54948</color>-->
+    <!--&lt;!&ndash;<color name="background_color">#000000</color>&ndash;&gt;-->
+    <!--<color name="text_color_produt">#fc4584</color>-->
+    <!--<color name="line">#dddddd</color>-->
+    <!--<color name="text_blue">#2f6fdb</color>-->
+    <!--<color name="text_bg">#1A000000</color>-->
+    <!--<color name="text_bg2">#E6CCCCCC</color>-->
+    <!--<color name="text_bg3">#FFCE38</color>-->
+    <!--<color name="price_color">#FC4854</color>-->
+
+    <!--<color name="banner_selected">#ff4444</color>-->
+    <!--<color name="banner_normal">#30333333</color>-->
+    <!--&lt;!&ndash;背景颜色&ndash;&gt;-->
+    <!--<color name="activity_bg">#F7F7F7</color>-->
+
+    <!--<color name="p2psystem_bg">#CC0000</color>-->
+    <!--<color name="menu_text">#999999</color>-->
+    <!--<color name="des_rank_bg">#F3B700</color>-->
+    <!--<color name="des_banner_normal">#30888888</color>-->
+    <!--<color name="des_trans_color">#00ffffff</color>-->
+    <!--<color name="user_bg_color">#6eFFFFFF</color>-->
+    <!--<color name="half_input">#e0FFFFFF</color>-->
+    <!--<color name="hole_input">#00FFFFFF</color>-->
+    <!--<color name="time_green">#2F7979</color>-->
+    <!--<color name="time_gray">#999999</color>-->
+
+
+</resources>

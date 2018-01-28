@@ -1,0 +1,23 @@
+<resources>
+    <string name="add_address">新增地址</string>
+    <string name="save_and_use">保存并使用</string>
+    <string name="contact_name">收货人姓名</string>
+    <string name="contact_number">联系方式</string>
+    <string name="detail_address">详细地址</string>
+    <string name="select_contact">选取联系人</string>
+    <string name="addressmanage_address_error">地址有误</string>
+    <string name="addressmanage_default_address">[默认地址]</string>
+
+    <string name="new_address_title">新建收货地址</string>
+    <string name="set_default_address">设为默认地址</string>
+    <string name="action_details">注：每次下单时会使用该地址</string>
+    <string name="addressmanage_edite_address">编辑收货地址</string>
+
+    <string name="addressmanage_address_detail_num">详细地址不超过40个字</string>
+    <string name="addressmanage_receive_name_limit">收货人姓名不能超过20个字</string>
+    <string name="addressmanage_select_address">收货地址选择</string>
+    <string name="addressmanage_null_address">还没有收货地址哦~</string>
+    <string name="addressmanage_add_receive_address">添加收货地址</string>
+    <string name="addressmanage_delete_address">确定要删除该地址吗？</string>
+    <string name="location">定位</string>
+</resources>

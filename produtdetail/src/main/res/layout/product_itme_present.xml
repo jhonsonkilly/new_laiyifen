@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_giftinfo"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/fra_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_imge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:id="@+id/txt_gifsoldout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scan_background"
+                    android:gravity="center|bottom"
+                    android:textSize="8sp"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/fra_img"
+                android:text="×1"
+                android:textColor="@color/sub_title_color" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_state"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:textColor="@color/main_title_color" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_coupon"
+        android:layout_width="129dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="75dp"
+        android:background="@drawable/item_couponbg">
+
+        <LinearLayout
+            android:id="@+id/rl_rull"
+            android:layout_width="129dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="5dp"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="¥"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_conditionValue"
+                android:layout_width="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginTop="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="100"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:gravity="bottom"
+                android:text="@string/coupon"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_themeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_rull"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/img_couponsoldout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/item_nomore"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

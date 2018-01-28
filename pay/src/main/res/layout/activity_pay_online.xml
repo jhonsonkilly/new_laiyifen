@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".fail.PayFailActivity">
+
+    <include layout="@layout/head" />
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color" />
+
+    <!--余额支付-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44"
+            android:layout_marginLeft="@dimen/height_12"
+            android:gravity="center_vertical"
+            android:text="@string/pay_online1"
+            android:textColor="@color/sub_title_color"
+            android:textSize="@dimen/textsize_14sp" />
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+        <!--可用余额-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text1"
+                android:layout_marginLeft="@dimen/height_12"
+                android:text="@string/balance"
+                android:textColor="@color/main_title_color" />
+            <!--人民币符号-->
+            <TextView
+                style="@style/text1"
+                android:layout_marginLeft="2dp"
+                android:text="@string/money_symbol"
+                android:textColor="@color/main_title_color" />
+            <!--余额数量-->
+            <TextView
+                style="@style/text1"
+                android:text="20"
+                android:textColor="@color/main_title_color" />
+
+            <TextView
+                style="@style/text1"
+                android:layout_marginLeft="@dimen/height_12"
+                android:text="@string/can_used"
+                android:textColor="@color/theme_color" />
+            <!--人民币符号-->
+            <TextView
+                style="@style/text1"
+                android:layout_marginLeft="2dp"
+                android:text="@string/money_symbol"
+                android:textColor="@color/theme_color" />
+            <!--可用数量-->
+            <TextView
+                style="@style/text1"
+                android:text="20"
+                android:textColor="@color/theme_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--在线支付  支付方式列表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44"
+            android:layout_marginLeft="@dimen/height_12"
+            android:gravity="center_vertical"
+            android:text="@string/pay_online5"
+            android:textColor="@color/sub_title_color"
+            android:textSize="@dimen/textsize_14sp" />
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <!--支付方式列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_pay_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

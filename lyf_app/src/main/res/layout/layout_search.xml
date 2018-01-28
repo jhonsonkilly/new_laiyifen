@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_bt_qrcode" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/iv_scan"
+            android:text="@string/search"
+            android:textColor="@color/sub_title_color"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/tv_search"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/search_edit_bg"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:id="@+id/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_search" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/my_btn_close_n" />
+
+            <EditText
+                android:id="@+id/et_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_delete"
+                android:layout_toRightOf="@+id/icon_search"
+                android:background="@null"
+                android:hint="请输入关键字"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/main_title_color"
+                android:textColorHint="@color/edittext_hint_color"
+                android:textSize="@dimen/textsize_14sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.ody.p2p.views.swiprefreshview.OdySwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.ody.p2p.views.MyScrollView
+                android:id="@+id/ms_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_hot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/search_ic_hot"
+                            android:text="  热门搜索"
+                            android:textColor="@color/c80"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.ody.p2p.search.searchkey.flowTagLayout.FlowTagLayout
+                                android:id="@+id/fl_hot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginTop="10dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/search_ic_history"
+                            android:text="  历史搜索"
+                            android:textColor="@color/c80"
+                            android:textSize="14sp" />
+
+                        <com.ody.p2p.search.searchkey.flowTagLayout.FlowTagLayout
+                            android:id="@+id/fl_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-12dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/shape_clean_search_history"
+                            android:drawableLeft="@drawable/common_ic_clearhistory"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="清空搜索历史"
+                            android:textColor="@color/sub_title_color"
+                            android:textSize="@dimen/textsize_14sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_foot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_guess_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableLeft="@drawable/common_ic_history"
+                            android:text="  看过的商品"
+                            android:textColor="@color/sub_title_color"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/tv_guess_like"
+                            android:background="@color/divider_color"></View>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@+id/tv_guess_like"
+                            android:background="@color/divider_color"></View>
+                    </RelativeLayout>
+                    <com.ody.p2p.views.MyGridView
+                        android:id="@+id/rv_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="6dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="6dp"
+                        ></com.ody.p2p.views.MyGridView>
+                </LinearLayout>
+            </com.ody.p2p.views.MyScrollView>
+        </com.ody.p2p.views.swiprefreshview.OdySwipeRefreshLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_white">
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/send_redcard"/>
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="text"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:gravity="left|center"/>
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="text"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:gravity="left|center"/>
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text="text"
+                android:gravity="right|center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/background"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/gray7">
+    </FrameLayout>
+</merge>

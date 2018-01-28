@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ody.p2p.myhomepager">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <!--
+        <activity android:name=".HomePageFragment">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity android:name="com.ody.p2p.settings.SettingsActivity" />
+        <activity android:name="com.ody.p2p.settings.accountSafe.AccountSafeActivity" />
+        <activity android:name="com.ody.p2p.settings.accountSafe.modifyPsd1.ModifyPsdActivity" />
+        <activity android:name="com.ody.p2p.settings.accountSafe.modifyPsd2.ModifyPsdSecondActivity" />
+        <activity android:name="com.ody.p2p.settings.accountSafe.modifyPhone1.ModifyPhoneActivity" />
+        <activity android:name="com.ody.p2p.settings.accountSafe.modifyPhone2.ModifyPhoneSecondActivity" />
+        <activity android:name="com.ody.p2p.settings.modifyUserInfo.ModifyUserInfoActivity" />
+        <activity android:name="com.ody.p2p.settings.modifyUserInfo.modifyUserName.ModifyUserNameActivity" />
+        <activity android:name="com.ody.p2p.settings.ServiceAgerrment.ServiceAgreementActivity" />
+        <activity android:name="com.ody.p2p.settings.aboutme.AboutMeActivity" />
+        <activity android:name="com.ody.p2p.RefoundList.RefoundListActivity" />
+        <activity android:name="com.ody.p2p.RefoundInfo.RefoundInfoActivity" />
+        <activity android:name="com.ody.p2p.shoucang.MylikeActivity" />
+        <activity android:name="com.ody.p2p.scanhistory.ScanHistoryActivity" />
+        <activity android:name="com.ody.p2p.message.MessageCenterActivity" />
+        <activity android:name="com.ody.p2p.message.sysmessagelist.SysMessageListActivity" />
+        <activity android:name="com.ody.p2p.RefoundInfo.LogisticsCompanyActivity"/>
+    </application>
+
+</manifest>

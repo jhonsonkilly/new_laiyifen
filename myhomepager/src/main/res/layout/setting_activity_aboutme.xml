@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:id="@+id/lay_about_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/icon_back"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/about"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+    <ImageView
+        android:id="@+id/iv_about_scan"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_downLoad"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="13dp"
+        android:layout_gravity="center"
+        android:textColor="@color/main_title_color"
+        android:textSize="14sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_version"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/main_title_color"
+        android:textSize="14sp"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/lay_hotLine"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/about_btn_bg"
+        android:clickable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/about_hotLine"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/main_title_color"
+            android:paddingLeft="10dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_about_telNum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/main_title_color"
+            android:layout_marginRight="20dp"
+            android:text="@string/about_phoneNum"
+            android:textSize="14sp"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+    <!--分享暂时隐藏-->
+    <LinearLayout
+        android:id="@+id/lay_share_toFriend"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:background="@drawable/about_btn_bg"
+        android:clickable="true"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/about_share_toFriend"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_next"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            />
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/lay_about_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/about_btn_bg"
+        android:clickable="true"
+        android:padding="5dp"
+         android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/about_evaluate"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingLeft="10dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_next"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

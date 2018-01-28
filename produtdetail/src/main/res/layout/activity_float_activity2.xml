@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--顶部-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/store_home_appbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:fitsSystemWindows="true"
+                    app:layout_collapseMode="parallax">
+
+                    <ImageView
+                        android:id="@+id/store_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_stub" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/iv_storeLogo"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/icon_stub" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_store_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/tv_store_title"
+                                    android:background="@drawable/circle_theme_solid_bg"
+                                    android:padding="2dp"
+                                    android:text="@string/store_flagship"
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="9sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_storeIcon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_toRightOf="@id/tv_store_title" />
+
+                                <TextView
+                                    android:id="@+id/tv_store_attention_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="3.9万"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_store_grade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="暂无"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/attention"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                        <com.ody.p2p.productdetail.views.StarView
+                            android:id="@+id/star_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/transparent_color"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways">
+                    <!--搜索框-->
+                    <RelativeLayout
+                        android:id="@+id/store_home_rl_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:background="@color/transparent_color"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:id="@+id/store_home_view_input_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/store_home_iv_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="12dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/icon_back_yellow" />
+
+                        <FrameLayout
+                            android:id="@+id/store_home_fl_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp">
+
+                            <ImageView
+                                android:id="@+id/store_home_iv_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="4dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/common_btn_more_white" />
+
+                            <TextView
+                                android:id="@+id/store_home_redFlag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="14dp"
+                                android:layout_gravity="top|right"
+                                android:background="@drawable/radius_theme_9"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/store_home_iv_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/store_home_fl_message"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/store_classify" />
+
+                        <EditText
+                            android:id="@+id/store_home_et_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/store_home_iv_category"
+                            android:layout_toRightOf="@id/store_home_iv_back"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/icon_search"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="搜索店铺内的商品"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:paddingRight="5dp"
+                            android:textColor="@color/sub_title_color"
+                            android:textColorHint="@color/edittext_hint_color"
+                            android:textCursorDrawable="@drawable/shape_edittext_cursor"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <!--中间内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.ody.p2p.views.tablayout.CommonTabChooser
+                android:id="@+id/store_home_tab"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/store_home_fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <!--底部-->
+    <com.ody.p2p.views.tablayout.CommonTabChooser
+        android:id="@+id/store_home_tab_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/view_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/scan_background"
+        android:visibility="gone" />
+</LinearLayout>

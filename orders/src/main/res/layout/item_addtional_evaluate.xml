@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_evaluate_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_evaluate_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/linear_ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="82dp">
+
+            <RatingBar
+                android:id="@+id/rb_evaluate"
+                style="@style/roomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="1"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_eva_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_14sp"
+        android:textColor="@color/sub_title_color"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="12dp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_evaluate_pics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/background_color"
+        android:layout_marginTop="12dp">
+        <EditText
+            android:id="@+id/et_additional"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="@string/input_Additional_comments"
+            android:maxLength="200"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_text_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:text="0/200"
+            android:textColor="@color/note_color"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

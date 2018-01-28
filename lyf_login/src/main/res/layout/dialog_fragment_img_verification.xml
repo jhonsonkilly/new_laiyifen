@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:minWidth="322dp"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_white_radius_all_6dp"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:paddingTop="18dp">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/main_title_color"
+        android:textSize="@dimen/font_18"
+        android:layout_height="wrap_content"
+        android:text="@string/img_verification" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/verification_code"
+        android:layout_below="@id/v_divide_line5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+
+        <EditText
+            android:id="@+id/ed_login_verification_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="6dp"
+            android:digits="@string/digits"
+            android:hint="@string/hint_img_verification"
+            android:inputType="phone"
+            android:background="@null"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/grey"
+            android:textSize="15sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_cha_vercode"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/my_btn_close_n" />
+
+        </RelativeLayout>
+
+        <!--图形验证码-->
+        <ImageView
+            android:id="@+id/img_getvercode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/theme_color" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="@style/view_linr"/>
+
+
+    <LinearLayout
+
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ll_errorMessage"
+            android:visibility="invisible"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/tishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_errorMessage"
+                android:textColor="@color/color_ff6d00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_change_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:textColor="@color/grey_text_color"
+            android:text="@string/change_image"/>
+
+        <ImageView
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/shuaxin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="30dp"
+        style="@style/view_linr"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColor="@color/grey_text_color"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:text="@string/cancel"/>
+
+        <View
+            style="@style/view_vertical_linr"/>
+
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/sure_dialog_color"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

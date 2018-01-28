@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/text_grey_4line">
+
+    <LinearLayout
+        android:id="@+id/pop_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/create_regular_team"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_create_regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="新建群组"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+
+        <LinearLayout
+            android:id="@+id/qunfa"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_qunfa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="群发消息"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+        <LinearLayout
+            android:id="@+id/create_call"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_create_call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="创建多人电话"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view3"
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+        <LinearLayout
+            android:id="@+id/create_video"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_create_video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="创建多人视频"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view4"
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+        <LinearLayout
+            android:id="@+id/add_buddy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_add_buddy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="查找好友"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view5"
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+        <LinearLayout
+            android:id="@+id/sao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_sao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="扫一扫"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+        <!--<LinearLayout-->
+            <!--android:id="@+id/about"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+             <!--&gt;-->
+
+            <!--<ImageView-->
+                <!--android:layout_marginLeft="6dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/menu_setting" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="设置"-->
+                <!--android:textColor="@color/color_grey_999999"-->
+                <!--android:textSize="15dip" />-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/chat_room"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu_sao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="聊天室"
+                android:textColor="@color/black"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray7" />
+    </LinearLayout>
+
+</RelativeLayout>

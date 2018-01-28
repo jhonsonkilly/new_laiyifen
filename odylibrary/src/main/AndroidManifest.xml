@@ -1,0 +1,66 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ody.p2p">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <application
+
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <receiver android:name="com.ody.p2p.receiver.NetWorkBroadCastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.AlarmReceiver">
+
+            <intent-filter>
+                <action
+                    android:name="lyf.lingzaocan"
+                    android:process=":remote" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name="com.ody.p2p.webactivity.NewWebActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c12a14e23d6803f873037861fe72ccf6"
+
+            tools:replace="android:value" />
+
+        <activity android:name=".Contact.ContactsActivity"></activity>
+
+
+        <receiver android:name="com.ody.p2p.receiver.RemmindReceiver" />
+    </application>
+
+</manifest>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:background="#b0000000"-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--底部取消-->
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/textsize_18sp"
+        android:textColor="@color/main_title_color"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_popupw_bg"
+        />
+
+    <!--取消 上面的三行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/tv_cancel"
+        android:background="@drawable/shape_popupw_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/textsize_18sp"
+            android:textColor="@color/main_title_color"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_popupw_bg"
+            />
+
+        <View
+            android:id="@+id/v_divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/textsize_18sp"
+            android:textColor="@color/main_title_color"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_popupw_bg"
+            />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/v_divide_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_confirm2"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/textsize_18sp"
+            android:textColor="@color/main_title_color"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_popupw_bg"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

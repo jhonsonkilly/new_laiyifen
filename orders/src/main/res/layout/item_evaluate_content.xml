@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_evaluate_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/icon_stub" />
+
+        <TextView
+            android:id="@+id/tv_evaluate_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/linear_ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="82dp">
+
+            <RatingBar
+                android:id="@+id/rb_evaluate"
+                style="@style/roomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="1"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_evaluate_input"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:gravity="top|left"
+        android:hint="@string/please_input_product_evaluate"
+        android:maxLength="300"
+        android:textColor="@color/main_title_color"
+        android:textColorHint="@color/edittext_hint_color"
+        android:textSize="14sp" />
+
+    <com.ody.p2p.views.flowLayout.FlowView
+        android:id="@+id/lay_evaluate_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/upload_pictures_more_five"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+</LinearLayout>

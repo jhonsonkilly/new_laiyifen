@@ -1,0 +1,118 @@
+[
+  {
+    "i": "0",
+    "img": "icon_next",
+    "title": "我的团",
+    "destination": "",
+    "login": "0",
+    // 0 需要登陆  1 不需要登陆
+    "webview": "0"
+    // 0 activity  1 web
+  },
+  {
+    "i": "1",
+    "img": "icon_next",
+    "title": "我的砍价单",
+    "destination": "com.laiyifen.app.activity.member.card.RechargeActivity",
+    "login": "0",
+    "webview": "0"
+  },
+  {
+    "i": "2",
+    "img": "icon_next",
+    "title": "收货地址",
+    "destination": "com.laiyifen.app.activity.member.card.YcardQueryActivity",
+    "login": "0",
+    "webview": "0"
+  },
+  {
+    "i": "3",
+    "img": "icon_next",
+    "title": "常购清单",
+    "destination": "com.laiyifen.app.activity.member.redpacket.MyRedenvelopesActivity",
+    "login": "0",
+    "webview": "0"
+  },
+  {
+    "i": "4",
+    "img": "icon_next",
+    "title": "我的收藏",
+    "destination": "com.laiyifen.app.activity.other.GaodeMapActivity",
+    "login": "1",
+    "webview": "0"
+  },
+  {
+    "i": "5",
+    "img": "icon_next",
+    "title": "我的评价",
+    "destination": "com.laiyifen.app.activity.other.MyLikeActivity",
+    "login": "0",
+    "webview": "0"
+  },
+  {
+    "i": "6",
+    "img": "icon_next",
+    "title": "一句话福利",
+    "destination": "com.laiyifen.app.activity.other.MyLikeActivity",
+    "login": "0",
+    "webview": "0"
+  },
+  {
+    "i": "7",
+    "img": "icon_next",
+    "title": "查询伊点卡",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  },
+  {
+    "i": "8",
+    "img": "icon_next",
+    "title": "查询门店",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  },
+  {
+    "i": "9",
+    "img": "icon_next",
+    "title": "在线客服",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  },
+  {
+    "i": "10",
+    "img": "icon_next",
+    "title": "加盟来伊份",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  },
+  {
+    "i": "11",
+    "img": "icon_next",
+    "title": "中奖记录",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  },
+  {
+    "i": "12",
+    "img": "icon_next",
+    "title": "增票资质",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  },
+  {
+    "i": "13",
+    "img": "icon_next",
+    "title": "我的发票",
+    "destination": "",
+    "login": "0",
+    "webview": "1"
+  }
+]
+
+

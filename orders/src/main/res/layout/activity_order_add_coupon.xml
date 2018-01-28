@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back"
+            android:layout_marginLeft="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_coupon"
+            android:textColor="@color/main_title_color"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="12dp">
+        <EditText
+            android:id="@+id/et_coupon_code"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:hint="@string/input_coupon_number"
+            android:drawableRight="@drawable/my_btn_close_n"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="14sp"
+            android:textColor="@color/main_title_color"
+            android:background="@null"
+            android:singleLine="true"
+            android:digits="@string/coupon_rule"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/theme_btn_background"
+        android:text="@string/add"
+        android:textColor="@color/button_text_color"
+        android:textSize="@dimen/textsize_14sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/buy_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cf5f5f5"
+        android:drawableLeft="@mipmap/icon_home"
+        android:drawablePadding="5dp"
+        android:gravity="bottom"
+        android:padding="10dp"
+        android:text="jaja"
+        android:textColor="@color/C515253" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="配送信息"
+                android:textColor="@color/text_max_grey" />
+
+            <TextView
+                android:id="@+id/text_peisong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="来伊份商城配送" />
+
+            <TextView
+                android:id="@+id/text_yunfei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/text_peisong"
+                android:text="运费"
+
+                android:textColor="@color/text_max_grey" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

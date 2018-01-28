@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@id/common_rllayout_horizontal_number_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@id/common_lllayout_horizontal_number_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/icon_flash_warn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="下一场，玩得更大，快来约一下！"
+                android:textColor="@color/text_min_grey"
+                android:textSize="@dimen/text_min_12" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@id/common_lllayout_horizontal_number_3"
+            android:background="@color/text_min_grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@id/common_lllayout_horizontal_number_3"
+            android:background="@color/text_min_grey" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/common_tv_horizontal_number_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/common_rllayout_horizontal_number_4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="点我，约好走起>"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/text_min_12"/>
+
+</RelativeLayout>

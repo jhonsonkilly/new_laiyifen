@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bt_expendition"
+    android:padding="12dp"
+    android:id="@+id/ll_root">
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_14sp"
+        android:textColor="@color/white"
+        android:text="@string/delect_order"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_logitics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_14sp"
+        android:textColor="@color/white"
+        android:text="@string/show_logistics"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>

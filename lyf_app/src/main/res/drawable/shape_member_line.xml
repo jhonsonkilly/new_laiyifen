@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <!-- 设置固定填充色 -->
+    <solid android:color="#F6C744" />
+
+    <size android:width="28dp" android:height="13dp"/>
+
+    <corners android:radius="10dp"/>
+
+</shape>

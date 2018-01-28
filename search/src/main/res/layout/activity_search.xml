@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <View style="@style/liner_horizontal" />
+
+    <!--</android.support.v7.widget.Toolbar>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <LinearLayout
+        style="@style/searchbar_layout_style"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--左边的向左箭头  p2p没有,德升有-->
+        <!--<RelativeLayout-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="match_parent">-->
+        <ImageView
+            android:id="@+id/iv_left_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="center"
+            android:src="@drawable/icon_back"/>
+        <!--</RelativeLayout>-->
+        <!--搜索框-->
+        <RelativeLayout
+            android:id="@+id/search_keywords_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_search_keywords"
+                style="@style/searchbar_input_edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:maxLength="20" />
+
+            <!--扫一扫-->
+            <ImageView
+                android:id="@+id/iv_saoyisao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_scan"
+                android:visibility="gone" />
+
+            <!--叉  p2p没有,德升有,不设置src,留在德升里代码添加该图-->
+            <ImageView
+                android:id="@+id/iv_cha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_scan"
+                android:layout_marginRight="6dp" />
+        </RelativeLayout>
+
+        <!--取消   p2p原来就有,德升没有-->
+        <TextView
+            android:id="@+id/closebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="12dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_14sp" />
+
+        <!--搜索 p2p没有,德升有-->
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textColor="@color/search"
+            android:textSize="@dimen/textsize_12sp"
+            android:visibility="gone" />
+
+        <!-- p2p没有,德升有 -->
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_more"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--输入关键字弹出的搜索list-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.ody.p2p.search.searchkey.utils.MyScrollview
+            android:id="@+id/sv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--热门搜索-->
+                <RelativeLayout
+                    android:id="@+id/rl_hot_search_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/hot_search"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <!--热门搜索的标签流布局-->
+                <RelativeLayout
+                    android:id="@+id/rl_hot_search_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <com.ody.p2p.search.searchkey.flowTagLayout.FlowTagLayout
+                        android:id="@+id/ftl_hot_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp" />
+                </RelativeLayout>
+
+                <!--历史搜索-->
+                <RelativeLayout
+                    android:id="@+id/rl_search_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/current_search"
+                        android:textColor="@color/sub_title_color"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <!--历史搜索的recyclerView-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_search_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <!--<com.odianyun.search.flowTagLayout.FlowTagLayout-->
+                <!--android:id="@+id/ftl_search_history"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="12dp"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--android:layout_marginTop="10dp"></com.odianyun.search.flowTagLayout.FlowTagLayout>-->
+
+                <TextView
+                    android:id="@+id/tv_clean_search_history"
+                    android:layout_width="100dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_clean_search_history"
+                    android:gravity="center"
+                    android:text="@string/clear_search_history"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="@dimen/textsize_12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </com.ody.p2p.search.searchkey.utils.MyScrollview>
+    </FrameLayout>
+</LinearLayout>
+

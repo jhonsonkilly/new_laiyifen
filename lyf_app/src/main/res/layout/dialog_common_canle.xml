@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:id="@+id/fl2"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+
+        android:layout_below="@+id/fl1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_white_bg_rect_bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="您确定删除订单吗?"
+            android:textColor="@color/text_max_grey"
+            android:textSize="@dimen/text_max_16" />
+
+        <LinearLayout
+
+
+            android:layout_width="match_parent"
+
+            android:layout_height="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="@drawable/shape_white_bg_rect_bottom">
+
+
+                <TextView
+                    android:id="@id/common_tv_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/text_med_grey"
+                    android:textSize="@dimen/text_max_16" />
+
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_bg" />
+
+                <TextView
+                    android:id="@id/common_tv_2"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/text_max_16" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

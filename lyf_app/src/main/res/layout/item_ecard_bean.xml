@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="109dp"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/height_12"
+        android:background="@drawable/shape_yidian_card_item_bg"
+        android:orientation="horizontal">
+
+        <!--伊点卡列表item-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_14"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卡内可使用余额"
+                android:textColor="@color/grey_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_ecard_tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text=""
+                android:textColor="@color/c_ff690"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="98dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/item_ecard_tv_card_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/grey_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_ecard_tv_card_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/grey_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_ecard_tv_card_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/grey_text_color"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10">
+
+            <!--可赠送-->
+            <TextView
+                android:id="@+id/item_card_tv_present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_ecard_present"
+                android:gravity="center"
+                android:text="赠送好友"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible" />
+
+            <!--过期-->
+            <ImageView
+                android:id="@+id/item_card_tv_expire"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_marginTop="@dimen/dp_10"
+                android:src="@drawable/mark_outdate" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

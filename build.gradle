@@ -1,0 +1,47 @@
+import java.util.concurrent.TimeUnit
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.networkbench.newlens.agent.android:agent-gradle-plugin:2.5.3'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.0'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+        classpath 'me.tatarka:gradle-retrolambda:3.1.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/' }
+        maven {
+            url "http://120.92.227.70:8081/content/repositories/snapshots"
+        }
+        maven { url 'http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/' }
+        configurations.all {
+            resolutionStrategy.cacheChangingModulesFor 1, TimeUnit.MINUTES
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circular_bead_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dialog_messagetitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="25dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="25dp"
+            android:text="MessageTitle"
+            android:textColor="@color/main_title_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="25dp"
+            android:text="MessageTitle"
+            android:textColor="@color/main_title_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_confirm_bottom"
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/theme_btn_background"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="知道了"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/img_close"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:src="@drawable/icon_close"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+</FrameLayout>

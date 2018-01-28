@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="text1" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/textsize_14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="LyfTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+</resources>

@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+
+
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res', 'res-ptr2', 'res-chatroom']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    compile 'me.everything:overscroll-decor-android:1.0.4'
+
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    //compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1' // if you want to use the Glide GPU Filters
+
+    compile "me.leolin:ShortcutBadger:1.1.17@aar"
+
+
+    compile 'com.squareup.okhttp3:okhttp:3.3.0'
+    compile 'com.google.zxing:core:3.3.0'
+    compile project(path: ':odylibrary')
+}

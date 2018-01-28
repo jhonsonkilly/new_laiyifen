@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/dismisstop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:text="选择配送区域"
+                android:textColor="@color/sub_title_color"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:drawablePadding="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/location_address"
+                    android:drawableLeft="@drawable/detail_ic_location"
+                    android:text="@string/loactionload"
+                    android:textSize="15sp"
+                    android:drawablePadding="12dp"
+                    android:textColor="@color/main_title_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/img_location_choose"
+                    android:visibility="visible"
+                    android:src="@drawable/icon_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_marginTop="12dp"
+                style="@style/line_match_parent"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyle_pop_select_address"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white" />
+            <Button
+                android:id="@+id/btn_newaddress"
+                android:layout_width="match_parent"
+                android:background="@color/theme_color"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/new_address_title"
+                android:layout_height="44dp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_dismiss"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_close"
+            android:layout_gravity="right|top"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

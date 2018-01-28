@@ -1,0 +1,27 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <corners
+                android:bottomLeftRadius="@dimen/distance_5"
+                android:topLeftRadius="@dimen/distance_5" />
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="@dimen/distance_1"
+                android:color="@color/divider_color" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/distance_1"
+        android:left="@dimen/distance_1"
+        android:top="@dimen/distance_1">
+        <shape>
+            <corners
+                android:bottomLeftRadius="@dimen/distance_5"
+                android:topLeftRadius="@dimen/distance_5" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+
+</layer-list>

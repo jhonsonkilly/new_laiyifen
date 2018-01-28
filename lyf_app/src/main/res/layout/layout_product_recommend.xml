@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+
+             android:layout_height="wrap_content"
+
+
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_tuijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="#33666666"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:drawableLeft="@mipmap/icon_likes"
+                android:drawablePadding="6dp"
+                android:text="猜你喜欢  "
+                android:textColor="@color/text_med_grey"
+                android:textSize="12sp"/>
+
+            <View
+                android:layout_width="0dp"
+
+
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="#33666666"/>
+        </LinearLayout>
+
+
+
+
+
+        <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                      android:id="@+id/banner_grid"
+                                                      android:layout_width="match_parent"
+                                                      android:layout_height="wrap_content"
+                                                      android:background="@color/cf0f0f0"
+                                                      app:canLoop="true"/>
+
+        <LinearLayout
+            android:visibility="gone"
+
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="#33666666"/>
+
+            <TextView
+                android:id="@+id/text_otherrecommend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="上拉图文详情"
+                android:textColor="@color/text_med_grey"
+                android:textSize="14sp"
+                android:visibility="visible"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="#33666666"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

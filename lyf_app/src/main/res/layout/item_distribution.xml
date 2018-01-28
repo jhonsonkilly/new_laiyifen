@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    >
+    <View
+        android:id="@+id/check_icon"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/theme_color"></View>
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/main_title_color"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_alignBottom="@+id/checkBox" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/sub_title_color"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/textView"
+        android:layout_marginTop="3dp"
+        />
+
+    <CheckBox
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:button="@null"
+        android:background="@drawable/checkbox_coupon"
+        android:layout_marginRight="16dp"
+        android:id="@+id/checkBox"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+</RelativeLayout>
+

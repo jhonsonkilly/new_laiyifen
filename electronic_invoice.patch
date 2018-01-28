@@ -1,0 +1,1652 @@
+Index: orders/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/AndroidManifest.xml	(revision 186955)
++++ orders/src/main/AndroidManifest.xml	(revision )
+@@ -8,7 +8,7 @@
+         <activity
+             android:name=".aftersale.AftersaleActivity"
+             android:windowSoftInputMode="stateUnchanged|adjustPan" />
+-        <activity android:name=".bill.BillActivity" />
++        <activity android:name=".bill.BillActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+         <activity android:name=".coupon.AddCouponActivity" />
+         <activity android:name=".coupon.CouponActivity" />
+         <activity android:name=".giftcard.BindGiftCardActivity" />
+\ No newline at end of file
+Index: orders/src/main/java/com/ody/p2p/check/bill/InvoicePresenterImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/java/com/ody/p2p/check/bill/InvoicePresenterImpl.java	(revision 186955)
++++ orders/src/main/java/com/ody/p2p/check/bill/InvoicePresenterImpl.java	(revision )
+@@ -5,8 +5,6 @@
+ import com.ody.p2p.Constants;
+ import com.ody.p2p.base.BaseRequestBean;
+ import com.ody.p2p.base.OdyApplication;
+-import com.ody.p2p.check.R;
+-import com.ody.p2p.check.orderoinfo.OrderInfoBean;
+ import com.ody.p2p.okhttputils.OkHttpManager;
+ import com.ody.p2p.utils.ToastUtils;
+ import com.squareup.okhttp.Request;
+@@ -21,36 +19,100 @@
+ 
+     private InvoiceView invoiceView;
+ 
+-    public InvoicePresenterImpl(InvoiceView invoiceView){
++    public InvoicePresenterImpl(InvoiceView invoiceView) {
+-        this.invoiceView=invoiceView;
++        this.invoiceView = invoiceView;
+     }
++
+     @Override
+-    public void saveInvoice(final Map<String, String> params) {
+-        String type=params.get("invoiceType");
+-        if(type.equals("1")){//普通发票
+-            if(params.containsKey("invoiceTitleType")&&TextUtils.isEmpty(params.get("invoiceTitleType"))){
++    public void saveInvoice(final InvoiceDocument document) {
++        Map<String, String> newParams = new HashMap<>();
++        newParams.put("invoiceMode", document.getInvoiceMode() + "");
++        newParams.put("invoiceType", document.getInvoiceType() + "");
++        //发票类型
++        if (document.isInvoiceTypeNull()){//不开发票
++            doSaveInvoiceWork(document, newParams);
++            return;
++        }
++        newParams.put("invoiceTitleType", document.getInvoiceTitleType() + "");
++        if (document.isInvoiceModeElectronic()) {
++            //电子发票
++            saveElectronicInvoice(document, newParams);
++        } else if (document.isInvoiceModePaper()) {
++            //纸质发票
++            if (document.isInvoiceTypeNormal()) {//普通发票
++                //开票方式
++                newParams.put("invoiceType", document.getInvoiceType() + "");
++                savePaperInvoice(document, newParams);
++            } else if (document.isInvoiceTypeVAT()) {//增值税发票
++                newParams.put("invoiceType", document.getInvoiceType() + "");
++                doSaveInvoiceWork(document, newParams);
++            }
++        } else {
++            ToastUtils.showShort("请选择开票方式");
++            return;
++        }
++
++    }
++
++    private void savePaperInvoice(InvoiceDocument document, Map<String, String> newParams) {
++        if (document.isInvoiceTitleTypePersonal()) {
++            //发票抬头:个人
++        } else if (document.isInvoiceTitleTypeCompany()) {
++            //发票抬头:单位
++            if (TextUtils.isEmpty(document.getInvoiceTitleContent())) {
++                ToastUtils.showShort("请填写单位名称");
++                return;
++            }
++            newParams.put("invoiceTitleContent", document.getInvoiceTitleContent());
++        } else {
+-                ToastUtils.showShort("请选择发票抬头");
+-                return;
+-            }
++            ToastUtils.showShort("请选择发票抬头");
++            return;
++        }
+-            if(!TextUtils.isEmpty(params.get("invoiceTitleType"))&&params.get("invoiceTitleType").equals("2")){
+-                if(TextUtils.isEmpty(params.get("invoiceTitleContent"))){
++//        if (TextUtils.isEmpty(document.getInvoiceContent())) {
++//            ToastUtils.showShort("请选择发票内容");
++//            return;
++//        }
++//        newParams.put("invoiceContentId", document.getInvoiceContentId() + "");
++//        newParams.put("invoiceContent", document.getInvoiceContent());
++        newParams.put("isNeedDetails", document.getIsNeedDetails() + "");
++        doSaveInvoiceWork(document, newParams);
++    }
++
++
++    private void saveElectronicInvoice(InvoiceDocument document, Map<String, String> newParams) {
++        if (document.isInvoiceTitleTypePersonal()) {
++            //发票抬头:个人
++            newParams.put("takerEmail", document.getTakerEmail());
++        } else if (document.isInvoiceTitleTypeCompany()) {
++            //发票抬头:单位
++            if (TextUtils.isEmpty(document.getInvoiceTitleContent())) {
+-                    ToastUtils.showShort("请填写单位名称");
+-                    return;
+-                }
++                ToastUtils.showShort("请填写单位名称");
++                return;
++            }
++            newParams.put("invoiceTitleContent", document.getInvoiceTitleContent());
++            if (TextUtils.isEmpty(document.getTaxpayerIdentificationCode())) {
++                ToastUtils.showShort("请填写纳税人识别号");
++                return;
+             }
+-            if(params.containsKey("invoiceContentId")&&TextUtils.isEmpty(params.get("invoiceContentId"))){
+-                ToastUtils.showShort("请选择发票内容");
++            newParams.put("taxpayerIdentificationCode", document.getTaxpayerIdentificationCode());
++            newParams.put("takerEmail", document.getTakerEmail());
++        } else {
++            ToastUtils.showShort("请选择发票抬头");
+-                return;
+-            }
++            return;
++        }
+-        }else{//增值税发票
+-//            params.put("invoiceTitleType","");
+-            params.put("invoiceTitleContent","");
+-            params.put("invoiceContentId","");
+-            params.put("invoiceContent","");
++//        if (TextUtils.isEmpty(document.getInvoiceContent())) {
++//            ToastUtils.showShort("请选择发票内容");
++//            return;
++//        }
++//        newParams.put("invoiceContentId", document.getInvoiceContentId() + "");
++//        newParams.put("invoiceContent", document.getInvoiceContent());
++        newParams.put("isNeedDetails", document.getIsNeedDetails() + "");
++        doSaveInvoiceWork(document, newParams);
+-        }
++    }
+ 
++    private void doSaveInvoiceWork(final InvoiceDocument document, Map<String, String> newParams) {
+         invoiceView.showLoading();
+-        params.put("ut", OdyApplication.getValueByKey(Constants.USER_LOGIN_UT,""));
++        newParams.put("ut", OdyApplication.getValueByKey(Constants.USER_LOGIN_UT, ""));
+         OkHttpManager.postAsyn(Constants.SAVE_INVOICE, new OkHttpManager.ResultCallback<BaseRequestBean>() {
+             @Override
+             public void onFinish() {
+@@ -64,22 +126,29 @@
+             }
+ 
+             @Override
++            public void onFailed(String code, String json, String msg) {
++                super.onFailed(code, json, msg);
++                ToastUtils.showShort(msg);
++            }
++
++            @Override
+             public void onResponse(BaseRequestBean response) {
+                 invoiceView.hideLoading();
+-                if(response==null){
++                if (response == null) {
+                     return;
+                 }
+-                if(response.code.equals("0")&&!params.get("invoiceType").equals("0")){
++                if (response.code.equals("0") && !document.isInvoiceTypeNull()) {
+                     invoiceView.finishActivity();
+                 }
+             }
+-        },params);
++        }, newParams);
+     }
++
+ 
+     @Override
+     public void addTaxInfo() {
+-        Map<String,String> params=new HashMap<>();
++        Map<String, String> params = new HashMap<>();
+-        params.put("ut",OdyApplication.getValueByKey(Constants.USER_LOGIN_UT,""));
++        params.put("ut", OdyApplication.getValueByKey(Constants.USER_LOGIN_UT, ""));
+         invoiceView.showLoading();
+         OkHttpManager.postAsyn(Constants.INVOICE_INFO, new OkHttpManager.ResultCallback<InvoiceInfoBean>() {
+ 
+@@ -96,10 +165,10 @@
+ 
+             @Override
+             public void onResponse(InvoiceInfoBean response) {
+-                if(response!=null){
++                if (response != null) {
+                     invoiceView.addInvoiceInfo(response);
+                 }
+             }
+-        },params);
++        }, params);
+     }
+ }
+Index: orders/src/main/java/com/ody/p2p/check/bill/BillActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/java/com/ody/p2p/check/bill/BillActivity.java	(revision 186955)
++++ orders/src/main/java/com/ody/p2p/check/bill/BillActivity.java	(revision )
+@@ -1,6 +1,8 @@
+ package com.ody.p2p.check.bill;
+ 
+ import android.content.Context;
++import android.support.annotation.IdRes;
++import android.support.annotation.NonNull;
+ import android.support.v7.widget.GridLayoutManager;
+ import android.support.v7.widget.RecyclerView;
+ import android.text.TextUtils;
+@@ -21,13 +23,9 @@
+ import com.ody.p2p.check.R;
+ import com.ody.p2p.receiver.ConfirmOrderBean;
+ import com.ody.p2p.utils.JumpUtils;
+-import com.ody.p2p.utils.PxUtils;
+-import com.ody.p2p.utils.ToastUtils;
+ import com.ody.p2p.webactivity.WebActivity;
+ 
+ import java.util.ArrayList;
+-import java.util.HashMap;
+-import java.util.Map;
+ 
+ 
+ /**
+@@ -38,18 +36,22 @@
+     private CheckBox cb_switch;
+     private ImageView backIcon;
+     private RadioButton rg_invoive_paper;//纸质发票
+-    private TextView tv_invoice_electronic;//电子发票
++    private RadioButton rg_invoive_electronic;//电子发票
+     private RadioButton rb_person;
+     private RadioButton rb_company;
++    private RadioButton rb_invoice_content_detail_false;
++    private RadioButton rb_invoice_content_detail_true;
+     private LinearLayout ll_content;
+     private LinearLayout ll_invoice;
+     private Button btn_yes;
+     private InvoicePresenter presenter;
+-    private Map<String, String> params;
+     private LinearLayout ll_taitou;
+     private EditText et_company_name, et_phone, et_email;
++    private EditText et_taxpayer_code;
++    private EditText et_receiver_mail;
+     private RadioGroup rg_invoice_type;
+     private RadioGroup rg_taitou;
++    private RadioGroup rg_invoice_way;
+     private RadioGroup rg_invoice_content;
+     private RadioButton rb_invoice_type1, rb_invoice_type2;
+     private ConfirmOrderBean.DataEntity.OrderInvoiceEntity orderInvoice;
+@@ -68,16 +70,19 @@
+     private TextView tv_register_phone;
+     private TextView tv_bank;
+     private TextView tv_bank_account;
++    private TextView tv_electronic_info2;
+     private ArrayList<String> pros;
+     private TextView tv_invoice_rule;
+ 
++    private InvoiceDocument mDocument;
++
+     @Override
+     public void initPresenter() {
+         presenter = new InvoicePresenterImpl(this);
+-        String str=getIntent().getStringExtra("invoice_content");
++        String str = getIntent().getStringExtra("invoice_content");
+         Gson gson = new Gson();
+-        orderInvoice=gson.fromJson(str,ConfirmOrderBean.DataEntity.OrderInvoiceEntity.class);
++        orderInvoice = gson.fromJson(str, ConfirmOrderBean.DataEntity.OrderInvoiceEntity.class);
+-        pros=getIntent().getStringArrayListExtra("proUrl_list");
++        pros = getIntent().getStringArrayListExtra("proUrl_list");
+     }
+ 
+     @Override
+@@ -87,103 +92,143 @@
+ 
+     @Override
+     public void initView(View view) {
++        mDocument = new InvoiceDocument();
+-        backIcon= (ImageView) findViewById(R.id.backIcon);
++        backIcon = (ImageView) findViewById(R.id.backIcon);
+         cb_switch = (CheckBox) findViewById(R.id.cb_switch);
+         rb_invoice_type1 = (RadioButton) findViewById(R.id.rb_invoice_type1);
+         rb_invoice_type2 = (RadioButton) findViewById(R.id.rb_invoice_type2);
+         ll_invoice = (LinearLayout) findViewById(R.id.ll_invoice);
+         rg_invoive_paper = (RadioButton) findViewById(R.id.rg_invoive_paper);
+-        tv_invoice_electronic = (TextView) findViewById(R.id.tv_invoice_electronic);
++        rg_invoive_electronic = (RadioButton) findViewById(R.id.rg_invoive_electronic);
+         rb_person = (RadioButton) findViewById(R.id.rb_person);
+         rb_company = (RadioButton) findViewById(R.id.rb_company);
++        rb_invoice_content_detail_false = (RadioButton) findViewById(R.id.rb_invoice_content_detail_false);
++        rb_invoice_content_detail_true = (RadioButton) findViewById(R.id.rb_invoice_content_detail_true);
+         ll_content = (LinearLayout) findViewById(R.id.ll_content);
+         btn_yes = (Button) findViewById(R.id.btn_yes);
+         ll_taitou = (LinearLayout) findViewById(R.id.ll_taitou);
+         et_company_name = (EditText) findViewById(R.id.et_company_name);
++        et_taxpayer_code = (EditText) findViewById(R.id.et_taxpayer_code);
++        et_receiver_mail = (EditText) findViewById(R.id.et_receiver_mail);
+         et_email = (EditText) findViewById(R.id.et_email);
+         et_phone = (EditText) findViewById(R.id.et_phone);
++        rg_invoice_way = (RadioGroup) findViewById(R.id.rg_invoice_way);
+         rg_taitou = (RadioGroup) findViewById(R.id.rg_taitou);
+         rg_invoice_type = (RadioGroup) findViewById(R.id.rg_invoice_type);
+         rg_invoice_content = (RadioGroup) findViewById(R.id.rg_invoice_content);
+ 
+-        ll_added_pros= (LinearLayout) findViewById(R.id.ll_added_pros);
++        ll_added_pros = (LinearLayout) findViewById(R.id.ll_added_pros);
+-        ll_common= (LinearLayout) findViewById(R.id.ll_common);
++        ll_common = (LinearLayout) findViewById(R.id.ll_common);
+-        ll_added_tax= (LinearLayout) findViewById(R.id.ll_added_tax);
++        ll_added_tax = (LinearLayout) findViewById(R.id.ll_added_tax);
+-        rv_pics= (RecyclerView) findViewById(R.id.rv_pics);
++        rv_pics = (RecyclerView) findViewById(R.id.rv_pics);
+-        ll_addtax_unauth= (LinearLayout) findViewById(R.id.ll_addtax_unauth);
++        ll_addtax_unauth = (LinearLayout) findViewById(R.id.ll_addtax_unauth);
+-        ll_addtax_auth= (LinearLayout) findViewById(R.id.ll_addtax_auth);
++        ll_addtax_auth = (LinearLayout) findViewById(R.id.ll_addtax_auth);
+-        tv_company_name= (TextView) findViewById(R.id.tv_company_name);
++        tv_company_name = (TextView) findViewById(R.id.tv_company_name);
+-        tv_code= (TextView) findViewById(R.id.tv_code);
++        tv_code = (TextView) findViewById(R.id.tv_code);
+-        tv_register_address= (TextView) findViewById(R.id.tv_register_address);
++        tv_register_address = (TextView) findViewById(R.id.tv_register_address);
+-        tv_register_phone= (TextView) findViewById(R.id.tv_register_phone);
++        tv_register_phone = (TextView) findViewById(R.id.tv_register_phone);
+-        tv_bank= (TextView) findViewById(R.id.tv_bank);
++        tv_bank = (TextView) findViewById(R.id.tv_bank);
+-        tv_bank_account= (TextView) findViewById(R.id.tv_bank_account);
++        tv_bank_account = (TextView) findViewById(R.id.tv_bank_account);
+-        tv_invoice_rule= (TextView) findViewById(R.id.tv_invoice_rule);
++        tv_invoice_rule = (TextView) findViewById(R.id.tv_invoice_rule);
++        tv_electronic_info2 = (TextView) findViewById(R.id.tv_electronic_info2);
+ 
+-        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,4);
++        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4);
+         gridLayoutManager.setOrientation(GridLayoutManager.VERTICAL);
+         rv_pics.setLayoutManager(gridLayoutManager);
+         backIcon.setOnClickListener(this);
+-        params = new HashMap<>();
++
+     }
+ 
+     @Override
+     public void doBusiness(Context mContext) {
+-        if(orderInvoice==null){
++        if (orderInvoice == null) {
+             return;
+         }
+         presenter.addTaxInfo();
+-        if(pros==null||pros.size()==0){
+-            ll_added_pros.setVisibility(View.GONE);
+-        }else{
+-            ll_added_pros.setVisibility(View.VISIBLE);
+-            InvoiceProductsAdapter adapter=new InvoiceProductsAdapter(this);
+-            adapter.setData(pros);
+-            rv_pics.setAdapter(adapter);
++
++
++        initEvent();
++
++        initData();
++
+-        }
++    }
++
++    private void initEvent() {
++        //是否需要发票
+         cb_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+             @Override
+             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                 if (b) {
+                     ll_content.setVisibility(View.VISIBLE);
++                    if (mDocument.isInvoiceTypeNull()) {
++                        mDocument.setInvoiceTypeNormal();
++                    }
+                 } else {
+                     ll_content.setVisibility(View.GONE);
+-                    params.put("invoiceType",0+"");
+-                    presenter.saveInvoice(params);
++                    mDocument.setInvoiceTypeNull();
++                    presenter.saveInvoice(mDocument);
+                 }
+             }
+         });
+-        rg_taitou.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
++
++        //开票方式
++        rg_invoice_way.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+             @Override
+-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+-                if (R.id.rb_person == i) {
+-                    params.put("invoiceTitleType", 1 + "");
+-                    ll_taitou.setVisibility(View.GONE);
++            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
++                if (checkedId == R.id.rg_invoive_electronic) {
++                    //电子发票
++                    mDocument.setInvoiceModeElectronic();
++                    //隐藏发票类型
++                    ll_invoice.setVisibility(View.GONE);
++                    int taitouCheckId = rg_taitou.getCheckedRadioButtonId();
++                    if (taitouCheckId == R.id.rb_person) {
++                        //发票抬头内容 个人
++                        showElectronicAndPersonView();
++                    } else if (taitouCheckId == R.id.rb_company) {
++                        //发票抬头内容 单位
++                        showElectronicAndCompanyView();
+-                } else {
++                    } else {
+-                    params.put("invoiceTitleType", 2 + "");
+-                    ll_taitou.setVisibility(View.VISIBLE);
++                        hideAllTaitouView();
+-                }
++                    }
++
++                } else if (checkedId == R.id.rg_invoive_paper) {
++                    //纸质发票
++                    mDocument.setInvoiceModePaper();
++                    //显示发票类型
++                    ll_invoice.setVisibility(View.VISIBLE);
++                    int taitouCheckId = rg_taitou.getCheckedRadioButtonId();
++                    if (taitouCheckId == R.id.rb_person) {
++                        //发票抬头内容 个人
++                        showPaperAndPersonView();
++                    } else if (taitouCheckId == R.id.rb_company) {
++                        //发票抬头内容 单位
++                        showPaperAndCompanyView();
++                    } else {
++                        hideAllTaitouView();
+-            }
++                    }
++                }
++            }
+         });
+ 
+-        rb_invoice_type1.setChecked(true);
+-        params.put("invoiceType", 1 + "");
+         rg_invoice_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+             @Override
+             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                 if (checkedId == R.id.rb_invoice_type1) {
+-                    params.put("invoiceType", 1 + "");
++                    //普通发票
++                    mDocument.setInvoiceTypeNormal();
+                     ll_common.setVisibility(View.VISIBLE);
+                     ll_added_tax.setVisibility(View.GONE);
+                     btn_yes.setClickable(true);
+                     btn_yes.setBackgroundResource(R.drawable.theme_btn_normal);
+                 } else if (checkedId == R.id.rb_invoice_type2) {
+-                    params.put("invoiceType", 2 + "");
++                    //增值税发票
++                    mDocument.setInvoiceTypeVAT();
+                     ll_common.setVisibility(View.GONE);
+                     ll_added_tax.setVisibility(View.VISIBLE);
+                     btn_yes.setClickable(true);
+                     btn_yes.setBackgroundResource(R.drawable.theme_btn_normal);
+                     if (pros != null && pros.size() > 0) {
++                        //存在不支持增值税发票的商品
+                         ll_added_pros.setVisibility(View.VISIBLE);
+                         InvoiceProductsAdapter adapter = new InvoiceProductsAdapter(BillActivity.this);
+                         adapter.setData(pros);
+@@ -193,43 +238,229 @@
+                     } else {
+                         ll_added_pros.setVisibility(View.GONE);
+                     }
++
++                    if (ll_addtax_unauth.getVisibility() == View.VISIBLE) {
++//                        ToastUtils.showToast("用户没有增值税发票信息");
++                        btn_yes.setClickable(false);
++                        btn_yes.setBackgroundResource(R.drawable.shape_cannot_click);
+-                }
++                    }
++                } else {
++                    //不开发票
++                    mDocument.setInvoiceTypeNull();
+-            }
++                }
++            }
+         });
+ 
+-        if (orderInvoice.invoice.invoiceType == 1) {
+-            cb_switch.setChecked(true);
+-            if (orderInvoice.invoice.invoiceTitleType == 1) {
+-                rb_person.setChecked(true);
++
++        //发票抬头
++        rg_taitou.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
++            @Override
++            public void onCheckedChanged(RadioGroup radioGroup, int i) {
++                if (R.id.rb_person == i) {
++                    //发票抬头内容 个人
++                    mDocument.setInvoiceTitleTypePersonal();
++                    int wayCheckId = rg_invoice_way.getCheckedRadioButtonId();
++                    if (wayCheckId == R.id.rg_invoive_electronic) {
++                        //电子发票
++                        showElectronicAndPersonView();
++                    } else if (wayCheckId == R.id.rg_invoive_paper) {
++                        //纸质发票
++                        showPaperAndPersonView();
+-            } else {
++                    } else {
+-                rb_company.setChecked(true);
+-                et_company_name.setText(orderInvoice.invoice.invoiceTitleContent);
++                        hideAllTaitouView();
+-            }
++                    }
+-        } else if (orderInvoice.invoice.invoiceType == 0) {
+-            ll_content.setVisibility(View.GONE);
+-        } else if (orderInvoice.invoice.invoiceType == 2) {
+-            cb_switch.setChecked(true);
+-            rb_invoice_type2.setChecked(true);
+-        }
+ 
+-        if (orderInvoice != null && orderInvoice.invoiceContentList != null && orderInvoice.invoiceContentList.size() > 0) {
+-            for (int i = 0; i < orderInvoice.invoiceContentList.size(); i++) {
+-                RadioButton radioButton = new RadioButton(this);
+-                RadioGroup.LayoutParams params= new RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT,RadioGroup.LayoutParams.WRAP_CONTENT);
+-                params.setMargins(0,24,24,0);
+-                radioButton.setLayoutParams(params);
+-                radioButton.setButtonDrawable(R.drawable.checkbox_coupon);
+-                radioButton.setTextColor(getResources().getColor(R.color.main_title_color));
+-                radioButton.setText(orderInvoice.invoiceContentList.get(i).invoiceContentValue);
+-                radioButton.setPadding(PxUtils.dipTopx(5),0,0,0);
+-                rg_invoice_content.addView(radioButton);
++                } else if (R.id.rb_company == i) {
++                    //发票抬头内容 单位
++                    mDocument.setInvoiceTitleTypeCompany();
++                    int wayCheckId = rg_invoice_way.getCheckedRadioButtonId();
++                    if (wayCheckId == R.id.rg_invoive_electronic) {
++                        //电子发票
++                        showElectronicAndCompanyView();
++                    } else if (wayCheckId == R.id.rg_invoive_paper) {
++                        //纸质发票
++                        showPaperAndCompanyView();
++                    } else {
++                        hideAllTaitouView();
+-            }
+-        }
++                    }
++                }
++            }
++        });
++        //发票内容
++        rg_invoice_content.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
++            @Override
++            public void onCheckedChanged(RadioGroup radioGroup, int i) {
++                if (R.id.rb_invoice_content_detail_false == i) {
++                    //发票内容 汇总
++                    mDocument.setNeedDetailsFalse();
++                } else if (R.id.rb_invoice_content_detail_true == i) {
++                    //发票内容 明细
++                    mDocument.setNeedDetailsTrue();
++                } else {
++                    //发票内容 默认汇总
++                    mDocument.setNeedDetailsFalse();
++                }
++            }
++        });
+ 
++
+         tv_invoice_rule.setOnClickListener(this);
+         btn_yes.setOnClickListener(this);
+     }
+ 
++    /**
++     * 隐藏所有抬头需要输入的信息
++     */
++    private void hideAllTaitouView() {
++        ll_taitou.setVisibility(View.GONE);
++    }
++
++    /**
++     * 显示（电子发票 - 个人）需要输入的信息
++     */
++    private void showElectronicAndPersonView() {
++        ll_taitou.setVisibility(View.VISIBLE);
++        et_company_name.setVisibility(View.GONE);
++        et_taxpayer_code.setVisibility(View.GONE);
++        et_receiver_mail.setVisibility(View.VISIBLE);
++    }
++
++    /**
++     * 显示（纸质发票 - 个人）需要输入的信息
++     */
++    private void showPaperAndPersonView() {
++        hideAllTaitouView();
++    }
++
++    /**
++     * 显示（纸质发票 - 单位）需要输入的信息
++     */
++    private void showPaperAndCompanyView() {
++        ll_taitou.setVisibility(View.VISIBLE);
++        et_company_name.setVisibility(View.VISIBLE);
++        et_taxpayer_code.setVisibility(View.GONE);
++        et_receiver_mail.setVisibility(View.GONE);
++    }
++
++    /**
++     * 显示（电子发票 - 单位）需要输入的信息
++     */
++    private void showElectronicAndCompanyView() {
++        ll_taitou.setVisibility(View.VISIBLE);
++        et_company_name.setVisibility(View.VISIBLE);
++        et_taxpayer_code.setVisibility(View.VISIBLE);
++        et_receiver_mail.setVisibility(View.VISIBLE);
++    }
++
++    private void initData() {
++        ConfirmOrderBean.DataEntity.OrderInvoiceEntity.InvoiceEntity invoice = orderInvoice.invoice;
++        if (invoice == null) {
++            mDocument.setInvoiceTypeNull();
++            return;
++        }
++        //发票类型
++        mDocument.setInvoiceType(invoice.invoiceType);
++        //开票方式
++        mDocument.setInvoiceMode(invoice.invoiceMode);
++        //发票抬头类型
++        mDocument.setInvoiceTitleType(invoice.invoiceTitleType);
++        //发票抬头内容
++        mDocument.setInvoiceTitleContent(invoice.invoiceTitleContent);
++        et_company_name.setText(invoice.invoiceTitleContent);
++        //纳税人识别码
++        mDocument.setTaxpayerIdentificationCode(invoice.taxpayerIdentificationCode);
++        et_taxpayer_code.setText(invoice.taxpayerIdentificationCode);
++        //收票人邮箱
++        mDocument.setTakerEmail(invoice.takerEmail);
++        et_receiver_mail.setText(invoice.takerEmail);
++        //发票内容
++        mDocument.setIsNeedDetails(invoice.isNeedDetails);
++        //是否开发票
++        if (mDocument.isInvoiceTypeNull()) {
++            //不需要发票
++            cb_switch.setChecked(false);
++            ll_content.setVisibility(View.GONE);
++        } else {
++            //不需要发票
++            cb_switch.setChecked(true);
++            ll_content.setVisibility(View.VISIBLE);
++        }
++        //开票方式
++        if (orderInvoice.isSupportEInvoice()) {
++            rg_invoive_electronic.setEnabled(true);
++            rg_invoive_electronic.setTextColor(getResources().getColor(R.color.main_title_color));
++            tv_electronic_info2.setVisibility(View.GONE);
++        } else {
++            rg_invoive_electronic.setEnabled(false);
++            rg_invoive_electronic.setTextColor(getResources().getColor(R.color.sub_title_color));
++            tv_electronic_info2.setVisibility(View.VISIBLE);
++        }
++        if (mDocument.isInvoiceModeElectronic()) {
++            //电子发票
++            rg_invoive_electronic.setChecked(true);
++            //隐藏发票类型
++            ll_invoice.setVisibility(View.GONE);
++        } else if (mDocument.isInvoiceModePaper()) {
++            //纸质发票
++            rg_invoive_paper.setChecked(true);
++            //显示发票类型
++            ll_invoice.setVisibility(View.VISIBLE);
++        } else {
++            //默认纸质发票
++            rg_invoive_paper.setChecked(true);
++            //显示发票类型
++            ll_invoice.setVisibility(View.VISIBLE);
++        }
++        //发票抬头
++        if (mDocument.isInvoiceTitleTypePersonal()) {
++            //发票抬头内容 个人
++            rb_person.setChecked(true);
++        } else if (mDocument.isInvoiceTitleTypeCompany()) {
++            //发票抬头内容 单位
++            rb_company.setChecked(true);
++        } else {
++            //发票抬头内容 默认个人
++            rb_person.setChecked(true);
++        }
++        //发票类型
++        if (mDocument.isInvoiceTypeNormal()) {
++            //普通发票
++            rb_invoice_type1.setChecked(true);
++        } else if (mDocument.isInvoiceTypeVAT()) {
++            //增值税发票
++            rb_invoice_type2.setChecked(true);
++        } else {
++            //默认普通发票
++            rb_invoice_type1.setChecked(true);
++        }
++        //发票内容 写死 汇总 + 明细
++        if (mDocument.isNeedDetails()) {
++            rb_invoice_content_detail_true.setChecked(true);
++        } else {
++            rb_invoice_content_detail_false.setChecked(true);
++        }
++        //动态展示
++//        if (orderInvoice.invoiceContentList != null && orderInvoice.invoiceContentList.size() > 0) {
++//            for (int i = 0; i < orderInvoice.invoiceContentList.size(); i++) {
++//                ConfirmOrderBean.DataEntity.OrderInvoiceEntity.InvoiceContentListEntity invoiceContentListEntity = orderInvoice.invoiceContentList.get(i);
++//                RadioButton radioButton = new RadioButton(this);
++//                RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT);
++//                params.setMargins(0, 24, 24, 0);
++//                radioButton.setLayoutParams(params);
++//                radioButton.setButtonDrawable(R.drawable.checkbox_coupon);
++//                radioButton.setTextColor(getResources().getColor(R.color.main_title_color));
++//                radioButton.setText(invoiceContentListEntity.invoiceContentValue);
++//                radioButton.setPadding(PxUtils.dipTopx(5), 0, 0, 0);
++//                if (invoiceContentListEntity.invoiceContentId == invoice.invoiceContentId) {
++//                    radioButton.setChecked(true);
++//                } else {
++//                    radioButton.setChecked(false);
++//                }
++//                rg_invoice_content.addView(radioButton);
++//            }
++//        }
++    }
++
+     @Override
+     public void resume() {
+ 
+@@ -248,8 +479,8 @@
+ 
+     @Override
+     public void addInvoiceInfo(final InvoiceInfoBean invoiceInfoBean) {
+-        if(invoiceInfoBean.data!=null){
++        if (invoiceInfoBean.data != null) {
+-            if(!TextUtils.isEmpty(invoiceInfoBean.data.id)){
++            if (!TextUtils.isEmpty(invoiceInfoBean.data.id)) {
+                 ll_addtax_unauth.setVisibility(View.GONE);
+                 ll_addtax_auth.setVisibility(View.VISIBLE);
+                 tv_company_name.setText(invoiceInfoBean.data.unitName);
+@@ -258,79 +489,64 @@
+                 tv_register_phone.setText(invoiceInfoBean.data.registerPhone);
+                 tv_bank.setText(invoiceInfoBean.data.bankDeposit);
+                 tv_bank_account.setText(invoiceInfoBean.data.bankAccount);
+-                if (TextUtils.isEmpty(invoiceInfoBean.data.id)) {
+-                    ToastUtils.showToast("用户没有增值税发票信息");
+-                    btn_yes.setClickable(false);
+-                    btn_yes.setBackgroundResource(R.drawable.shape_cannot_click);
+-                }
+-            }else{
++            } else {
+                 ll_addtax_unauth.setVisibility(View.VISIBLE);
+                 ll_addtax_auth.setVisibility(View.GONE);
+             }
+-        }else{
++        } else {
+             ll_addtax_unauth.setVisibility(View.VISIBLE);
+             ll_addtax_auth.setVisibility(View.GONE);
+         }
+-
+-//        rb_invoice_type1.setChecked(true);
+-//        params.put("invoiceType", 1 + "");
+-//        rg_invoice_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+-//            @Override
+-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+-//                if (checkedId == R.id.rb_invoice_type1) {
+-//                    params.put("invoiceType", 1 + "");
+-//                    ll_common.setVisibility(View.VISIBLE);
+-//                    ll_added_tax.setVisibility(View.GONE);
+-//                    btn_yes.setClickable(true);
+-//                    btn_yes.setBackgroundResource(R.drawable.theme_btn_normal);
+-//                } else if (checkedId == R.id.rb_invoice_type2) {
+-//                    params.put("invoiceType", 2 + "");
+-//                    ll_common.setVisibility(View.GONE);
+-//                    ll_added_tax.setVisibility(View.VISIBLE);
+-//                    btn_yes.setClickable(true);
+-//                    btn_yes.setBackgroundResource(R.drawable.theme_btn_normal);
+-//                    if(pros!=null&&pros.size()>0){
+-//                        ll_added_pros.setVisibility(View.VISIBLE);
+-//                        InvoiceProductsAdapter adapter=new InvoiceProductsAdapter(BillActivity.this);
+-//                        adapter.setData(pros);
+-//                        rv_pics.setAdapter(adapter);
+-//                        btn_yes.setClickable(false);
+-//                        btn_yes.setBackgroundResource(R.drawable.shape_cannot_click);
+-//                    }else{
+-//                        ll_added_pros.setVisibility(View.GONE);
+-//                    }
+-//                    if(TextUtils.isEmpty(invoiceInfoBean.data.id)){
+-//                        ToastUtils.showToast("用户没有增值税发票信息");
+-//                        btn_yes.setClickable(false);
+-//                        btn_yes.setBackgroundResource(R.drawable.shape_cannot_click);
+-//                    }
+-//                }
+-//            }
+-//        });
+     }
+ 
+ 
+     @Override
+     public void onClick(View view) {
+         if (view.getId() == R.id.btn_yes) {
+-            params.put("invoiceTitleContent",et_company_name.getText().toString());
+-            if(orderInvoice.invoiceContentList!=null&&orderInvoice.invoiceContentList.size()>0){
+-                params.put("invoiceContentId",orderInvoice.invoiceContentList.get(getCheckItem(rg_invoice_content)).invoiceContentId+"");
+-                params.put("invoiceContent",orderInvoice.invoiceContentList.get(getCheckItem(rg_invoice_content)).invoiceContentValue);
+-            }
+-//            params.put("takerMobile",et_phone.getText().toString()+"");
+-//            params.put("takerEmail",et_email.getText().toString()+"");
+-            presenter.saveInvoice(params);
++            mDocument.setInvoiceTitleContent(getCompanyName());
++            mDocument.setTakerEmail(getTakerEmail());
++            mDocument.setTaxpayerIdentificationCode(getTaxpayerIdentificationCode());
++            //动态发票内容
++//            if (orderInvoice.invoiceContentList != null && orderInvoice.invoiceContentList.size() > 0) {
++//                int checkItem = getCheckItem(rg_invoice_content);
++//                if (checkItem == -1) {
++//                    mDocument.setInvoiceContentId(0);
++//                    mDocument.setInvoiceContent("");
++//                } else {
++//                    ConfirmOrderBean.DataEntity.OrderInvoiceEntity.InvoiceContentListEntity entity = orderInvoice.invoiceContentList.get(checkItem);
++//                    mDocument.setInvoiceContentId(entity.invoiceContentId);
++//                    mDocument.setInvoiceContent(entity.invoiceContentValue);
++//                }
++//            }
++            presenter.saveInvoice(mDocument);
+-        }else if(view.getId()==R.id.backIcon){
++        } else if (view.getId() == R.id.backIcon) {
+             JumpUtils.ToActivity(JumpUtils.CONFIRMORDER);
+             finish();
+-        }else if(view.getId()==R.id.tv_invoice_rule){
++        } else if (view.getId() == R.id.tv_invoice_rule) {
+-//            InvoiceRuleDialog invoiceRuleDialog=new InvoiceRuleDialog(this);
+-//            invoiceRuleDialog.show();
+             JumpUtils.ToWebActivity(OdyApplication.H5URL + "/pay/billRule.html", WebActivity.NO_TITLE, -1, null);
+         }
+     }
+ 
++    @Override
++    public void onBackPressed() {
++        JumpUtils.ToActivity(JumpUtils.CONFIRMORDER);
++        finish();
++    }
++
++    @NonNull
++    private String getTaxpayerIdentificationCode() {
++        return et_taxpayer_code.getText().toString().trim();
++    }
++
++    @NonNull
++    private String getTakerEmail() {
++        return et_receiver_mail.getText().toString().trim();
++    }
++
++    @NonNull
++    private String getCompanyName() {
++        return et_company_name.getText().toString().trim();
++    }
+ 
+ 
+     public int getCheckItem(RadioGroup group) {
+@@ -341,6 +557,6 @@
+                 break;
+             }
+         }
+-        return  item;
++        return item;
+     }
+ }
+Index: odylibrary/src/main/java/com/ody/p2p/Constants.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- odylibrary/src/main/java/com/ody/p2p/Constants.java	(revision 186955)
++++ odylibrary/src/main/java/com/ody/p2p/Constants.java	(revision )
+@@ -350,7 +350,8 @@
+     public static final String GET_SEARCH_LIST = BASEURL + "/api/search/searchList";
+     //添加商品到购物车
+     public static final String ADD_TO_CART = BASEURL + "/api/cart/addItem";
+-    public static final String SAVE_INVOICE = BASEURL + "/api/checkout/saveOrderInvoice";
++//    public static final String SAVE_INVOICE = BASEURL + "/api/checkout/saveOrderInvoice";
++    public static final String SAVE_INVOICE = BASEURL + "/api/checkout/savelyfOrderInvoice";
+ 
+     //---------------------------------------------商品详情
+     // 获取全部分类数据
+Index: orders/src/main/java/com/ody/p2p/check/bill/InvoicePresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/java/com/ody/p2p/check/bill/InvoicePresenter.java	(revision 186955)
++++ orders/src/main/java/com/ody/p2p/check/bill/InvoicePresenter.java	(revision )
+@@ -1,12 +1,10 @@
+ package com.ody.p2p.check.bill;
+ 
+-import java.util.Map;
+-
+ /**
+  * Created by tangmeijuan on 16/6/24.
+  */
+ public interface InvoicePresenter {
+-    void saveInvoice(Map<String, String> params);
++    void saveInvoice(InvoiceDocument document);
+ 
+     void addTaxInfo();
+ }
+Index: orders/src/main/res/layout/activity_order_bill.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/res/layout/activity_order_bill.xml	(revision 186955)
++++ orders/src/main/res/layout/activity_order_bill.xml	(revision )
+@@ -79,12 +79,9 @@
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+-                android:visibility="gone"
+                 >
+ 
+-                <!-- 发票类型-->
+                 <LinearLayout
+-                    android:id="@+id/ll_invoice"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+@@ -98,7 +95,7 @@
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+-                            android:text="@string/invoice_type"
++                            android:text="@string/make_out_invoice_way"
+                             android:layout_marginTop="15dp"
+                             android:layout_marginBottom="10dp"
+                             android:layout_marginLeft="12dp"
+@@ -106,107 +103,140 @@
+                             android:textColor="#333333"
+                             />
+                     </LinearLayout>
+-                    <RadioGroup
+-                        android:id="@+id/rg_invoice_type"
++                    <FrameLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:paddingBottom="15dp"
+                         >
+ 
++                        <RadioGroup
++                            android:id="@+id/rg_invoice_way"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:orientation="vertical"
++                            android:paddingLeft="12dp"
++                            >
++
+-                        <RadioButton
++                            <RadioButton
+-                            android:id="@+id/rb_invoice_type1"
++                                android:id="@+id/rg_invoive_electronic"
+-                            android:layout_width="wrap_content"
+-                            android:layout_height="wrap_content"
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"
+-                            android:text="@string/common_invoice"
++                                android:text="@string/electron_invoice"
+-                            android:textColor="@color/main_title_color"
++                                android:textColor="@color/main_title_color"
+-                            android:layout_marginLeft="12dp"
+-                            android:button="@drawable/checkbox_coupon"
+-                            android:paddingLeft="5dp"
+-                            android:gravity="center_vertical"
+-                            />
++                                android:button="@drawable/checkbox_coupon"
++                                android:paddingLeft="5dp"
++                                android:gravity="center_vertical"
++                                />
+ 
++                            <TextView
++                                android:text="@string/electronic_info1"
++                                android:textColor="@color/sub_title_color"
++                                android:paddingTop="5dp"
++                                android:paddingBottom="5dp"
++                                android:paddingLeft="24dp"
++                                android:textSize="@dimen/text_size_12sp"
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"/>
++
+-                        <RadioButton
++                            <RadioButton
+-                            android:id="@+id/rb_invoice_type2"
++                                android:id="@+id/rg_invoive_paper"
+-                            android:layout_width="wrap_content"
+-                            android:layout_height="wrap_content"
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"
+-                            android:layout_marginLeft="29dp"
+-                            android:text="@string/added_tax_invoice"
++                                android:text="@string/paper_invoice"
++                                android:layout_marginTop="6dp"
+-                            android:textColor="@color/main_title_color"
+-                            android:button="@drawable/checkbox_coupon"
+-                            android:paddingLeft="5dp"
+-                            android:gravity="center_vertical"
+-                            />
++                                android:textColor="@color/main_title_color"
++                                android:button="@drawable/checkbox_coupon"
++                                android:paddingLeft="5dp"
++                                android:gravity="center_vertical"
++                                />
+ 
+-                    </RadioGroup>
++                        </RadioGroup>
++
++                        <TextView
++                            android:id="@+id/tv_electronic_info2"
++                            android:visibility="gone"
++                            android:text="@string/electronic_info2"
++                            android:textColor="@color/orange"
++                            android:paddingLeft="100dp"
++                            android:textSize="@dimen/text_size_12sp"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"/>
++
++                    </FrameLayout>
+                 </LinearLayout>
+ 
+-                <!-- 普通发票-->
++                <!-- 发票类型-->
+                 <LinearLayout
+-                    android:id="@+id/ll_common"
++                    android:id="@+id/ll_invoice"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+-                    >
+-                    <LinearLayout
+-                        android:layout_width="match_parent"
+-                        android:layout_height="wrap_content"
+-                        android:orientation="vertical"
+-                        android:background="@color/white"
+-                        android:layout_marginTop="12dp">
+-                        <LinearLayout
+-                            android:layout_width="match_parent"
+-                            android:layout_height="wrap_content"
+-                            android:orientation="vertical"
+-                            >
+-                            <TextView
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
++                    android:background="@color/white"
++                    android:layout_marginTop="12dp">
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="vertical"
++                        >
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
+-                                android:text="@string/make_out_invoice_way"
++                            android:text="@string/invoice_type"
+-                                android:layout_marginTop="15dp"
+-                                android:layout_marginBottom="10dp"
+-                                android:layout_marginLeft="12dp"
+-                                android:textSize="14sp"
+-                                android:textColor="#333333"
+-                                />
+-                        </LinearLayout>
++                            android:layout_marginTop="15dp"
++                            android:layout_marginBottom="10dp"
++                            android:layout_marginLeft="12dp"
++                            android:textSize="14sp"
++                            android:textColor="#333333"
++                            />
++                    </LinearLayout>
+-                        <LinearLayout
++                    <RadioGroup
++                        android:id="@+id/rg_invoice_type"
+-                            android:layout_width="match_parent"
+-                            android:layout_height="wrap_content"
+-                            android:orientation="horizontal"
+-                            android:paddingBottom="15dp"
+-                            >
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal"
++                        android:paddingBottom="15dp"
++                        >
++
+-                            <RadioButton
++                        <RadioButton
+-                                android:id="@+id/rg_invoive_paper"
++                            android:id="@+id/rb_invoice_type1"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
+-                                android:text="@string/paper_invoice"
++                            android:text="@string/common_invoice"
+-                                android:textColor="@color/main_title_color"
++                            android:textColor="@color/main_title_color"
+-                                android:checked="true"
+-                                android:button="@drawable/checkbox_coupon"
+-                                android:layout_marginLeft="12dp"
++                            android:layout_marginLeft="12dp"
+-                                android:enabled="false"
++                            android:button="@drawable/checkbox_coupon"
+-                                android:paddingLeft="5dp"
+-                                android:gravity="center_vertical"
+-                                />
++                            android:paddingLeft="5dp"
++                            android:gravity="center_vertical"
++                            />
+-                            <TextView
+-                                android:id="@+id/tv_invoice_electronic"
+-                                android:layout_width="80dp"
+-                                android:layout_height="30dp"
+-                                android:layout_marginLeft="12dp"
+-                                android:text="@string/electron_invoice"
+-                                android:textSize="13sp"
+-                                android:textColor="#666666"
+-                                android:gravity="center"
+-                                android:background="@drawable/grey_stroke_white_solid"
+-                                android:visibility="gone"
++
++                        <RadioButton
++                            android:id="@+id/rb_invoice_type2"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:layout_marginLeft="29dp"
++                            android:text="@string/added_tax_invoice"
++                            android:textColor="@color/main_title_color"
++                            android:button="@drawable/checkbox_coupon"
++                            android:paddingLeft="5dp"
++                            android:gravity="center_vertical"
+-                                />
++                            />
++
++                    </RadioGroup>
+-                        </LinearLayout>
++                </LinearLayout>
+-                    </LinearLayout>
++
++                <!-- 普通发票-->
+-                    <LinearLayout
++                <LinearLayout
++                    android:id="@+id/ll_common"
+-                        android:layout_width="match_parent"
+-                        android:layout_height="wrap_content"
+-                        android:orientation="vertical"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:orientation="vertical"
++                    >
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="vertical"
+                         android:background="@color/white"
+                         android:layout_marginTop="12dp"
+                         >
+@@ -262,28 +292,49 @@
+                         </RadioGroup>
+                         <LinearLayout
+                             android:id="@+id/ll_taitou"
++                            android:visibility="gone"
+                             android:layout_width="match_parent"
+-                            android:layout_height="44dp"
+-                            android:orientation="horizontal"
++                            android:layout_height="wrap_content"
++                            android:orientation="vertical"
+                             android:layout_marginRight="12dp"
+                             android:layout_marginLeft="12dp"
+                             android:layout_marginBottom="14dp"
+                             android:background="@color/background_color"
+-                            android:visibility="gone"
+                             >
+ 
+                             <EditText
+                                 android:id="@+id/et_company_name"
+                                 android:layout_width="match_parent"
+-                                android:layout_height="match_parent"
++                                android:layout_height="40dp"
+                                 android:background="@null"
+                                 android:hint="@string/wirte_organization_name"
+-                                android:layout_marginLeft="12dp"
+-                                android:textSize="13sp"
++                                android:textSize="14sp"
+                                 android:textColorHint="#999999"
+                                 android:textColor="#666666"
+                                 android:maxLength="30"/>
+ 
++                            <EditText
++                                android:id="@+id/et_taxpayer_code"
++                                android:layout_width="match_parent"
++                                android:layout_height="40dp"
++                                android:background="@null"
++                                android:hint="@string/hint_taxpayer_code"
++                                android:textSize="14sp"
++                                android:textColorHint="#999999"
++                                android:textColor="#666666"
++                                android:maxLength="30"/>
++
++                            <EditText
++                                android:id="@+id/et_receiver_mail"
++                                android:layout_width="match_parent"
++                                android:layout_height="40dp"
++                                android:background="@null"
++                                android:hint="@string/hint_receiver_mail"
++                                android:textSize="14sp"
++                                android:textColorHint="#999999"
++                                android:textColor="#666666"
++                                android:maxLength="30"/>
++
+                         </LinearLayout>
+                     </LinearLayout>
+ 
+@@ -392,6 +443,28 @@
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical"
+                             >
++
++                            <RadioButton
++                                android:id="@+id/rb_invoice_content_detail_false"
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"
++                                android:text="汇总"
++                                android:textColor="@color/main_title_color"
++                                android:button="@drawable/checkbox_coupon"
++                                android:padding="5dp"
++                                android:gravity="center_vertical"
++                                />
++
++                            <RadioButton
++                                android:id="@+id/rb_invoice_content_detail_true"
++                                android:layout_width="wrap_content"
++                                android:layout_height="wrap_content"
++                                android:text="明细"
++                                android:textColor="@color/main_title_color"
++                                android:button="@drawable/checkbox_coupon"
++                                android:padding="5dp"
++                                android:gravity="center_vertical"
++                                />
+                         </RadioGroup>
+                     </LinearLayout>
+                 </LinearLayout>
+@@ -619,12 +692,23 @@
+                         </RelativeLayout>
+                     </LinearLayout>
+                 </LinearLayout>
+-                <RelativeLayout
++
++                <LinearLayout
+                     android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:layout_margin="20dp">
++                    android:layout_height="wrap_content"
++                    android:orientation="vertical"
++                    android:padding="12dp">
+ 
++                    <TextView
++                        android:textSize="@dimen/text_size_12sp"
++                        android:textColor="@color/sub_title_color"
++                        android:text="@string/invoice_rule1"
++                        android:lineSpacingExtra="2dp"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"/>
++
+                     <Button
++                        android:layout_marginTop="20dp"
+                         android:id="@+id/btn_yes"
+                         android:layout_width="match_parent"
+                         android:layout_height="48dp"
+@@ -635,7 +719,7 @@
+                         android:layout_alignParentBottom="true"
+                         android:layout_centerHorizontal="true"
+                         />
+-                </RelativeLayout>
++                </LinearLayout>
+ 
+             </LinearLayout>
+     </LinearLayout>
+Index: odylibrary/src/main/java/com/ody/p2p/receiver/ConfirmOrderBean.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- odylibrary/src/main/java/com/ody/p2p/receiver/ConfirmOrderBean.java	(revision 186955)
++++ odylibrary/src/main/java/com/ody/p2p/receiver/ConfirmOrderBean.java	(revision )
+@@ -187,7 +187,13 @@
+         }
+ 
+         public static class OrderInvoiceEntity implements Serializable {
+-            public int merchantSupportInvoiceType;
++            public int merchantSupportInvoiceType;//0 不支持发票 1 仅支持普通发票 2 仅支持增值税发票 3 支持普通发票和增值税发票
++            public int isSupportEInvoice;//0 不支持电子发票 1 支持电子发票
++
++            public boolean isSupportEInvoice() {
++                return isSupportEInvoice == 1;
++            }
++
+             public InvoiceEntity invoice;
+             /**
+              * invoiceContentId : 1
+@@ -222,9 +228,12 @@
+ //                        "receiverAddress": null,
+ //                        "auditStatus": 1
+ 
+-                public int invoiceType;
+-                public int invoiceTitleType;
+-                public String invoiceTitleContent;
++                public int invoiceType;//发票类型 0是不开发票，1普通发票，2增值税发票
++                public int invoiceTitleType;//发票抬头内容 1个人／2单位
++                public int invoiceMode;//发票种类 1电子发票，2纸质发票
++                public String invoiceTitleContent;//普通发票的发票抬头内容
++                public String taxpayerIdentificationCode;//纳税人识别码
++                public String takerEmail;//收票人邮箱
+                 public int isNeedDetails;
+                 public long invoiceContentId;
+                 public String unitName;
+Index: orders/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/res/values/strings.xml	(revision 186955)
++++ orders/src/main/res/values/strings.xml	(revision )
+@@ -134,4 +134,10 @@
+ 3、所有商品仅按顾客实付现金金额开具发票，不包括抵用券、返利金额、销售折让等金额部分。\n
+ 4、伊点卡、悠点卡、积分方式进行支付，则对于该部分支付金额，顾客仅可选择开具0元发票。\n
+ 5、如需将普通发票换开为增值税专用发票（电子发票不支持换开），则必须退回普通发票原件。</string>
++    <string name="hint_taxpayer_code">请填写纳税人识别号</string>
++    <string name="hint_receiver_mail">请填写收票人邮箱</string>
++    <string name="electronic_info1">电子发票与纸质发票具备同等法律效力，可支持报销入账</string>
++    <string name="electronic_info2">本单存在不支持开具电子发票的商品</string>
++
++    <string name="invoice_rule1">说明：\n1.目前发票金额不包含悠点卡、伊点卡、积分支付部分。\n2.来伊份自营商品（含生鲜）可开具电子发票或者纸质发票，且由来伊份负责开具。\n3.如商品由第三方卖家销售，发票内容、开具、寄出由商家决定，请直接联系商家。</string>
+ </resources>
+Index: orders/src/main/java/com/ody/p2p/check/bill/InvoiceDocument.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- orders/src/main/java/com/ody/p2p/check/bill/InvoiceDocument.java	(revision )
++++ orders/src/main/java/com/ody/p2p/check/bill/InvoiceDocument.java	(revision )
+@@ -0,0 +1,303 @@
++package com.ody.p2p.check.bill;
++
++/**
++ * 发票单据
++ */
++
++public class InvoiceDocument {
++
++    //region 发票类型
++    private static final int INVOICE_TYPE_NULL = 0; //不开发票
++    private static final int INVOICE_TYPE_NORMAL = 1; //普通发票
++    private static final int INVOICE_TYPE_VAT = 2; //增值税发票
++
++    /**
++     * @return 当选择不开发票时返回true
++     */
++    public boolean isInvoiceTypeNull() {
++        return invoiceType == INVOICE_TYPE_NULL;
++    }
++
++    /**
++     * 设置不开发票
++     */
++    public void setInvoiceTypeNull() {
++        this.invoiceType = INVOICE_TYPE_NULL;
++    }
++
++    /**
++     * @return 当选择开普通发票时返回true
++     */
++    public boolean isInvoiceTypeNormal() {
++        return invoiceType == INVOICE_TYPE_NORMAL;
++    }
++
++    /**
++     * 设置发票类型为：普通发票
++     */
++    public void setInvoiceTypeNormal() {
++        this.invoiceType = INVOICE_TYPE_NORMAL;
++    }
++
++    /**
++     * @return 当选择开增值税发票时返回true
++     */
++    public boolean isInvoiceTypeVAT() {
++        return invoiceType == INVOICE_TYPE_VAT;
++    }
++
++    /**
++     * 设置发票类型为：增值税发票
++     */
++    public void setInvoiceTypeVAT() {
++        this.invoiceType = INVOICE_TYPE_VAT;
++    }
++
++    //endregion
++
++    //region 开票方式
++    private static final int INVOICE_MODE_ELECTRONIC = 1; //电子发票
++    private static final int INVOICE_MODE_PAPER = 2; //纸质发票
++
++    /**
++     * @return 当选择开电子发票时返回true
++     */
++    public boolean isInvoiceModeElectronic() {
++        return invoiceMode == INVOICE_MODE_ELECTRONIC;
++    }
++
++    /**
++     * 设置开票方式为：电子发票
++     */
++    public void setInvoiceModeElectronic() {
++        this.invoiceMode = INVOICE_MODE_ELECTRONIC;
++    }
++
++    /**
++     * @return 当选择开纸质发票时返回true
++     */
++    public boolean isInvoiceModePaper() {
++        return invoiceMode == INVOICE_MODE_PAPER;
++    }
++
++    /**
++     * 设置开票方式为：纸质发票
++     */
++    public void setInvoiceModePaper() {
++        this.invoiceMode = INVOICE_MODE_PAPER;
++    }
++
++    //endregion
++
++    //region 发票抬头类型
++    private static final int INVOICE_TITLE_TYPE_PERSONAL = 1; //个人
++    private static final int INVOICE_TITLE_TYPE_COMPANY = 2; //单位
++
++
++    /**
++     * @return 当选择开个人发票时返回true
++     */
++    public boolean isInvoiceTitleTypePersonal() {
++        return invoiceTitleType == INVOICE_TITLE_TYPE_PERSONAL;
++    }
++
++    /**
++     * 设置发票抬头类型为：个人
++     */
++    public void setInvoiceTitleTypePersonal() {
++        this.invoiceTitleType = INVOICE_TITLE_TYPE_PERSONAL;
++    }
++
++    /**
++     * @return 当选择开单位发票时返回true
++     */
++    public boolean isInvoiceTitleTypeCompany() {
++        return invoiceTitleType == INVOICE_TITLE_TYPE_COMPANY;
++    }
++
++
++    /**
++     * 设置发票抬头类型为：单位
++     */
++    public void setInvoiceTitleTypeCompany() {
++        this.invoiceTitleType = INVOICE_TITLE_TYPE_COMPANY;
++    }
++
++
++    //endregion
++
++
++    private static final int INVOICE_IS_NEED_DETAIL_FALSE = 0; //汇总
++    private static final int INVOICE_IS_NEED_DETAIL_TRUE = 1; //明细
++
++    /**
++     * @return 发票内容为明细时返回true
++     */
++    public boolean isNeedDetails() {
++        return isNeedDetails == INVOICE_IS_NEED_DETAIL_TRUE;
++    }
++
++    /**
++     * 设置发票内容为明细
++     */
++    public void setNeedDetailsTrue() {
++        this.isNeedDetails = INVOICE_IS_NEED_DETAIL_TRUE;
++    }
++
++    /**
++     * 设置发票内容为汇总
++     */
++    public void setNeedDetailsFalse() {
++        this.isNeedDetails = INVOICE_IS_NEED_DETAIL_FALSE;
++    }
++
++    /**
++     * 是否开发票
++     */
++    private boolean isOpened;
++
++    /**
++     * 发票类型
++     */
++    private int invoiceType;
++    /**
++     * 开票方式
++     */
++    private int invoiceMode;
++    /**
++     * 发票抬头类型
++     */
++    private int invoiceTitleType;
++    /**
++     * 发票抬头内容（这里指单位名称）
++     */
++    private String invoiceTitleContent;
++    /**
++     * 是否需要明细（默认不需要）
++     */
++    private int isNeedDetails;
++    /**
++     * 发票内容id
++     */
++    private long invoiceContentId;
++    /**
++     * 发票内容
++     */
++    private String invoiceContent;
++    /**
++     * 收票人手机
++     */
++    private String takerMobile;
++    /**
++     * 收票人邮箱
++     */
++    private String takerEmail;
++    /**
++     * 纳税人识别码
++     */
++    private String taxpayerIdentificationCode;
++    /**
++     * 订单类型0：普通订单 1：团购订单 2：询价订单 3：租赁订单
++     * 4：砍价订单 5：预售订单，第一阶段支付定金
++     * 6：预售订单：第二阶段支付尾款 默认普通订单，其他业务类型订单时，必须字段
++     */
++    private int businessType;
++
++
++    public boolean isOpened() {
++        return isOpened;
++    }
++
++    public void setOpened(boolean opened) {
++        this.isOpened = opened;
++    }
++
++    public int getInvoiceType() {
++        return invoiceType;
++    }
++
++    public void setInvoiceType(int invoiceType) {
++        this.invoiceType = invoiceType;
++    }
++
++    public int getInvoiceMode() {
++        return invoiceMode;
++    }
++
++    public void setInvoiceMode(int invoiceMode) {
++        this.invoiceMode = invoiceMode;
++    }
++
++    public int getInvoiceTitleType() {
++        return invoiceTitleType;
++    }
++
++    public void setInvoiceTitleType(int invoiceTitleType) {
++        this.invoiceTitleType = invoiceTitleType;
++    }
++
++    public String getInvoiceTitleContent() {
++        return invoiceTitleContent;
++    }
++
++    public void setInvoiceTitleContent(String invoiceTitleContent) {
++        this.invoiceTitleContent = invoiceTitleContent;
++    }
++
++    public int getIsNeedDetails() {
++        return isNeedDetails;
++    }
++
++    public void setIsNeedDetails(int isNeedDetails) {
++        this.isNeedDetails = isNeedDetails;
++    }
++
++    public long getInvoiceContentId() {
++        return invoiceContentId;
++    }
++
++    public void setInvoiceContentId(long invoiceContentId) {
++        this.invoiceContentId = invoiceContentId;
++    }
++
++    public String getInvoiceContent() {
++        return invoiceContent;
++    }
++
++    public void setInvoiceContent(String invoiceContent) {
++        this.invoiceContent = invoiceContent;
++    }
++
++    public String getTakerMobile() {
++        return takerMobile;
++    }
++
++    public void setTakerMobile(String takerMobile) {
++        this.takerMobile = takerMobile;
++    }
++
++    public String getTakerEmail() {
++        return takerEmail;
++    }
++
++    public void setTakerEmail(String takerEmail) {
++        this.takerEmail = takerEmail;
++    }
++
++    public String getTaxpayerIdentificationCode() {
++        return taxpayerIdentificationCode;
++    }
++
++    public void setTaxpayerIdentificationCode(String taxpayerIdentificationCode) {
++        this.taxpayerIdentificationCode = taxpayerIdentificationCode;
++    }
++
++    public int getBusinessType() {
++        return businessType;
++    }
++
++    public void setBusinessType(int businessType) {
++        this.businessType = businessType;
++    }
++
++}

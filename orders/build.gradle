@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+//    applicationId "com.ody.p2p"
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //要上传的仓库地址
+    def MAVEN_LOCAL_PATH ='http://120.92.227.70:8081/content/repositories/snapshots'
+//artifaceID
+    def ARTIFACT_ID = 'orders'
+//version
+    def VERSION_NAME = '1.0.0-SNAPSHOT'
+//    groupID
+    def GROUP_ID = 'com.ody.p2p'
+//仓库的账户
+    def USERNAME='admin'
+//对应的密码
+    def PASSWORD='admin123'
+
+
+    uploadArchives {
+        repositories {
+            println("uploadArchives repositories")
+            mavenDeployer {
+                snapshotRepository(url: MAVEN_LOCAL_PATH) {
+                    authentication(userName: USERNAME, password: PASSWORD)
+                }
+
+                pom.project{
+                    groupId GROUP_ID
+                    artifactId ARTIFACT_ID
+                    version VERSION_NAME
+                    packaging 'aar'
+                    description 'lib for onesdk'
+                }
+
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile project(':odylibrary')
+    compile project(':photograph')
+}

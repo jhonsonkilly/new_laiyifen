@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shopcart_data_null"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/icon_no_commodity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/no_product_inshopcart"
+        android:textColor="@color/sub_title_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txt_goshop"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circular_bead_nobackgroud"
+        android:gravity="center"
+        android:text="@string/visit_the"
+        android:textColor="@color/sub_title_color"
+        android:textSize="12sp" />
+
+</LinearLayout>

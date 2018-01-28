@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FF6900</color>
+    <color name="colorPrimaryDark">#FF6900</color>
+    <color name="colorAccent">#FF6900</color>
+    <color name="theme_color">#FF6900</color>
+    <color name="button_text_color">#ffffff</color>
+    <color name="warn_bg">#fffbc5</color>
+    <color name="c80">#808080</color>
+    <color name="cb2">#b2b2b2</color>
+    <color name="cyellow">#ffb400</color>
+    <color name="edittext_hint_color">#666666</color>
+    <color name="commend_btn_background">#fff5ed</color>
+    <color name="cfo">#f0f0f0</color>
+    <!-- 分割线颜色-->
+    <color name="divider_color">#dddddd</color>
+
+    <!--购物车促销标签背景色-->
+    <color name="changesale_lable">#b9be67</color>
+    <color name="line_color">#DDDDDD</color>
+
+    <color name="aliwx_common_text_color">#f9f9f9</color>
+
+
+    <color name="bg_color">#f3f3f3</color>
+    <color name="green_deep_text">#00cc00</color>
+    <color name="darkgray3">#ff505050</color>
+    <!--橘黄色-->
+    <color name="saffron_yellow">#ff6900</color>
+    <color name="c_ff690">#ff6900</color>
+    <color name="ffeadb">#ffeadb</color>
+    <color name="e5e5e5">#e5e5e5</color>
+    <color name="gray_6">#666666</color>
+
+    <color name="six_3">#333333</color>
+    <color name="three_b2">#b2b2b2</color>
+
+
+
+    <color name="touming">#00000000</color>
+
+    <color name="black">#000000</color>
+
+    <color name="text_max_grey">#333333</color>
+    <color name="text_med_grey">#666666</color>
+    <color name="text_min_grey">#999999</color>
+
+
+
+    <color name="white">#ffffff</color>
+    <color name="ccccccc">#cccccc</color>
+
+
+    <color name="cf19737">#f19737</color>
+
+
+    <!-- main buttom-->
+    <color name="ce85f00">#e85f00</color>
+    <color name="c736e69">#736e69</color>
+    <color name="cf8400">#ff8400</color>
+    <color name="cdddddd">#dddddd</color>
+    <color name="c333333">#333333</color>
+    <color name="c666666">#666666</color>
+    <color name="ce5e5e5e">#e5e5e5</color>
+
+    <color name="common_bg">#eeeeee</color>
+    <color name="cff6900">#ff6900</color>
+
+    <color name="cd9d9d9">#D9D9D9</color>
+
+    <color name="cf5f5f5">#f5f5f5</color>
+    <color name="cFFFF0000">#FFFF0000</color>
+
+    <color name="cb2b2b2">#B2B2B2</color>
+    <color name="c0066cc">#0066cc</color>
+    <color name="c808080">#808080</color>
+    <color name="c30000000">#30000000</color>
+
+    <color name="cf0f0f0">#F0F0F0</color>
+
+    <color name="C00B4FF">#00B4FF</color>
+
+    <color name="C0289C4">#0289C4</color>
+
+    <color name="C515253">#515253</color>
+
+    <color name="cfff58c5b">#fff58c5b</color>
+    <color name="c787878">#787878</color>
+    <color name="ca7a4a4">#a7a4a4</color>
+
+</resources>

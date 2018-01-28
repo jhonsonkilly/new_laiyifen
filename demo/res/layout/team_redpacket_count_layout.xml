@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/border_white"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:text="个数"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+
+    <EditText
+        android:id="@+id/input_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/unit"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="right|center"
+        android:hint="填写个数"
+        android:textColorHint="@color/gray_text"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@color/gray_text"/>
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:text="个"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+</LinearLayout>

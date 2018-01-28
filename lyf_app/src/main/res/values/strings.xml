@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">来伊份商城</string>
+    <string name="quick_key_login">一键登陆</string>
+    <string name="quick_login">快速登陆</string>
+    <string name="app_user_agreement">来伊份用户协议</string>
+    <string name="input_login_zhanghao">请输入11位手机号</string>
+    <string name="password_lenght_6for18">密码由6-16位英文字母、数字或符号组成</string>
+    <string name="piece_product_total">件 合计:</string>
+    <string name="pay_suc_tip">您的包裹正整装待发</string>
+    <string name="noshear_product_recommend">没有找到相关商品，推荐\"</string>
+    <string name="please_change_key">\"的搜索结果\n换个关键词试试</string>
+    <string name="like_eat">爱吃</string>
+    <string name="this_no_evaluate">还没有评价哦~</string>
+    <string name="product_appraise">商品评价</string>
+    <string name="show_allAppraise">查看全部评价</string>
+    <string name="already_favorable_">已优惠:</string>
+    <string name="announcement">公告</string>
+    <string name="no_product_inshopcart">购物车空空荡荡...</string>
+    <string name="visit_the">立刻去逛逛</string>
+    <string name="loactionload">定位中。。</string>
+    <string name="arrival_notif">到货通知</string>
+    <string name="app_push_notif">App推送通知</string>
+    <string name="message_notif">短信通知</string>
+    <string name="notifaction_for_product">商品到货后我们将会用以下方式通知您</string>
+    <string name="sale_null">已售罄</string>
+    <string name="aliwx_back"> </string>
+    <array name="home_tabs">
+        <item>首页</item>
+        <item>分类</item>
+        <item>全球尖货</item>
+        <item>购物车</item>
+        <item>我的</item>
+    </array>
+
+    <array name="home_tabs2">
+        <item>首页</item>
+        <item>分类</item>
+        <item>聊天</item>
+        <item>购物车</item>
+        <item>我的</item>
+    </array>
+
+    <string name="block_canary_display_activity_label">Blocks</string>
+    <string name="tips_seckill">限量秒杀商品已抢完，超出部分恢复原价</string>
+
+    <!-- 商品 -->
+    <string name="shop_attention">关注</string>
+    <string name="shop_all_goods">全部商品</string>
+    <string name="shop_up_new">上新</string>
+    <string name="shop_coupons">领券</string>
+    <string name="shop_coupons_list">领券活动</string>
+
+    <string name="shop_contact_merchant">联系商家</string>
+    <string name="shop_enter_shop">进入店铺</string>
+    <string name="title_activity_lyf_store">LyfStoreActivity</string>
+    <string name="shop_dispatching">由***提供配送服务</string>
+
+    <string name="already_receive_completed">已领完</string>
+    <string name="already_receive">已领取</string>
+    <string name="receive_immediately">立即\n领取</string>
+    <string name="receive_success">领取成功</string>
+    <string name="add_cart_success">添加购物车成功</string>
+    <string name="store_flagship">旗舰店</string>
+    <string name="inite_you_join">邀请你一起加入</string>
+
+    <string-array name="ordertype_names">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>待评价</item>
+        <item>已完成</item>
+        <item>售后服务</item>
+    </string-array>
+
+</resources>

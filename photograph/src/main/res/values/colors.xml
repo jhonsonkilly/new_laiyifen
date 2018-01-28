@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 次标题颜色-->
+    <color name="sub_title_color">#666666</color>
+    <color name="white">#ffffff</color>
+
+    <!-- 分割线颜色-->
+    <color name="divider_color">#dddddd</color>
+
+    <!-- 主题色-->
+    <color name="theme_color">#CC0000</color>
+
+    <color name="banner_normal">#30333333</color>
+
+    <color name="scan_background">#60000000</color>
+
+    <color name="scan_border">#ff09BB07</color>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/addressmanage" />
+            <option value="$PROJECT_DIR$/classesification" />
+            <option value="$PROJECT_DIR$/demo" />
+            <option value="$PROJECT_DIR$/im" />
+            <option value="$PROJECT_DIR$/lyf_app" />
+            <option value="$PROJECT_DIR$/lyf_home" />
+            <option value="$PROJECT_DIR$/lyf_login" />
+            <option value="$PROJECT_DIR$/myhomepager" />
+            <option value="$PROJECT_DIR$/odylibrary" />
+            <option value="$PROJECT_DIR$/orders" />
+            <option value="$PROJECT_DIR$/pay" />
+            <option value="$PROJECT_DIR$/photograph" />
+            <option value="$PROJECT_DIR$/produtdetail" />
+            <option value="$PROJECT_DIR$/pushlibrary" />
+            <option value="$PROJECT_DIR$/search" />
+            <option value="$PROJECT_DIR$/share" />
+            <option value="$PROJECT_DIR$/shopcart" />
+            <option value="$PROJECT_DIR$/uikit" />
+            <option value="$PROJECT_DIR$/uplevel" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

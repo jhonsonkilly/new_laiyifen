@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ody.p2p.produtdetail">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.ody.p2p.productdetail.ProductDetailActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+        <activity android:name="com.ody.p2p.productdetail.photoamplification.ViewPagerActivity"></activity>
+        <activity android:name="com.ody.p2p.productdetail.productdepreciate.ProductThepriceActivity"></activity>
+        <activity android:name="com.ody.p2p.productdetail.productrecommend.ProductAppriesActivity"></activity>
+        <activity android:name="com.ody.p2p.productdetail.store.fragment.FloatActivity"/>
+        <activity android:name="com.ody.p2p.productdetail.store.StoreHomeActivity"></activity>
+        <activity android:name="com.ody.p2p.productdetail.store.StoreDetailActivity"></activity>
+        <activity android:name="com.ody.p2p.productdetail.store.storecategory.StoreCategoryActivity"></activity>
+    </application>
+
+</manifest>

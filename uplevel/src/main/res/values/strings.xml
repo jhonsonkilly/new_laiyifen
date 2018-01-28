@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="no_network_examine">当期网络不可用,请检查你的网络</string>
+    <string name="confirm_cancel_up">确定取消更新?</string>
+    <string name="up_fail">下载失败</string>
+    <string name="Network_connection_broken">网络连接断开</string>
+    <string name="type">类型</string>
+    <string name="status">状态</string>
+</resources>

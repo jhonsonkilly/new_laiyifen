@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/addressmanage_title_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/lay_address_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_no_address"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/address_null"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addressmanage_null_address"
+            android:textColor="@color/note_color"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/btn_address_null_add"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_null_address_bg"
+            android:text="@string/addressmanage_add_receive_address"
+            android:textColor="@color/sub_title_color"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/lay_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_receiver_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="12dp"
+            android:divider="@color/background_color"
+            android:layout_marginBottom="50dp"/>
+
+        <Button
+            android:id="@+id/btn_receiver_add_newAddress"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="@string/add_address"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_red_rectangle_bg"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+    </FrameLayout>
+
+
+
+
+
+
+</LinearLayout>

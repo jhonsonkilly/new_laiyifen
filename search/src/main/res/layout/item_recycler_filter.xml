@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/tv_filter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="@string/brand"
+            android:textColor="@color/text_gray_color"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_filter_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:drawableRight="@drawable/selector_open_gray"
+            android:drawablePadding="4dp"
+            android:text="@string/all"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp" />
+        <GridView
+            android:id="@+id/recycler_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_filter_title"
+            android:layout_marginLeft="12dp"
+            android:scrollbars="none"
+            android:numColumns="3"
+            android:horizontalSpacing="7.5dp"
+            android:layout_marginRight="12dp"/>
+    </RelativeLayout>
+</LinearLayout>

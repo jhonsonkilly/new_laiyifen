@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="247dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/circular_topbead_border"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="升级中..."
+        android:textColor="@color/text3color" />
+
+    <TextView
+        android:id="@+id/tv_jindu"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="0 %"
+        android:textColor="@color/theme_color" />
+
+    <TextView
+        android:id="@+id/tv_wangsu"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="0 KB/s"
+        android:textColor="@color/theme_color"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pro_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="4dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_color" />
+</LinearLayout>

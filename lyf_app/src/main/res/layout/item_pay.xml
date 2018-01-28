@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_pay_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:textColor="@color/main_title_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_pay_name"
+        android:layout_below="@+id/tv_pay_name"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/c80"
+        android:textSize="@dimen/textsize_14sp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/tv_promotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_next"
+        android:background="@drawable/circle_theme_stroke_bg"
+        android:padding="2dp"
+        android:textColor="@color/theme_color"
+        android:textSize="15sp"
+        />
+
+</RelativeLayout>

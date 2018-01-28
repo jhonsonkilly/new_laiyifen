@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RatingBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rb_evaluate"
+    style="@style/roomRatingBar"
+    android:layout_width="wrap_content"
+    android:layout_height="10dp"
+    android:isIndicator="false"
+    android:numStars="5"
+    android:rating="5"
+    android:stepSize="1" />

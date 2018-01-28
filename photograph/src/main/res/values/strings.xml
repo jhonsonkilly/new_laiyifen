@@ -1,0 +1,16 @@
+<resources>
+    <string name="photos_num">%1$d张</string>
+    <string name="msg_no_camera">没找到摄像头</string>
+    <string name="msg_maxi_capacity">已达到照片选择上限</string>
+    <string name="commit_num">确定(%1$d/%2$d)</string>
+    <string name="all_photos">所有图片</string>
+    <string name="choose_photos_num">选择照片数量</string>
+    <string name="please_input_num">请输入数量</string>
+    <string name="show_photos">显示照片</string>
+    <string name="take_photos">拍摄照片</string>
+    <string name="picture">图片</string>
+    <string name="confirm">确定</string>
+    <string name="spread">张</string>
+    <string name="photo_album">相册</string>
+    <string name="please_put_qr_code_in_scanning_frame">请将二维码放入扫描框内</string>
+</resources>

@@ -1,0 +1,31 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:right="200dp">
+        <shape>
+            <!--当angle=0时，渐变色是从左向右,然后逆时针方向转，当angle=90时为从下往上。-->
+            <gradient
+                android:angle="0"
+                android:endColor="#b38a32"
+                android:startColor="#b38a32" />
+        </shape>
+    </item>
+    <item
+        android:left="160dp"
+        android:right="40dp">
+        <shape>
+            <gradient
+                android:angle="0"
+                android:endColor="#cca34b"
+                android:startColor="#b38a32" />
+        </shape>
+    </item>
+    <item android:left="320dp">
+        <shape>
+            <gradient
+                android:angle="0"
+                android:endColor="#f6e1b4"
+                android:startColor="#cca34b" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cf0f0f0"
+    >
+
+    <LinearLayout
+        android:id="@+id/liner_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_gravity="center"
+            android:id="@+id/img_recommend"
+            style="@style/fresocStyle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            fresco:actualImageScaleType="focusCrop"/>
+
+        <TextView
+            android:id="@+id/tv_recommed_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/product_name"
+            android:textColor="@color/text_med_grey"
+            android:textSize="14sp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_recommend_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥0.00"
+                        android:textColor="@color/theme_color"/>
+
+                    <TextView
+                        android:id="@+id/tv_sourceprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="¥0.00"
+                        android:textColor="@color/text_med_grey"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_evaluate_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="12条评论，好评90%"
+                    android:textColor="@color/theme_color"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+            <ImageView
+
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_addcart"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:src="@mipmap/btn_addtoshoppingcart"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

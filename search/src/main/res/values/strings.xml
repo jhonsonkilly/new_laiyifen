@@ -1,0 +1,14 @@
+<resources>
+    <string name="current_search">历史搜索</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="clear_search_history">清空搜索历史</string>
+    <string name="search_key_cannot_null">搜索关键词不能为空</string>
+    <string name="please_input_true_price_setcion">请输入正确的价格区间</string>
+    <string name="canont_get_keyword">没有获取到keyword</string>
+    <string name="brand_name">品牌名称</string>
+    <string name="comprehensive_ranking">综合排序</string>
+    <string name="Sales_is_preferred">销量</string>
+    <string name="cannot_search_product">没有找到相关商品~</string>
+    <string name="price_setcion">价格区间</string>
+    <string name="clear_empty_the_history">清空历史记录?</string>
+</resources>

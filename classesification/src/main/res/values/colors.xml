@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--分类-->
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+
+    <!-- 主色-->
+    <color name="system_primary">#ff3a1d</color>
+    <color name="threePrimary">#666666</color>
+</resources>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scan_background"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <!-- 添加优惠券-->
+    <FrameLayout
+        android:id="@+id/popupwindow_lyf_choose_coupon_framelayout_add_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginTop="@dimen/distance_18"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_50"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/icon_back"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="添加券"
+                    android:textColor="@color/gray_5d5d5d"
+                    android:textSize="@dimen/font_18" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="券号码"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_cardnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:digits="@string/coupon_rule"
+                    android:hint="请输入券号码"
+                    android:textColor="@color/main_title_color"
+                    android:textColorHint="@color/rectangle_bead"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="券密码"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:hint="请输入券密码"
+                    android:textColor="@color/main_title_color"
+                    android:textColorHint="@color/rectangle_bead"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/distance_48"
+                    android:background="@color/theme_color"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_add_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/pay_pop_close" />
+
+    </FrameLayout>
+
+    <!--优惠券列表 -->
+    <FrameLayout
+        android:id="@+id/popupwindow_lyf_choose_coupon_framelayout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginTop="@dimen/distance_18"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_50"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:text="添加券"
+                    android:textColor="@color/theme_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="使用优惠券"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="@dimen/text_size_18sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不使用优惠券"
+                    android:textColor="@color/main_title_color"
+                    android:textSize="@dimen/textsize_14sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_check"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/checkbox_coupon" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/popupwindow_lyf_choose_coupon_radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/distance_10"
+                    android:checkedButton="@+id/popupwindow_lyf_choose_coupon_radiobutton_use"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/popupwindow_lyf_choose_coupon_radiobutton_use"
+                        android:layout_width="@dimen/distance_90"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_left_is_radius"
+                        android:button="@color/sub_title_color"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/distance_8"
+                        android:paddingTop="@dimen/distance_8"
+                        android:text="可用"
+                        android:textColor="@drawable/radiobutton_text_colr" />
+
+                    <RadioButton
+                        android:id="@+id/popupwindow_lyf_choose_coupon_radiobutton_no_use"
+                        android:layout_width="@dimen/distance_90"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_right_is_radius"
+                        android:button="@color/sub_title_color"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/distance_8"
+                        android:paddingTop="@dimen/distance_8"
+                        android:text="不可用"
+                        android:textColor="@drawable/radiobutton_text_colr" />
+
+                </RadioGroup>
+
+                <ListView
+                    android:id="@+id/popupwindow_lyf_choose_coupon_lv_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:divider="@color/white"
+                    android:dividerHeight="10dp" />
+
+                <TextView
+                    android:id="@+id/popupwindow_lyf_choose_coupon_tv_choose_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/distance_48"
+                    android:background="@color/theme_color"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="@dimen/font_16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/distance_12"
+            android:src="@drawable/pay_pop_close" />
+
+    </FrameLayout>
+
+</LinearLayout>

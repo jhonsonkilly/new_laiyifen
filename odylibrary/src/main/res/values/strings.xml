@@ -1,0 +1,606 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="my">我的</string>
+    <string name="live">直播</string>
+    <string name="home">首页</string>
+    <string name="address">上海</string>
+    <string name="app_name">Saax</string>
+    <string name="classesif">分类</string>
+    <string name="ody_title">欧电云</string>
+    <string name="shop_cart">购物车</string>
+
+    <string name="digits">0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</string>
+
+
+    <string name="to">至</string>
+    <string name="pen">笔</string>
+    <string name="day">日</string>
+    <string name="ago">前</string>
+    <string name="man">男</string>
+    <string name="unit">件</string>
+    <string name="year">年</string>
+    <string name="piece">件</string>
+    <string name="woman">女</string>
+    <string name="month">月</string>
+    <string name="spread">张</string>
+    <string name="common">共</string>
+    <string name="next_ci">次</string>
+    <string name="dollars">元</string>
+    <string name="individual">个</string>
+    <string name="money_symbol">¥</string>
+
+    <string name="no">没有</string>
+    <string name="add">添加</string>
+    <string name="age">年龄</string>
+    <string name="all">全部</string>
+    <string name="read">阅读</string>
+    <string name="more">更多</string>
+    <string name="test">测试</string>
+    <string name="bind">绑定</string>
+    <string name="gift">赠品</string>
+    <string name="show">显示</string>
+    <string name="help">帮助</string>
+    <string name="bill">账单</string>
+    <string name="save">保存</string>
+    <string name="query">查询</string>
+    <string name="faile">失效</string>
+    <string name="share">分享</string>
+    <string name="clear">清空</string>
+    <string name="login">登录</string>
+    <string name="reset">重置</string>
+    <string name="total">合计</string>
+    <string name="order">订单</string>
+    <string name="radio">单选</string>
+    <string name="stock">库存</string>
+    <string name="close">关闭</string>
+    <string name="about">关于</string>
+    <string name="store">店铺</string>
+    <string name="serve">服务</string>
+    <string name="price">价格</string>
+    <string name="today">今日</string>
+    <string name="brand">品牌</string>
+    <string name="system">系统</string>
+    <string name="affirm">确认</string>
+    <string name="screen">筛选</string>
+    <string name="choose">选择</string>
+    <string name="camera">相机</string>
+    <string name="parcel">包裹</string>
+    <string name="editor">编辑</string>
+    <string name="mobile">手机</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="manage">管理</string>
+    <string name="submit">提交</string>
+    <string name="search">搜索</string>
+    <string name="refund">退款</string>
+    <string name="product">商品</string>
+    <string name="invoice">发票</string>
+    <string name="sals_">已售：</string>
+    <string name="comment">评论</string>
+    <string name="pattern">模式</string>
+    <string name="total_">合计:</string>
+    <string name="collect">收藏</string>
+    <string name="feright">运费</string>
+    <string name="confirm">确定</string>
+    <string name="message">消息</string>
+    <string name="setting">设置</string>
+    <string name="sign_in">签到</string>
+    <string name="special">专题</string>
+    <string name="pack_up">收起</string>
+    <string name="deatile">详情</string>
+    <string name="balance">余额</string>
+    <string name="predict">预计</string>
+    <string name="checkbox">多选</string>
+    <string name="register">注册</string>
+    <string name="complete">完成</string>
+    <string name="password">密码</string>
+    <string name="user_sex">性别</string>
+    <string name="can_used">可用</string>
+    <string name="integral">积分</string>
+    <string name="price_">价格：</string>
+    <string name="appraise">评价</string>
+    <string name="oldprice">原价</string>
+    <string name="activity">活动</string>
+    <string name="refound">"退款"</string>
+    <string name="user_name">昵称</string>
+    <string name="scan_code">扫码</string>
+    <string name="out_stock">无货</string>
+    <string name="money_sum">金额</string>
+    <string name="personage">个人</string>
+    <string name="logistics">物流</string>
+    <string name="yesterday">昨日</string>
+    <string name="this_week">本周</string>
+    <string name="collection">收藏</string>
+    <string name="user_photo">头像</string>
+    <string name="get_coupon">领券</string>
+    <string name="synthesize">综合</string>
+    <string name="this_month">本月</string>
+    <string name="redemption">换购</string>
+    <string name="public_comm">公共</string>
+    <string name="oldprice_">原价：</string>
+    <string name="store_level">级店</string>
+    <string name="photo_album">相册</string>
+    <string name="selectedall">全选</string>
+    <string name="with_a_gift">满赠</string>
+    <string name="sales_return">退货</string>
+    <string name="modification">修改</string>
+    <string name="seconds_kill">秒杀</string>
+    <string name="delect_nbsp">删 除</string>
+    <string name="already_sell">已售</string>
+    <string name="account_number">账号</string>
+    <string name="already_choose">已选</string>
+    <string name="exchange_goods">换货</string>
+    <string name="good_reputation">好评</string>
+    <string name="settle_accounts">结算</string>
+    <string name="to_settle_accounts">去结算</string>
+    <string name="content_reputation">条评论</string>
+    <string name="expenses_taxation">税费</string>
+
+    <string name="next">下一步</string>
+    <string name="used">已使用</string>
+    <string name="know">知道了</string>
+    <string name="Sale">已售完</string>
+    <string name="unpay">待付款</string>
+    <string name="unused">未使用</string>
+    <string name="coupon">优惠券</string>
+    <string name="to_pay">去支付</string>
+    <string name="unshow">不显示</string>
+    <string name="un_save">不保存</string>
+    <string name="new_psd">新密码</string>
+    <string name="tocancle">已取消</string>
+    <string name="to_audit">待审核</string>
+    <string name="completed">已完成</string>
+    <string name="gift_card">礼金卡</string>
+    <string name="min_price">最低价</string>
+    <string name="max_price">最高价</string>
+    <string name="visit_the">去逛逛</string>
+    <string name="page_view">浏览量</string>
+    <string name="unappraise">待评价</string>
+    <string name="for_refund">待退款</string>
+    <string name="have_refund">已退款</string>
+    <string name="out_of_date">已过期</string>
+    <string name="unReceiving">待收货</string>
+    <string name="A_refund_of">退款中</string>
+    <string name="phone_number">手机号</string>
+    <string name="verification">验证码</string>
+    <string name="img_verification">图形验证码</string>
+    <string name="order_b_coed">订单号</string>
+    <string name="not_can_used">无可用</string>
+    <string name="ranking_list">排行榜</string>
+    <string name="active_region">活动区</string>
+    <string name="please_select">请选择</string>
+    <string name="verification_">验证码 :</string>
+    <string name="undeliver_goods">待发货</string>
+    <string name="exchange_goods_now">换货中</string>
+    <string name="hot_sell_billboard">热销榜</string>
+    <string name="already_authentication">已认证</string>
+    <string name="unalready_authentication">未认证</string>
+
+    <string name="nowBuy">立即购买</string>
+    <string name="pay_way">支付方式</string>
+    <string name="no_more">没有更多</string>
+    <string name="myPhoto">我的相册</string>
+    <string name="my_gold">我的金币</string>
+    <string name="my_order">我的订单</string>
+    <string name="all_type">全部分类</string>
+    <string name="standard">规格参数</string>
+    <string name="loderror">加载错误</string>
+    <string name="addcart">加入购物车</string>
+    <string name="noteerror">网络错误</string>
+    <string name="productId">商品编号</string>
+    <string name="show_gift">查看赠品</string>
+    <string name="to_passable">去凑单</string>
+    <string name="shop_share">店铺分享</string>
+    <string name="creat_time">创建时间</string>
+    <string name="all_orders">所有订单</string>
+    <string name="order_coed">订单编号</string>
+    <string name="order_info">订单详情</string>
+    <string name="modify_psd">修改密码</string>
+    <string name="welcome_to">欢迎来到</string>
+    <string name="his_general">全场通用</string>
+    <string name="apply_after">申请售后</string>
+    <string name="add_succeed">添加成功</string>
+    <string name="check_order">查看订单</string>
+    <string name="apply_again">重新申请</string>
+    <string name="load_finish">加载完毕</string>
+    <string name="set_default_address">设为\n默认</string>
+    <string name="my_integral">我的积分</string>
+    <string name="product_name">商品名称</string>
+    <string name="apply_refund">申请退款</string>
+    <string name="delect_order">删除订单</string>
+    <string name="delect_faile">删除失败</string>
+    <string name="submit_order">提交订单</string>
+    <string name="product_info">商品详情</string>
+    <string name="no_inventory">暂无库存</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="choose_more">最多可选择</string>
+    <string name="confirm_order">确认订单</string>
+    <string name="collect_faile">收藏失败</string>
+    <string name="product_total">商品总额</string>
+    <string name="my_gif_card">我的礼金卡</string>
+    <string name="delect_succeed">删除成功</string>
+    <string name="show_logistics">查看物流</string>
+    <string name="choose_product">选择商品</string>
+    <string name="guess_you_like">猜你喜欢</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="move_attention">移入收藏</string>
+    <string name="confirm_delect">确定删除</string>
+    <string name="submit_succeed">提交成功</string>
+    <string name="update_succeed">更新成功</string>
+    <string name="complete_submit">确认提交</string>
+    <string name="receive_address">收货地址</string>
+    <string name="input_phone">请输入手机号</string>
+    <string name="clear_succeed_">清空成功!</string>
+    <string name="collect_succeed">收藏成功</string>
+    <string name="product_collect">商品收藏</string>
+    <string name="more_recommended">更多推荐</string>
+    <string name="inventory_nervou">库存紧张</string>
+    <string name="inventory_enough">库存充足</string>
+    <string name="inventory_nervous">库存紧张</string>
+    <string name="service_agreement">服务协议</string>
+    <string name="input_new_psd">请输入新密码</string>
+    <string name="back_to_shopcart">返回购物车</string>
+    <string name="prduct_total_prices">商品总价</string>
+    <string name="recommended_for_you">为您推荐</string>
+    <string name="continue_settlement">继续结算</string>
+    <string name="operation_successful">操作成功</string>
+    <string name="please_confirm_psd">请确认密码</string>
+    <string name="addressmanage_change">修改成功</string>
+    <string name="seckill_rush_purchase">秒杀抢购</string>
+    <string name="cancel_exchange_goods">取消换货</string>
+    <string name="addressmanage_location">所在地区</string>
+    <string name="inventory_insufficient">库存不足</string>
+    <string name="cancel_collect_faile">取消收藏失败</string>
+    <string name="ResembleRecommend">相似好货为你推荐</string>
+    <string name="contact_customer_service">联系客服</string>
+    <string name="cancel_collect_succeed">取消收藏成功</string>
+    <string name="add_to_shopcart_faile">加入购物车失败</string>
+    <string name="input_validate_code">请输入手机验证码</string>
+    <string name="add_to_shopcart_succeeed">加入购物车成功</string>
+    <string name="confirm_take_delivery_of_goods">确认收货</string>
+    <string name="default_address">默认</string>
+
+
+    <string name="install_up">安装了:</string>
+    <string name="uninstallup">卸载了:</string>
+    <string name="order_code_">"订单编号: "</string>
+    <string name="refund_reason_">退款原因:\t</string>
+    <string name="refund_instructions_t">退款说明:\t</string>
+    <string name="exchange_goods_instructions">换货说明:\t</string>
+    <string name="exchange_goods_instructions_t">换货原因:\t</string>
+
+
+    <string name="zero">99</string>
+    <string name="othermore">99+</string>
+    <string name="load_in_">加载中...</string>
+    <string name="contacts_">联  系  人</string>
+    <string name="waite_code">敬请期待!</string>
+    <string name="my_coupon">我的优惠券</string>
+    <string name="noprodut">商品库存不足</string>
+    <string name="invalid_url">地址不合法</string>
+    <string name="my_address">我的收货地址</string>
+    <string name="feil_notfind">文件不存在</string>
+    <string name="webErro">哎呀！网络不给力</string>
+    <string name="please_inputtext">请输入内容</string>
+    <string name="not_to_install_qq">没有安装QQ</string>
+    <string name="loading_waiting">努力加载中...</string>
+    <string name="a_o_load_faile">啊哦~加载失败!</string>
+    <string name="no_more_product">没有更多商品了</string>
+    <string name="content_cannot_no">内容不能为空</string>
+    <string name="show_more_product">查看更多商品</string>
+    <string name="refund_in_the_audit">退款审核中</string>
+    <string name="Package_name_program">包名的程序</string>
+    <string name="exceed_max_number">超过允许最大数</string>
+    <string name="please_choose_product">请选择商品</string>
+    <string name="exit_the_program">再按一次退出程序</string>
+    <string name="save_store_code">长按保存店铺二维码</string>
+    <string name="product_already_sold">该商品已下架</string>
+    <string name="not_to_install_wechat">没有安装微信</string>
+    <string name="not_to_install_sinawb">没有安装微博</string>
+    <string name="confirm_cancel_order">确认取消订单？</string>
+    <string name="prompt">将二维码放入框内，即可自动扫描</string>
+    <string name="not_to_install_sian">没有安装新浪微博</string>
+    <string name="Sina_micro_boden_record">新浪微博登录</string>
+    <string name="app_search_hint_keywords">请输入关键字</string>
+    <string name="permissiontext">为了更好的体验请开启权限</string>
+    <string name="actual_gathering_amount">实际收款金额：</string>
+    <string name="buyer_confirmed_receiving">买家已确认收货</string>
+    <string name="you_no_correlation_order_">您还没有相关订单~</string>
+    <string name="please_init_odcard_right">请输入正确的身份证号</string>
+    <string name="addressmanage_phone_number_num">手机号不超过11位</string>
+    <string name="connection_service_fail">客服连线失败，请稍后重试！</string>
+    <string name="get_app_version_fail_">获取应用程序版本失败，原因：</string>
+    <string name="get_system_core_fail_">获取系统内核版本失败，原因：</string>
+    <string name="addressmanage_phone_number_format">手机号格式不正确</string>
+    <string name="photos_more_than">每张不超过5M，支持JPG、BMP、PNG，最多上传3张</string>
+    <string name="please_put_qr_code_in_scanning_frame">请将二维码放入扫描框内</string>
+    <string name="Network_convulsions_please_checking">网络抽风了，请检查后重试~</string>
+
+    <string name="week_rank">本周热销榜单</string>
+    <string name="subject_house">特色主题馆</string>
+    <string name="app_search_hint_keywords_lyf">搜索来伊份</string>
+
+    <string name="hot_promotions">活动商品</string>
+    <string name="result_total">合计:</string>
+    <string name="result_promotion_en">已满活动条件</string>
+    <string name="result_promotion_content">还差</string>
+    <string name="result_go_shopcart">进入购物车</string>
+    <string name="result_look_pro">查看赠品</string>
+    <string name="result_promotion_description">活动说明：</string>
+
+    <string name="refreshing">refreshing...</string>
+    <string name="refresh_done">refresh done</string>
+    <string name="choosedate_format">yyyy.M.d</string>
+    <string name="listview_loading">loading...</string>
+    <string name="nomore_loading">no more to be loaded</string>
+    <string name="listview_header_last_time">last update：</string>
+    <string name="listview_header_hint_normal">pull to refresh</string>
+    <string name="listview_header_hint_release">release to start refresh</string>
+    <string name="user_agent" translatable="false">
+        Mozilla/5.0 (Linux; U;
+        <xliff:g id="x">Android %s</xliff:g>)
+        AppleWebKit/534.30 (KHTML, like Gecko)
+        Version/4.0
+        <xliff:g id="mobile">%s</xliff:g>
+        Safari/534.30
+    </string>
+    <string name="search_empty_tip">很抱歉，没有找到符合的信息</string>
+
+
+    <!-- APP -->
+    <!--customerservice--> <!--customerservice--> <!--customerservice--> <!--customerservice--> <!--customerservice--> <!--customerservice-->
+    <string name="xn_inputfunction_select">图片@拍照@评价</string>
+    <string name="xn_find_mylocation">寻找我的位置</string>
+    <string name="xn_recent_person">最近联系人</string>
+    <string name="xn_remove_visitor">确定解除黑名单吗？</string>
+    <string name="xn_refuse_visitor">是否加入黑名单？</string>
+    <string name="xn_showphoto_title">发送中...</string>
+    <string name="xn_phasebook_text">常用语</string>
+    <string name="xn_consultation_text">咨询总结</string>
+    <string name="xn_histalk_last">上一次会话</string>
+    <string name="xn_histalk_next">下一次会话</string>
+    <string name="xn_mylocation">我的位置</string>
+    <string name="xn_toast_nointernet">当前网络不可用，请检查网络设置！</string>
+    <string name="xn_toast_imagetoobig">图片太大，加载失败</string>
+    <string name="xn_toast_getservicefail">获取服务器列表失败</string>
+    <string name="xn_toast_submit">提交</string>
+    <string name="xn_toast_callcsfalse">获取客服失败</string>
+    <string name="xn_toast_paramserror">传入参数错误</string>
+    <string name="xn_toast_formaterror">传入JSON字符串格式错误</string>
+    <string name="xn_text_pulldown">下拉刷新</string>
+    <string name="xn_text_refresh">正在刷新...</string>
+    <string name="xn_text_recentlyupdate">最近更新:</string>
+    <string name="xn_toast_filempty">录音文件不完整或已损坏</string>
+    <string name="xn_action_Tchat">由于你长时间未进行会话,已经与客服断开连接</string>
+    <string name="xn_tt_leavemsgtip_nikname">请输入昵称</string>
+    <string name="xn_tt_leavemsgtip_phoneormail">请填写手机号码或者邮箱</string>
+    <string name="xn_tt_leavemsgtip_failed">留言失败,连接服务器失败</string>
+    <string name="xn_tt_userid_is_illegal">userid不合法，请重新传入</string>
+    <string name="xn_tt_username_is_illegal">username不合法，请重新传入</string>
+    <string name="xn_tt_voicetip_tooshort">时间太短   录音失败</string>
+    <string name="xn_tt_voicetip_stopfailed">关闭录音出错</string>
+    <string name="xn_tt_openspecifiedactivity_fail">可以在这里提示用户没有找到应用程序，或者是做其他的操作！</string>
+    <string name="xn_tt_clearcache_success">成功清空本地缓存...</string>
+    <string name="xn_notify_newmsg">您有新消息哦！</string>
+    <string name="xn_demoexit">退出</string>
+    <string name="xn_newmsg_num">条新消息</string>
+    <string name="xn_sdk_tryuse">试用</string>
+    <string name="xn_chatpage_blacklist">该用户被加入黑名单，消息已被屏蔽！</string>
+    <string name="xn_chatlist_csgroupname">客服组名称</string>
+    <string name="xn_chatlist_lastmsgtime">最后一条消息时间</string>
+    <string name="xn_chatlist_lastmsg">最后一条消息</string>
+    <string name="xn_transferui_tip1">有客服把一个访客转接给您，是否接收该对话</string>
+    <string name="xn_transferui_tip2">客服</string>
+    <string name="xn_transferui_tip3">将访客</string>
+    <string name="xn_transferui_tip4">转接给您，是否接收该对话?</string>
+    <string name="xn_transferui_tip5">有客服邀请您一起接待访客，是否加入该对话</string>
+    <string name="xn_transferui_tip6">邀请您接待访客</string>
+    <string name="xn_transferui_tip7">，是否加入该对话?</string>
+    <string name="xn_functionSettingsBody4">常用语</string>
+    <string name="xn_functionSettingsBody5">邀请评价</string>
+    <string name="xn_functionSettingsBody6">黑名单</string>
+    <string name="xn_functionSettingsBody7">咨询总结</string>
+    <string name="xn_switch_succeed">您已成功拒绝转接邀请!</string>
+    <string name="xn_chatpage_transferkefu">客服 张宁宁将 访客转接给您，是否接收该对话</string>
+    <!-- SDK -->
+
+
+    <!-- xn_activity_valuationpage.xml -->
+    <string name="xn_require_evaluation">感谢您的支持，请评价</string>
+    <string name="xn_ad_appraise_vg">非常满意</string>
+    <string name="xn_ad_appraise_good">满意</string>
+    <string name="xn_ad_appraise_normal">一般</string>
+    <string name="xn_ad_appraise_bad">不满意</string>
+    <string name="xn_ad_appraise_vb">非常不满意</string>
+    <string name="xn_ad_questionstatus">问题解决状态</string>
+    <string name="xn_val_going">跟进中</string>
+    <string name="xn_val_done">已解决</string>
+    <string name="xn_val_no">未解决</string>
+    <string name="xn_adviseandfeedback">建议与反馈</string>
+    <string name="xn_valuation_suggestion_hint">建议</string>
+
+    <!-- xn_activity_valuationpage.xml,xn_activity_leavemsgpage.xml -->
+    <string name="xn_submit">提交</string>
+
+    <!-- xn_activity_leavemsgpage.xml,xn_dialog_leavemsg.xml -->
+    <string name="xn_leave">亲！客服不在线，请留言！</string>
+    <string name="xn_leave_message">留言</string>
+
+    <!-- xn_dialog_leavemsg.xml -->
+    <string name="xn_leavemsg_dialogback">返回</string>
+    <string name="xn_getservicefail">请求服务失败，请联系服务商</string>
+
+    <!-- xn_activity_leavemsgpage.xml -->
+    <string name="xn_input_pe">请输入手机号码或者邮箱</string>
+    <string name="xn_toast_cancel">返回</string>
+    <string name="xn_leavemesg_words_hint">留言</string>
+    <string name="xn_leavemesg_name_hint">姓名</string>
+    <string name="xn_leavemesg_tel_hint">电话</string>
+    <string name="xn_leavemesg_email_hint">邮箱</string>
+
+    <!-- xn_activity_my_pg_bar.xml -->
+    <string name="xn_leavingmsg">正在留言</string>
+
+    <!-- xn_activity_chatpage.xml -->
+    <string name="xn_chatpage_kfname">在线客服</string>
+    <string name="xn_queuing_tips1">抱歉，人数过多您排在第</string>
+    <string name="xn_queuing_tips2">位     点击留言！</string>
+    <string name="xn_chatActivity_tipString3">客服不在线    点击留言！</string>
+    <string name="xn_chatActivity_tipString4">正在建立会话...</string>
+    <string name="xn_kefu_versiontip">SDK版本号:</string>
+    <string name="xn_chatActivity_tryout">(试用)</string>
+
+    <!-- xn_custom_facerelativelayout.xml -->
+    <string name="xn_custom_send">发送</string>
+    <string name="xn_sdk_presstalk">按住说话</string>
+    <string name="xn_sdk_loosestop">松开结束</string>
+
+    <!-- xn_message_function_layout.xml -->
+    <string name="xn_sdk_havevaluation">已评价</string>
+    <string name="picture">图片</string>
+    <string name="photograph">拍照</string>
+    <string name="xn_functionSettingsBody3">评价</string>
+
+    <!-- xn_listview_head.xml -->
+    <string name="xn_sdk_nomoreinfo">没有更多聊天内容...</string>
+    <string name="xn_sdk_moreinfo">加载更多...</string>
+
+    <!-- xn_activity_chatpage.xml,xn_activity_explorer.xml -->
+    <string name="back">返回</string>
+
+    <!-- xn_activity_myimage_dialog.xml -->
+    <string name="xn_myimage_back">返回</string>
+    <string name="xn_myimage_savelocal">保存到本地</string>
+
+    <!-- xn_normal_dialog.xml -->
+    <string name="xn_normaldialog_title">提    示</string>
+    <string name="xn_contact_provider">获取服务失败，请联系服务商！</string>
+    <string name="xn_cancel_queue">您好，是否放弃排队？</string>
+    <string name="xn_close_chat_session">确定结束对话</string>
+
+    <!-- xn_popupwindow_copy.xml -->
+    <string name="xn_copy">复制</string>
+    <string name="xn_copylink">复制链接</string>
+
+    <!-- xn_activity_valuationpage.xml,xn_chatting_item_msg_system.xml -->
+    <string name="xn_valuation">评价</string>
+
+
+    <!-- xn_activity_valuationpage.xml,xn_normal_dialog.xml -->
+    <string name="xn_cancel">取消</string>
+    <string name="xn_confirm">确定</string>
+
+    <!-- Toast -->
+    <string name="xn_noevaluat">您还不能对本次会话进行评价，谢谢！</string>
+    <string name="xn_tt_leavemsgtip_content">请填写留言内容，谢谢！</string>
+    <string name="xn_tt_leavemsgtip_name">请填写您的姓名，谢谢！</string>
+    <string name="xn_tt_leavemsgtip_truephone">请填写正确的手机号，谢谢！</string>
+    <string name="xn_tt_leavemsgtip_trueemail">请填写正确的邮箱，谢谢！</string>
+    <string name="xn_tt_leavemsgtip_righttext">不能输入特殊字符</string>
+    <string name="xn_tt_leavemsgtip_success">留言成功,我们会尽快联系您</string>
+    <string name="xn_tt_leavemsg_failed">留言失败</string>
+    <string name="xn_toast_errorinput">请不要输入空字符</string>
+    <string name="xn_toast_authority">亲,还没开启录音权限哦</string>
+    <string name="xn_valuationtip_hasposted">您的评价已提交,谢谢</string>
+    <string name="xn_inputtext_size">您输入的字数已经超过了400字限制！</string>
+    <string name="xn_inputvaluatuion_maxsize">评价内容不能超过200个字符</string>
+    <string name="xn_inputleavemsg_maxsize">留言内容不能超过400个字符</string>
+    <string name="xn_toast_sendfail">发送失败</string>
+    <string name="xn_toast_getpicturefailed">找不到图片</string>
+    <string name="xn_tt_sdcardtip_nowriteright">获取存储权限失败</string>
+    <string name="xn_tt_cameratip_nofindapplication">没有找到相关应用或拍照权限被禁止</string>
+    <string name="xn_tt_cameratip_creatfilefailed">创建照片文件失败</string>
+    <string name="xn_tt_cameratip_getfilefailed">获取照片文件失败</string>
+    <string name="xn_tt_cameratip_cancel">拍照已取消</string>
+    <string name="xn_tt_savepicture_success">保存成功</string>
+
+    <!-- xn_dialog_myvioce.xml -->
+    <string name="xn_releasetotalk">松开手指，取消发送</string>
+    <string name="xn_fingerslip_totalk">手指上滑，取消发送</string>
+    <string name="xn_tooshort">说话时间太短</string>
+
+    <!-- 系统消息提示 -->
+    <string name="xn_historyinfo">以上是历史消息</string>
+    <string name="xn_kefu_leave">您好！客服不在线</string>
+    <string name="xn_kefu_leave2">您好！客服不在线，请</string>
+    <string name="xn_leave_queue">您好！客服忙碌中，您排在第</string>
+    <string name="xn_leave_queue3">位请稍后或</string>
+    <string name="xn_valuation_submit">评价提交成功！</string>
+
+    <string name="xn_queuing_toast">亲！客服忙碌中，请稍后！</string>
+    <string name="xn_requestkf">正在请求客服...</string>
+
+    <string name="xn_btn_yes">是</string>
+    <string name="xn_btn_no">否</string>
+
+    <string name="xn_netinvalid_valuation">亲！无网络，评价暂时不可提交</string>
+
+    <string name="xn_robot_leave_message">留言</string>
+    <string name="opean_window_succeed">打开聊窗成功</string>
+    <string name="opean_faile_failecode">打开聊窗失败，错误码:</string>
+    <string name="execute_succeed">执行成功</string>
+    <string name="execute_faile_failecoed">执行失败，错误码:</string>
+    <string name="init_sdk_succeed">初始化SDK成功</string>
+    <string name="init_faile_failecoed">初始化SDK失败，错误码:</string>
+    <!--addressmanage--><!--addressmanage--><!--addressmanage--><!--addressmanage-->
+
+    <!--addressmanage--><!--addressmanage--><!--addressmanage--><!--addressmanage-->
+
+    <!--classesification--><!--classesification--><!--classesification-->
+
+    <!--classesification--><!--classesification--><!--classesification-->
+
+
+    <!--desapp--><!--desapp--><!--desapp--><!--desapp-->
+
+    <!--desapp--><!--desapp--><!--desapp--><!--desapp-->
+
+
+    <!--deshome--><!--deshome--><!--deshome--><!--deshome--><!--deshome-->
+
+    <!--deshome--><!--deshome--><!--deshome--><!--deshome--><!--deshome-->
+
+
+    <!--login--><!--login--><!--login--><!--login-->
+
+    <!--login--><!--login--><!--login--><!--login-->
+
+    <!--myhomepager--><!--myhomepager--><!--myhomepager--><!--myhomepager--><!--myhomepager--><!--myhomepager-->
+
+    <!--myhomepager--><!--myhomepager--><!--myhomepager--><!--myhomepager--><!--myhomepager--><!--myhomepager-->
+
+    <!--orders--><!--orders--><!--orders--><!--orders--><!--orders--><!--orders--><!--orders--><!--orders-->
+
+    <!--orders--><!--orders--><!--orders--><!--orders--><!--orders--><!--orders--><!--orders--><!--orders-->
+
+    <!--p2p_home--><!--p2p_home--><!--p2p_home--><!--p2p_home--><!--p2p_home--><!--p2p_home-->
+
+    <!--p2p_home--><!--p2p_home--><!--p2p_home--><!--p2p_home--><!--p2p_home-->
+
+    <!--pay--><!--pay--><!--pay--><!--pay--><!--pay-->
+
+    <!--pay--><!--pay--><!--pay--><!--pay--><!--pay-->
+
+
+    <!--photosgraph--><!--photosgraph--><!--photosgraph--><!--photosgraph--><!--photosgraph-->
+
+    <!--photosgraph--><!--photosgraph--><!--photosgraph--><!--photosgraph--><!--photosgraph-->
+
+    <!--productdetail--><!--productdetail--><!--productdetail--><!--productdetail-->
+
+    <!--productdetail--><!--productdetail--><!--productdetail--><!--productdetail--><!--productdetail-->
+
+
+    <!--search--><!--search--><!--search--><!--search--><!--search-->
+
+    <!--search--><!--search--><!--search--><!--search--><!--search-->
+
+
+    <!--share--><!--share--><!--share--><!--share--><!--share--><!--share-->
+
+    <!--share--><!--share--><!--share--><!--share--><!--share--><!--share--><!--share-->
+
+    <!--shopcart--><!--shopcart--><!--shopcart--><!--shopcart--><!--shopcart--><!--shopcart-->
+
+    <!--shopcart--><!--shopcart--><!--shopcart--><!--shopcart--><!--shopcart--><!--shopcart-->
+</resources>

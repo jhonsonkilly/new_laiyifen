@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_category"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <com.ody.p2p.views.ScrollGridView
+        android:id="@+id/lv_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:horizontalSpacing="9dp"
+        android:numColumns="2"
+        android:verticalSpacing="12dp" />
+</LinearLayout>

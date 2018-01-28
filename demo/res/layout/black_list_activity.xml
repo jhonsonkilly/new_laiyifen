@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_background">
+
+    <include
+        android:id="@+id/app_bar_layout"
+        layout="@layout/toolbar_layout"/>
+
+   <!-- <include
+        android:id="@+id/notify_bar"
+        layout="@layout/network_status_bar" />-->
+
+    <ListView
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:id="@+id/black_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="vertical" />
+</LinearLayout>

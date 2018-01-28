@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fresh_bg_color"
+    android:orientation="vertical">
+    <!--伊点卡-->
+    <com.ody.p2p.main.views.ImToolBar
+        android:id="@+id/yidian_card_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:right_text="排序筛选"
+        app:right_tv_visible="true"
+        app:tv_title="伊点卡" />
+    <!--头部操作-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_18"
+        android:orientation="vertical">
+
+        <com.ody.p2p.main.views.SimpleCellLinearLayout
+            android:id="@+id/yidian_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:et_hint_text="请输入卡号"
+            app:tv_text="卡号"
+            app:tv_text_color="@color/rectangle_bead" />
+
+        <com.ody.p2p.main.views.SimpleCellLinearLayout
+            android:id="@+id/yidian_card_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:et_hint_text="请输入密码"
+            app:tv_text="密码"
+            app:tv_text_color="@color/rectangle_bead" />
+
+        <Button
+            android:id="@+id/yidian_card_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_15"
+            android:layout_marginRight="@dimen/height_15"
+            android:layout_marginTop="@dimen/height_18"
+            android:background="@drawable/shape_card_add"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/height_18"
+            android:layout_marginTop="@dimen/height_8"
+            android:gravity="center"
+            android:text="温馨提示：如非电子卡卷，至门店消费请务必携带实物卡"
+            android:textColor="@color/grey_text_color"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+    <!--底部卡信息显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/yidian_card_rgp_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_40"
+            android:layout_marginRight="@dimen/height_40"
+            android:layout_marginTop="@dimen/height_12"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <RadioButton
+                android:id="@+id/yidian_card_grp_0"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="可用"
+                android:textColor="@drawable/selector_cart_button_text_color" />
+
+            <RadioButton
+                android:id="@+id/yidian_card_grp_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="已用"
+                android:textColor="@drawable/selector_cart_button_text_color" />
+
+            <RadioButton
+                android:id="@+id/yidian_card_grp_2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="已送"
+                android:textColor="@drawable/selector_cart_button_text_color" />
+
+            <RadioButton
+                android:id="@+id/yidian_card_grp_3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg_right"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="过期"
+                android:textColor="@drawable/selector_cart_button_text_color" />
+        </RadioGroup>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/height_12"
+            android:layout_marginLeft="@dimen/height_40"
+            android:layout_marginRight="@dimen/height_40"
+            android:layout_marginTop="@dimen/height_12"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg_left"
+                android:enabled="false"
+                android:text="可用"
+                android:textColor="@drawable/selector_cart_button_text_color"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hint_text_color"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg"
+                android:enabled="true"
+                android:text="已用"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hint_text_color"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg"
+                android:enabled="true"
+                android:text="已送"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hint_text_color"
+                />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_35"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_card_button_bg_right"
+                android:enabled="true"
+                android:text="过期"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hint_text_color"
+                />
+        </LinearLayout>-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/yidian_card_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/yidian_card_no_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/common_coupon_noting"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="@color/divider_color" />
+    </LinearLayout>
+</LinearLayout>

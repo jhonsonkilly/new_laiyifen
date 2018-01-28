@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_gray_color">#666666</color>
+    <!--德升搜索两字的颜色-->
+    <color name="search">#B38A32</color>
+</resources>

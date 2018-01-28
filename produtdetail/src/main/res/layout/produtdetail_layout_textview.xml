@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_flow_name"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:background="@drawable/pingjiatextview"
+    android:button="@null"
+    android:gravity="center"
+    android:paddingBottom="8dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="8dp"
+    android:textSize="12sp"
+    android:textColor="@color/main_title_color">
+
+</CheckBox>

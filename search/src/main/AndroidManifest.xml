@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ody.p2p.search">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity android:name=".searchresult.SearchResultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".searchkey.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+    </application>
+
+</manifest>

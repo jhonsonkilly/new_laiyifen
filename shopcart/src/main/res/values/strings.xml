@@ -1,0 +1,22 @@
+<resources>
+    <string name="guanzhu">确定将这一种商品移入我的关注？</string>
+    <string name="delect_product">确认要删除选中商品吗？</string>
+    <string name="choose_delect_product">请选择要删除的商品</string>
+    <string name="choose_gift">选择赠品</string>
+    <string name="find_similarity">找相似</string>
+    <string name="no_product_inshopcart">购物车空空如也，来挑几件好货吧！</string>
+    <string name="clearn_faile_product">清空失效商品</string>
+    <string name="shopcart_assume_you_like">购物车猜你喜欢</string>
+    <string name="donation">[赠品]</string>
+    <string name="choose_donation">选择赠品</string>
+    <string name="item_delect">\t\t删\t除\t\t</string>
+    <string name="unfreight">不含运费</string>
+    <string name="not_standard">暂无规格</string>
+    <string name="num_gif">个赠品</string>
+    <string name="need_separate_settlement">您的商品需要分开结算</string>
+    <string name="max_choose_gif_noe">您最多只能选择1个赠品</string>
+    <string name="move_to_attention">移入\n关注</string>
+    <string name="max_choose">您最多只能选择</string>
+    <string name="showredemption">查看换购</string>
+
+</resources>

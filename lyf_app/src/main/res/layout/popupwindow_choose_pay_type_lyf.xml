@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/popupwindow_choose_pay_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_home_input"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/popupwindow_choose_pay_type_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_home_input"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/grey_text_color"
+        android:textSize="15sp" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+    >
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/common_img_1"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/img_order_pingtuan"
+            android:layout_width="25dp"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/common_img_2"
+
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/icon_home"
+            android:layout_width="20dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/buy_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:gravity="bottom"
+           />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

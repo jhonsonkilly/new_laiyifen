@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_whole"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44">
+
+        <ImageView
+            android:id="@+id/iv_pay_icon"
+            android:layout_width="@dimen/height_24"
+            android:layout_height="@dimen/height_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/tv_pay_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdasd"
+            android:textSize="@dimen/textsize_14sp"
+            android:textColor="@color/main_title_color"
+            android:layout_toRightOf="@id/iv_pay_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            />
+        
+        <!--抽奖等标签-->
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_10sp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/tv_pay_mode"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/shape_pay_mode_list"
+            android:padding="3dp"
+            />
+        
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="@dimen/height_16"
+            android:layout_height="@dimen/height_16"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/height_12"
+            />
+    </RelativeLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line"
+        android:layout_marginLeft="@dimen/height_12"
+        android:background="@color/divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</LinearLayout>

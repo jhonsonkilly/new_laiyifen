@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp">
+
+    <LinearLayout
+        android:id="@+id/liner_item_choose"
+        android:layout_width="match_parent"
+        android:paddingRight="15dp"
+        android:paddingTop="12dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/common_btn_edit" />
+        <!--detail_ic_location-->
+
+        <TextView
+            android:id="@+id/tv_address_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="上海  上海市  浦东新区xxxxxxxx路xxxxxxxx号"
+            android:textColor="@color/main_title_color"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/img_choose"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_ic_select"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="12dp"
+        style="@style/line_match_parent"/>
+
+
+
+</LinearLayout>

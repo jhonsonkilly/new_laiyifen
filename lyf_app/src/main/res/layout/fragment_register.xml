@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/head" />
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/head"
+        android:background="@color/divider_color" />
+
+    <!--手机号-->
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        style="@style/login_edit_style"
+        android:layout_below="@id/v_divide_line"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/tv_zhanghao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:minWidth="65dp"
+            android:text="@string/phone_number"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_cha"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/my_btn_close_n" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_cha"
+            android:layout_toRightOf="@id/tv_zhanghao"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="@string/input_register_phone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="@dimen/textsize_15sp" />
+    </RelativeLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_phone"
+        android:background="@color/divider_color"
+        android:visibility="gone" />
+
+    <!--获取验证码-->
+    <RelativeLayout
+        android:id="@+id/rl_validate_code_title"
+        style="@style/login_edit_style"
+        android:layout_below="@id/v_divide_line3"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_validate_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:minWidth="65dp"
+            android:text="@string/verification"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_15sp" />
+
+        <!--验证码图片-->
+        <RelativeLayout
+            android:id="@+id/rl_get_validate_code"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_get_captcha"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/themecolor_circular"
+                android:gravity="center"
+                android:text="@string/get_verification_code"
+                android:textColor="@color/theme_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <!--分割线-->
+        <View
+            android:id="@+id/v_divide_line2"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/rl_get_validate_code"
+            android:background="@color/divider_color"
+            android:visibility="gone" />
+
+        <!--叉图片-->
+        <RelativeLayout
+            android:id="@+id/rl_cha_validate_code"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/v_divide_line2"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/my_btn_close_n" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_input_validate_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rl_cha_validate_code"
+            android:layout_toRightOf="@id/tv_validate_code"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="@string/input_login_validate_code"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="@dimen/textsize_15sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/verification_code"
+        style="@style/login_edit_style"
+        android:layout_below="@id/rl_validate_code_title"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="@string/img_verification"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/textsize_15sp" />
+
+        <EditText
+            android:id="@+id/ed_login_verification_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingLeft="4dp"
+            android:digits="@string/digits"
+            android:hint="@string/input_login_validate_code"
+            android:inputType="phone"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/main_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_cha_vercode"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/my_btn_close_n" />
+
+        </RelativeLayout>
+
+        <!--图形验证码-->
+        <ImageView
+            android:id="@+id/img_getvercode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/theme_color" />
+
+    </LinearLayout>
+
+
+    <!--分割线-->
+    <View
+        android:id="@+id/v_divide_line4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/verification_code"
+        android:background="@color/divider_color"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/relative_register_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_next"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agree_register_"
+            android:textColor="@color/note_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_user_agreement"
+            android:textColor="@color/theme_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/contact_customer_service"
+            android:textColor="@color/note_color"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <!--下一步-->
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/v_divide_line4"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_login"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

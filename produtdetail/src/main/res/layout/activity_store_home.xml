@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                android:orientation="vertical">
+
+    <com.ody.p2p.views.tablayout.CommonTabChooser
+        android:id="@+id/store_home_tab_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"/>
+
+    <com.ody.p2p.views.odyscorllviews.OdyScrollView
+        android:id="@+id/store_home_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/store_home_tab_buttom"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+            <com.ody.p2p.views.tablayout.CommonTabChooser
+                android:id="@+id/store_home_tab"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"/>
+
+            <FrameLayout
+                android:id="@+id/store_home_fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </com.ody.p2p.views.odyscorllviews.OdyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/transparent_color"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@+id/view_input_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/store_return_white"/>
+
+        <FrameLayout
+            android:id="@+id/fl_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/common_btn_more_white"/>
+
+            <TextView
+                android:id="@+id/redFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_gravity="top|right"
+                android:background="@drawable/radius_theme_9"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_sweep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/fl_message"
+            android:scaleType="centerInside"
+            android:src="@drawable/store_classify"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_sweep"
+            android:layout_toRightOf="@id/tv_address"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="搜索店铺内的商品"
+            android:paddingRight="5dp"
+            android:textColor="@color/sub_title_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="12sp"/>
+        <!--搜索框-->
+
+        <View
+            style="@style/line_horizontal_parent"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <com.ody.p2p.views.tablayout.CommonTabChooser
+        android:id="@+id/store_home_copy_tab"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/rl_search"
+        android:background="@color/white"
+        android:visibility="invisible"/>
+</RelativeLayout>

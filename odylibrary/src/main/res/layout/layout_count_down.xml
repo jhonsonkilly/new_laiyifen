@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/mainhome_time_green"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:gravity="center"
+        android:text="天"
+        android:textColor="@color/main_title_color"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_hour"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/shape_countdown"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/mainhome_time_green"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/main_title_color"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_min"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/shape_countdown"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/mainhome_time_green"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/main_title_color"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_sec"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/shape_countdown"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/mainhome_time_green"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:gravity="center"
+        android:text="s"
+        android:textColor="@color/main_title_color"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="120dp"
+    android:background="@drawable/shape_dialog_ios"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择聊天室"/>
+
+    <View
+        android:background="@color/light"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
+

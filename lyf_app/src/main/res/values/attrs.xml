@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImToolBar">
+        <!--标题-->
+        <attr name="tv_title" format="string" />
+        <attr name="right_text" format="string" />
+        <!--是否显示右文字-->
+        <attr name="right_tv_visible" format="boolean" />
+        <!--是否显示右图片-->
+        <attr name="right_img_visible" format="boolean" />
+        <attr name="right_img2_visible" format="boolean" />
+        <!--右边背景-->
+        <attr name="right_bg" format="reference" />
+        <attr name="right_bg2" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SimpleCellLinearLayout">
+        <attr name="tv_width" format="dimension" />
+        <attr name="tv_visible" format="integer">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+        <attr name="tv_text" format="string" />
+        <attr name="et_max_length" format="integer" />
+        <attr name="et_hint_text" format="string" />
+        <attr name="line_visible" format="boolean" />
+        <attr name="tv_text_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SlideDetailsLayout">
+        <!-- float value for indicate the moment of switch panel-->
+        <attr name="percen" format="float"/>
+        <!-- how long the animation keep-->
+        <attr name="duration" format="integer"/>
+        <!-- default panel to show after init-->
+        <attr name="default_panel" format="enum">
+            <enum name="front" value="0"/>
+            <enum name="behind" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:background="#b0000000"-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- @drawable/shape_popupw_bg-->
+    <RelativeLayout
+        android:id="@+id/rl_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_popupw_bg">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:text="@string/cancel"
+            style="@style/text1"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_cancel"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_popupw_bg">
+<!--最上面一行-->
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text1"
+             />
+
+        <View
+            android:id="@+id/v_divide_line"
+            android:layout_below="@id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+<!--第二行-->
+        <TextView
+            android:id="@+id/tv_confirm"
+            style="@style/text1"
+            android:layout_below="@id/v_divide_line"/>
+
+<!--第三行-->
+        <View
+            android:id="@+id/v_divide_line2"
+            android:layout_below="@id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/tv_confirm2"
+            style="@style/text1"
+            android:layout_below="@id/v_divide_line2"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

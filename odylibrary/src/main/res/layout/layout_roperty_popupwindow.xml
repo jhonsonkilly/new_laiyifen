@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/framelayout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="174dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/popupwindow_productID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/popupwindow_productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/theme_color" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/divider_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_property"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:id="@+id/linear_add_or_baynow_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="购买数量"
+                    android:textColor="@color/sub_title_color"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_editproduct_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right">
+
+                    <Button
+                        android:id="@+id/btn_shopcart_sub"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:background="@drawable/sub_btn_background" />
+
+                    <ImageView
+                        android:id="@+id/img_shopcart_sub"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/icon_sub"/>
+
+                    <TextView
+                        android:id="@+id/tv_shopcart_num"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shopcart_rectangle_bead_bord"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/sub_title_color" />
+
+                    <Button
+                        android:id="@+id/btn_shopcart_add"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:background="@drawable/add_btn_background" />
+
+                    <ImageView
+                        android:id="@+id/img_shopcart_add"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/icon_add"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/view_linr" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+
+                <LinearLayout
+                    android:id="@+id/havaskotnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linear_add_or_baynow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+                        <TextView
+                            android:id="@+id/btn_property_addtoshopcart"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/orange"
+                            android:text="加入购物车"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/btn_property_baynow"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@color/theme_color"
+                            android:text="立即购买"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_property_confim"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@color/theme_color"
+                        android:text="@string/xn_confirm"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/notskonum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:text="无库存"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/popupwindow_productImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/circular_bead_border"
+            android:padding="2dp" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/icon_close" />
+    </FrameLayout>
+</RelativeLayout>

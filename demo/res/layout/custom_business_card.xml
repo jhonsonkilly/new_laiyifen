@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_white">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                android:layout_margin="5dp"
+                android:id="@+id/rock_paper_scissors_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_addbuddy"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|left"
+                android:layout_margin="5dp">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="czy"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
+            
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/gray7"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="个人名片"
+            android:gravity="center|left"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</merge>
