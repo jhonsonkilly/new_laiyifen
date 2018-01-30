@@ -439,7 +439,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="920f424403f967abc0a39de4797d11150b3482c3">
+        sha1="4b2d37b6c3828addbb64bde1573bcdb21c6913b8">
         <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/4/classes_f3eb4c83347feb3f87342203676aee2dbf8ad85f/classes.dex" />
     </item>
     <item
@@ -531,15 +531,6 @@
         revision="25.0.0"
         sha1="70d8c8e5f1523ff2e5f20af3b5af779d378556cb">
         <dex dex="/Users/mac/Desktop/new_laiyifen/lyf_app/build/intermediates/transforms/dex/Baidu/debug/folders/1000/8/ShareSDK-QQ-2.7.4_f464be9450d0fb959f86a27c2ee7b574b384e7d0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/mac/Desktop/final_laiyifen/odylibrary/build/intermediates/bundles/default/libs/datatist-sdk.2.0.6.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a1179c281f5c364aceebd37167ca41277e0c20ac">
-        <dex dex="/Users/mac/Desktop/final_laiyifen/lyf_app/build/intermediates/transforms/dex/Lenovo/debug/folders/1000/8/datatist-sdk.2.0.6_a8568bb99d021e0e802164eb1776dd5660051c89/classes.dex" />
     </item>
     <item
         is-multidex="true"

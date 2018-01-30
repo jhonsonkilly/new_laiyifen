@@ -92,6 +92,10 @@ public abstract class BaseCommActivity<P extends BaseCommPresenter> extends AppC
         return result;
     }
 
+    public String getNetTAG() {
+        return this.getLocalClassName();
+    }
+
     //修复miui问题
     public static boolean setMiuiStatusBarDarkMode(Activity activity, boolean darkmode) {
 

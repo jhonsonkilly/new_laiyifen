@@ -55,9 +55,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".TestBase.MainTabsActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:launchMode="singleTask"
+
             android:screenOrientation="portrait">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.VIEW" />
@@ -71,6 +71,8 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".login.LyfLogin"
             android:launchMode="singleTask" />
@@ -115,6 +117,8 @@
         <activity
             android:name=".shopcart.LyfShopCartActivity"
             android:launchMode="singleTask" />
+
+
         <activity
             android:name=".order.ChooseStoreActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />

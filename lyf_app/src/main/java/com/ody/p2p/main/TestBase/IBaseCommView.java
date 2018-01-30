@@ -46,4 +46,6 @@ public interface IBaseCommView {
     void onReciver(String filter, Intent intent);
 
 
+
+
 }

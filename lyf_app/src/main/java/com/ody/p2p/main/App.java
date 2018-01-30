@@ -54,6 +54,7 @@ import com.ody.p2p.check.orderlist.EvaluateActivity;
 import com.ody.p2p.check.orderlist.ShowImageViewActivity;
 import com.ody.p2p.check.orderoinfo.LogisticsActivity;
 import com.ody.p2p.check.ordersearch.OrdersearchActivity;
+import com.ody.p2p.main.TestBase.MainTabsActivity;
 import com.ody.p2p.main.eventbus.TaklingDataEventMessage;
 import com.ody.p2p.main.invitefriends.InviteFriendsActivity;
 import com.ody.p2p.main.login.LyfLogin;
@@ -233,7 +234,7 @@ public class App extends BaseApplication implements IDatatist {
 //                router.put(getRouterUrl(JumpUtils.REGISTER), LyfLoginFragment.class);//注册
                 router.put(getRouterUrl(JumpUtils.SEARCH_RESULT), LyfSearchResultActivity.class);
                 router.put(getRouterUrl(JumpUtils.ARRIVAL_NOTIF), ArrivalNotifaActivity.class);//到货通知
-                router.put(getRouterUrl(JumpUtils.MAIN), MainActivity.class);
+                router.put(getRouterUrl(JumpUtils.MAIN), MainTabsActivity.class);
                 router.put(getRouterUrl(JumpUtils.LOGIN), LyfLoginFragment.class);
                 router.put(getRouterUrl(JumpUtils.SMSLOGIN), LyfLogin.class);
                 router.put(getRouterUrl(JumpUtils.SEARCH), LYFSearchActivity.class);
