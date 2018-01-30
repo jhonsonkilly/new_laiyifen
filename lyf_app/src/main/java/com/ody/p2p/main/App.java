@@ -328,15 +328,12 @@ public class App extends BaseApplication implements IDatatist {
 
         getPersonalMes();
 
-        getGuangGao();
 
-
-    }
-
-    public void getGuangGao() {
 
 
     }
+
+
 
     public void getPersonalMes() {
 

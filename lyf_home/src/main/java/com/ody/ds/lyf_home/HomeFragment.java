@@ -164,90 +164,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         iv_message = (ImageView) view.findViewById(R.id.iv_message);
         tv_address = (TextView) view.findViewById(R.id.tv_address);
         suspendLayout = (SuspendFrameLayout) view.findViewById(R.id.suspend_layout);
-        //swipe_refresh = (OdySwipeRefreshLayout) view.findViewById(R.id.swipe_refresh);
-        //rl_home = (RelativeLayout) view.findViewById(R.id.rl_home);
-
-        //ll_footer = (LinearLayout) view.findViewById(R.id.ll_footer);
-        //ll_loading = (LinearLayout) view.findViewById(R.id.ll_loading);
-        //tv_nomore = (TextView) view.findViewById(R.id.tv_nomore);
-        //iv_loading = (ImageView) view.findViewById(R.id.iv_loading);
-
         rl_search_content.setOnClickListener(this);
         iv_message.setOnClickListener(this);
         iv_sweep.setOnClickListener(this);
         tv_address.setOnClickListener(this);
-        //swipe_refresh.setOdyDefaultView(true);
-        //swipe_refresh.setCanLoadMore(false);
-        /*swipe_refresh.setOnPullRefreshListener(new OdySwipeRefreshLayout.OnPullRefreshListener() {
-            @Override
-            public void onRefresh() {
-                pageNo = 1;
-                mPresenter.getHomePage();
-            }
 
-            @Override
-            public void onPullDistance(int distance) {
-
-            }
-
-            @Override
-            public void onPullEnable(boolean enable) {
-
-            }
-        });*/
-        /*recycler_home.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-                if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
-                    GridLayoutManager lm = (GridLayoutManager) recyclerView.getLayoutManager();
-                    if (lm.findLastVisibleItemPosition() >= recyclerView.getAdapter().getItemCount() - 10) {
-                        if (loadCom) {
-                            ll_footer.setVisibility(View.GONE);
-                            recyclerLoading();
-                        } else {
-                            ll_footer.setVisibility(View.VISIBLE);
-                            tv_nomore.setVisibility(View.GONE);
-                            ll_loading.setVisibility(View.VISIBLE);
-                            initLoading();
-                            if (!isLoading) {
-                                isLoading = true;
-                                mAdapter.isLoading = isLoading;
-                                pageNo++;
-                               // mPresenter.getCategoryProduct(moduleId, categoryId, pageNo);
-                            }
-                        }
-                    } else {
-                        ll_footer.setVisibility(View.GONE);
-                    }
-                }
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
-                    GridLayoutManager lm = (GridLayoutManager) recyclerView.getLayoutManager();
-                    if (lm.findFirstVisibleItemPosition() < getGoodsIndex(mBean)) {
-                        if (float_recycler_category.getVisibility() == View.VISIBLE) {
-                            float_recycler_category.setVisibility(View.INVISIBLE);
-                            if (mAdapter != null && float_recycler_category != null && float_recycler_category.getLayoutManager() != null) {
-                                View topView = float_recycler_category.getLayoutManager().getChildAt(0);
-                                if (topView == null) {
-                                    return;
-                                }
-                                int leftOffset = topView.getLeft();
-                                int leftPosition = float_recycler_category.getLayoutManager().getPosition(topView);
-                                mAdapter.scrollFilter(leftPosition, leftOffset);
-                            }
-                        }
-                    } else {
-                        initFilterbar();
-                    }
-                }
-            }
-        });
-        showTop(recycler_home);*/
 
         pagerslidingTab = (PagerSlidingTabStrip) view.findViewById(R.id.pagertab);
         slidViewpager = (ViewPager) view.findViewById(R.id.view_pager);
@@ -283,24 +204,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
 
     @Override
     public void doBusiness(Context mContext) {
-       /* loadAnimationDrawable = new LoadAnimationDrawable();
-        mAdapter = new QuickHomeAdapter(mPresenter);
-        GridLayoutManager manager = new GridLayoutManager(getActivity(), 2);
-        recycler_home.setLayoutManager(manager);
-        mAdapter.setSpanSizeLookup(new BaseQuickAdapter.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(GridLayoutManager gridLayoutManager, int position) {
-                int type = mAdapter.getData().get(position).getItemType();
-                if (type == AppHomePageBean.HomeData.TYPE_GOODS) {
-                    return 1;
-                } else {
-                    return 2;
-                }
-            }
-        });
-        recycler_home.setAdapter(mAdapter);*/
+
         et_search.setText(OdyApplication.getValueByKey("searchword", ""));
-        //mPresenter.getFloatTail();
+
     }
 
     public String getMobile() {
@@ -315,7 +221,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         if (v.getId() == R.id.rl_search_content) {
             JumpUtils.ToActivity(JumpUtils.SEARCH);
 
-            //JumpUtils.ToActivity(JumpUtils.QIANGGOU);
+
 
 
         }
@@ -323,7 +229,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         if (v.getId() == R.id.iv_sweep)
 
         {
-           /* RxPermissions rxPermissions = new RxPermissions(getContext());
+            RxPermissions rxPermissions = new RxPermissions(getContext());
             rxPermissions.request(
                     //mTODO:meiyizhi
                     android.Manifest.permission.CAMERA//相机
@@ -337,14 +243,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
                                 ToastUtils.showShort("为了更好的使用体验，请开启相机使用权限!");
                             }
                         }
-                    });*/
+                    });
 
             String url = "http://180110fg0025.umaman.com/hongbao/game.html?nickname=&avatar=&ut=abc&activity_id=5a607604d3df9001a5343685";
 
-            url = url + getMobile();
-            JumpUtils.ToWebActivity(url, WebActivity.CONTENT_TITLE, -1, "");
-           /* Intent intent = new Intent(getContext(), NewWebActivity.class);
-            getActivity().startActivity(intent);*/
+
         }
         //跳转到消息中心
         if (v.getId() == R.id.iv_message)
@@ -357,7 +260,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
 
             }
 
-            //getContext().startActivity(new Intent(getContext(), LoginActivity.class));
+
 
 
         }
@@ -959,57 +862,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
     @Override
     public void listener(int x, int y) {
         super.listener(x, y);
-//        if (y > 400) {
-//            float alpha = (y - 400) / 400.0f;
-//            view_input_bg.setAlpha(alpha > 0.8f ? 0.8f : alpha);
-//            view_input_bg.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.theme_color));
-//        } else {
-//            view_input_bg.setAlpha(1);
-//            view_input_bg.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.title_search_bg));
-//        }
+
     }
 
-    /**
-     * 筛选栏状态
-     */
-    private void initFilterbar() {
-        if (null != mAdapter && mAdapter.recycler_category != null) {
-            int[] position = new int[2];
-            float_recycler_category.getLocationInWindow(position);
-            int[] titlePosition = new int[2];
-            mAdapter.recycler_category.getLocationInWindow(titlePosition);
-            mAdapter.recycler_category.getHeight();
-            if (position[1] < titlePosition[1]) {
-                if (float_recycler_category.getVisibility() == View.VISIBLE) {
-                    float_recycler_category.setVisibility(View.INVISIBLE);
-                    if (mAdapter != null && float_recycler_category.getLayoutManager() != null) {
-                        View topView = float_recycler_category.getLayoutManager().getChildAt(0);
-                        if (topView == null) {
-                            return;
-                        }
-                        int leftOffset = topView.getLeft();
-                        int leftPosition = float_recycler_category.getLayoutManager().getPosition(topView);
-                        mAdapter.scrollFilter(leftPosition, leftOffset);
-                    }
-                }
-            } else {
-                if (NetworkUtil.isNetworkAvailable(getContext())) {
-                    if (float_recycler_category.getVisibility() == View.INVISIBLE) {
-                        float_recycler_category.setVisibility(View.VISIBLE);
-                        if (mAdapter.recycler_category != null) {
-                            View topView = mAdapter.recycler_category.getLayoutManager().getChildAt(0);
-                            if (topView == null) {
-                                return;
-                            }
-                            int leftOffset = topView.getLeft();
-                            int leftPosition = mAdapter.recycler_category.getLayoutManager().getPosition(topView);
-                            ((LinearLayoutManager) float_recycler_category.getLayoutManager()).scrollToPositionWithOffset(leftPosition, leftOffset);
-                        }
-                    }
-                }
-            }
-        }
-    }
+
 
     private View getView(int viewId) {
         return LayoutInflater.from(getContext()).inflate(viewId, new RelativeLayout(getContext()));
